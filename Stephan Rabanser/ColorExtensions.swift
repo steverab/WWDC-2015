@@ -26,4 +26,17 @@ extension UIColor {
         return UIColor(red: 0.0/255.0, green: 120.0/255.0, blue: 255.0/255.0, alpha: 1.0)
     }
     
+    class func colorForType(type: TimelineEntryType) -> UIColor {
+        switch type {
+            case .Personal:
+                return personalColor()
+            case .Education:
+                return educationColor()
+            case .Development:
+                return developmentColor()
+            default:
+                return blackColor()
+        }
+    }
+    
 }
