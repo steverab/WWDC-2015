@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA8626821AE0F78E004D995D /* Entries.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8626811AE0F78E004D995D /* Entries.plist */; };
 		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
+		AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626881AE0FC8C004D995D /* TimelineViewController.swift */; };
 		AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08311AE0EB5100617B43 /* AppDelegate.swift */; };
-		AA9C08341AE0EB5100617B43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08331AE0EB5100617B43 /* ViewController.swift */; };
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
 		AA9C08391AE0EB5100617B43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08381AE0EB5100617B43 /* Images.xcassets */; };
 		AA9C083C1AE0EB5100617B43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */; };
@@ -19,10 +19,10 @@
 /* Begin PBXFileReference section */
 		AA8626811AE0F78E004D995D /* Entries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entries.plist; sourceTree = "<group>"; };
 		AA8626831AE0F832004D995D /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		AA8626881AE0FC8C004D995D /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9C08301AE0EB5100617B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9C08311AE0EB5100617B43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA9C08331AE0EB5100617B43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA9C08361AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA9C08381AE0EB5100617B43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA9C083B1AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		AA8626851AE0F8AA004D995D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA9C08331AE0EB5100617B43 /* ViewController.swift */,
+				AA8626881AE0FC8C004D995D /* TimelineViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -174,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */,
-				AA9C08341AE0EB5100617B43 /* ViewController.swift in Sources */,
 				AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */,
+				AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
