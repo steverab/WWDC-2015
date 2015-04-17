@@ -12,5 +12,22 @@ class TimelineEntryCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var outlineView: OutlineView!
+    
+    var type: TimelineEntryType = TimelineEntryType.Personal {
+        willSet {
+            outlineView.contentType = newValue
+            if newValue == TimelineEntryType.Personal {
+                titleLabel.textColor = UIColor.personalColor()
+            } else if newValue == TimelineEntryType.Education {
+                titleLabel.textColor = UIColor.educationColor()
+            } else if newValue == TimelineEntryType.Development {
+                titleLabel.textColor = UIColor.developmentColor()
+            } else {
+                
+            }
+        }
+    }
     
 }

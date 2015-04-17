@@ -64,6 +64,16 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         cell.titleLabel.text = currentEntry.title
         cell.shortDescriptionLabel.text = currentEntry.shortDescription
+        cell.dateLabel.text = currentEntry.date
+        cell.type = currentEntry.type
+        
+        if indexPath.row == entries.count - 1 {
+            cell.outlineView.type = .Last
+        } else {
+            cell.outlineView.type = .Default
+        }
+        
+        cell.outlineView.setNeedsDisplay()
         
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
