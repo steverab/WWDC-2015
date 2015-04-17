@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>Singapore</string>
+		<key>shortDescription</key>
+		<string>Dummy text.</string>
+		<key>date</key>
+		<string>Mar 2015</string>
+		<key>type</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Siemens iCATCH</string>
+		<key>shortDescription</key>
+		<string>Dummy text.</string>
+		<key>date</key>
+		<string>Jan 2015</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Teaching assistant for Swift intro course</string>
+		<key>shortDescription</key>
+		<string>In last winter term&apos;s &quot;iOS Praktikum&quot; at TUM, I was chosen to be a teaching assistant in the Swift introduction course.</string>
+		<key>date</key>
+		<string>Oct 2014</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Hours</string>
+		<key>shortDescription</key>
+		<string>Hours is a new way for finding time to meet with friends, at work or anything in between.</string>
+		<key>date</key>
+		<string>Jan 2014</string>
+		<key>type</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Piqup</string>
+		<key>shortDescription</key>
+		<string>Piqup is a Dropbox client which makes it easy to take exclusive pictures and allows you to share them with your private group of choice.</string>
+		<key>date</key>
+		<string>Oct 2013</string>
+		<key>type</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>WWDC &apos;13 scholarship</string>
+		<key>shortDescription</key>
+		<string>Apple chose me to attend 2013’s Worldwide Developers Conference in San Francisco on a student scholarship.</string>
+		<key>date</key>
+		<string>Jun 2013</string>
+		<key>type</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Computer science student at TUM</string>
+		<key>shortDescription</key>
+		<string>TUM (Technische Universität München) is considerd one of the top technical universities in Europe.</string>
+		<key>date</key>
+		<string>Oct 2012</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Relocation to Munich</string>
+		<key>shortDescription</key>
+		<string>Dummy text.</string>
+		<key>date</key>
+		<string>Sep 2012</string>
+		<key>type</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>First time in the US: Miami</string>
+		<key>shortDescription</key>
+		<string>I&apos;ve always been a huge fan of the United States and on September 2nd I finally made the jump over the big lake for the very first time.</string>
+		<key>date</key>
+		<string>Sep 2012</string>
+		<key>type</key>
+		<integer>0</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Stripe CTF</string>
+		<key>shortDescription</key>
+		<string>Dummy text.</string>
+		<key>date</key>
+		<string>Feb 2012</string>
+		<key>type</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>iOS and Mac development</string>
+		<key>shortDescription</key>
+		<string>Dummy text.</string>
+		<key>date</key>
+		<string>Mar 2008</string>
+		<key>type</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>High school student at TFO</string>
+		<key>shortDescription</key>
+		<string>Dummy text.</string>
+		<key>date</key>
+		<string>Sep 2007</string>
+		<key>type</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Birth</string>
+		<key>shortDescription</key>
+		<string>I was born on December 12th 1993 in the beatiful region of Southtyrol.</string>
+		<key>date</key>
+		<string>Dec 1993</string>
+		<key>type</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>

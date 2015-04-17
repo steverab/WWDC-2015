@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA8626821AE0F78E004D995D /* Entries.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8626811AE0F78E004D995D /* Entries.plist */; };
 		AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08311AE0EB5100617B43 /* AppDelegate.swift */; };
 		AA9C08341AE0EB5100617B43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08331AE0EB5100617B43 /* ViewController.swift */; };
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA8626811AE0F78E004D995D /* Entries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entries.plist; sourceTree = "<group>"; };
 		AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9C08301AE0EB5100617B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9C08311AE0EB5100617B43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		AA9C082F1AE0EB5100617B43 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA8626811AE0F78E004D995D /* Entries.plist */,
 				AA9C08301AE0EB5100617B43 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */,
+				AA8626821AE0F78E004D995D /* Entries.plist in Resources */,
 				AA9C083C1AE0EB5100617B43 /* LaunchScreen.xib in Resources */,
 				AA9C08391AE0EB5100617B43 /* Images.xcassets in Resources */,
 			);
@@ -289,6 +293,7 @@
 				AA9C084D1AE0EB5100617B43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
