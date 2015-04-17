@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimelineViewController: UIViewController {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var timelineTableView: UITableView!
     
@@ -19,10 +19,21 @@ class TimelineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
         loadEntries()
     }
     
     // MARK: - Functions
+    
+    func setupTableView() {
+        timelineTableView.dataSource = self
+        timelineTableView.delegate = self
+        
+        timelineTableView.separatorStyle = .None
+        
+        timelineTableView.rowHeight = UITableViewAutomaticDimension
+        timelineTableView.estimatedRowHeight = 44
+    }
     
     func loadEntries() {
         let loadedEntries = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Entries", ofType: "plist")!)
@@ -43,8 +54,19 @@ class TimelineViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("EntryTableViewCell") as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
+        configureCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
         return cell
+    }
+    
+    func configureCell(cell: TimelineEntryCell, forIndexPath indexPath: NSIndexPath, isForOffscreenUse offscreenUse: Bool) {
+        let currentEntry = entries[indexPath.row]
+        
+        cell.titleLabel.text = currentEntry.title
+        cell.shortDescriptionLabel.text = currentEntry.shortDescription
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
     }
     
     // MARK: - Table view delegate
