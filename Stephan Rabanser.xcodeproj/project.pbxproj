@@ -15,6 +15,7 @@
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
 		AA9C08391AE0EB5100617B43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08381AE0EB5100617B43 /* Images.xcassets */; };
 		AA9C083C1AE0EB5100617B43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */; };
+		AAF2954E1AE1268600D05A9E /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AA9C08361AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA9C08381AE0EB5100617B43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA9C083B1AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				AA8626851AE0F8AA004D995D /* View Controllers */,
 				AA86268A1AE109D5004D995D /* Views */,
 				AA8626871AE0F8DA004D995D /* Models */,
+				AAF2954F1AE1268B00D05A9E /* Extensions */,
 				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
 				AA9C082F1AE0EB5100617B43 /* Supporting Files */,
 			);
@@ -111,6 +114,14 @@
 				AA9C08301AE0EB5100617B43 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAF2954F1AE1268B00D05A9E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */,
 				AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */,
 				AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */,
+				AAF2954E1AE1268600D05A9E /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
