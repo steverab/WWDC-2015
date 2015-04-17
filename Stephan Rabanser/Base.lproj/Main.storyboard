@@ -17,39 +17,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-Jz-Z2N">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-Jz-Z2N">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineEntryCell" rowHeight="68" id="jky-To-dWq" customClass="TimelineEntryCell" customModule="Stephan_Rabanser" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineEntryCell" rowHeight="105" id="jky-To-dWq" customClass="TimelineEntryCell" customModule="Stephan_Rabanser" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jky-To-dWq" id="SMt-9d-0CI">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-VA-quo">
-                                                    <rect key="frame" x="78" y="8" width="423" height="25"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-VA-quo">
+                                                    <rect key="frame" x="73" y="8" width="519" height="25"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-CW-4LH" customClass="OutlineView" customModule="Stephan_Rabanser" customModuleProvider="target">
-                                                    <rect key="frame" x="40" y="0.0" width="30" height="67"/>
+                                                <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-CW-4LH" customClass="OutlineView" customModule="Stephan_Rabanser" customModuleProvider="target">
+                                                    <rect key="frame" x="40" y="0.0" width="25" height="104"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="byp-SQ-gOb"/>
+                                                    </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-VO-zcs">
-                                                    <rect key="frame" x="6" y="1" width="33" height="35"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-VO-zcs">
+                                                    <rect key="frame" x="6" y="2" width="34" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="34" id="JSw-HK-ggt"/>
+                                                        <constraint firstAttribute="height" constant="35" id="qAE-Jw-DOE"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Short description label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk5-eg-N4x">
-                                                    <rect key="frame" x="78" y="41" width="423" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Short description label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk5-eg-N4x">
+                                                    <rect key="frame" x="73" y="41" width="519" height="55"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Nk5-eg-N4x" firstAttribute="bottom" secondItem="SMt-9d-0CI" secondAttribute="bottomMargin" id="4Hm-Wj-OiC"/>
+                                                <constraint firstItem="Nk5-eg-N4x" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="8" id="60a-Ta-PyC"/>
+                                                <constraint firstItem="Nk5-eg-N4x" firstAttribute="trailing" secondItem="SMt-9d-0CI" secondAttribute="trailingMargin" id="9xa-Rg-enj"/>
+                                                <constraint firstItem="q8h-VO-zcs" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" constant="-6" id="GMa-OW-DXQ"/>
+                                                <constraint firstItem="dXF-CW-4LH" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" constant="-8" id="H9U-qX-lvo"/>
+                                                <constraint firstItem="q8h-VO-zcs" firstAttribute="leading" secondItem="SMt-9d-0CI" secondAttribute="leadingMargin" constant="-2" id="JFu-5z-XcN"/>
+                                                <constraint firstItem="Nk5-eg-N4x" firstAttribute="top" secondItem="bYV-VA-quo" secondAttribute="bottom" constant="8" id="RIc-09-Jc2"/>
+                                                <constraint firstItem="bYV-VA-quo" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="8" id="ccu-MP-NDf"/>
+                                                <constraint firstItem="bYV-VA-quo" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" id="cgz-as-bdc"/>
+                                                <constraint firstItem="dXF-CW-4LH" firstAttribute="leading" secondItem="q8h-VO-zcs" secondAttribute="trailing" id="m48-ZW-b6q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="dXF-CW-4LH" secondAttribute="bottom" constant="-8" id="oyn-eZ-Jfz"/>
+                                                <constraint firstItem="bYV-VA-quo" firstAttribute="trailing" secondItem="SMt-9d-0CI" secondAttribute="trailingMargin" id="phB-4d-xz9"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="q8h-VO-zcs" id="JJi-vc-hQx"/>
