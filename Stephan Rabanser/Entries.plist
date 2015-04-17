@@ -24,7 +24,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Teaching assistant for Swift intro course</string>
+		<string>Swift Teaching Assistant</string>
 		<key>shortDescription</key>
 		<string>In last winter term&apos;s &quot;iOS Praktikum&quot; at TUM, I was chosen to be a teaching assistant in the Swift introduction course.</string>
 		<key>date</key>
@@ -54,7 +54,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>WWDC &apos;13 scholarship</string>
+		<string>WWDC &apos;13 Scholarship</string>
 		<key>shortDescription</key>
 		<string>Apple chose me to attend 2013’s Worldwide Developers Conference in San Francisco on a student scholarship.</string>
 		<key>date</key>
@@ -64,7 +64,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Computer science student at TUM</string>
+		<string>Computer Science student @ TUM</string>
 		<key>shortDescription</key>
 		<string>TUM (Technische Universität München) is considerd one of the top technical universities in Europe.</string>
 		<key>date</key>
@@ -84,7 +84,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>First time in the US: Miami</string>
+		<string>Miami</string>
 		<key>shortDescription</key>
 		<string>I&apos;ve always been a huge fan of the United States and on September 2nd I finally made the jump over the big lake for the very first time.</string>
 		<key>date</key>
@@ -104,7 +104,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>iOS and Mac development</string>
+		<string>iOS and Mac Development</string>
 		<key>shortDescription</key>
 		<string>Dummy text.</string>
 		<key>date</key>
@@ -114,7 +114,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>High school student at TFO</string>
+		<string>High School Student @ TFO</string>
 		<key>shortDescription</key>
 		<string>Dummy text.</string>
 		<key>date</key>
