@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA8626821AE0F78E004D995D /* Entries.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8626811AE0F78E004D995D /* Entries.plist */; };
+		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
 		AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08311AE0EB5100617B43 /* AppDelegate.swift */; };
 		AA9C08341AE0EB5100617B43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08331AE0EB5100617B43 /* ViewController.swift */; };
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		AA8626811AE0F78E004D995D /* Entries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entries.plist; sourceTree = "<group>"; };
+		AA8626831AE0F832004D995D /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9C08301AE0EB5100617B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9C08311AE0EB5100617B43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
 				AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */,
 				AA9C082F1AE0EB5100617B43 /* Supporting Files */,
+				AA8626831AE0F832004D995D /* TimelineEntry.swift */,
 			);
 			path = "Stephan Rabanser";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */,
 				AA9C08341AE0EB5100617B43 /* ViewController.swift in Sources */,
 				AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */,
 			);
