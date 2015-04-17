@@ -39,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA8626851AE0F8AA004D995D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA9C08331AE0EB5100617B43 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AA8626861AE0F8B8004D995D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */,
+				AA9C08351AE0EB5100617B43 /* Main.storyboard */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		AA8626871AE0F8DA004D995D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA8626831AE0F832004D995D /* TimelineEntry.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		AA9C08231AE0EB5000617B43 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +84,11 @@
 			isa = PBXGroup;
 			children = (
 				AA9C08311AE0EB5100617B43 /* AppDelegate.swift */,
-				AA9C08331AE0EB5100617B43 /* ViewController.swift */,
-				AA9C08351AE0EB5100617B43 /* Main.storyboard */,
+				AA8626861AE0F8B8004D995D /* Interfaces */,
+				AA8626851AE0F8AA004D995D /* View Controllers */,
+				AA8626871AE0F8DA004D995D /* Models */,
 				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
-				AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */,
 				AA9C082F1AE0EB5100617B43 /* Supporting Files */,
-				AA8626831AE0F832004D995D /* TimelineEntry.swift */,
 			);
 			path = "Stephan Rabanser";
 			sourceTree = "<group>";
