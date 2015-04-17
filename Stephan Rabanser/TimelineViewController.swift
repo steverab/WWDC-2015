@@ -19,6 +19,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        navigationController?.interactivePopGestureRecognizer.delegate = nil
+        
         setupTableView()
         loadEntries()
     }
@@ -83,6 +86,19 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let detailViewController = segue.destinationViewController as! DetailViewController
+        
+        let indexPath = timelineTableView.indexPathForSelectedRow()?.row
+        
+        if let indexPath = indexPath {
+            detailViewController.timelineEntry = entries[indexPath]
+        }
+        
     }
     
     // MARK: - Memory management
