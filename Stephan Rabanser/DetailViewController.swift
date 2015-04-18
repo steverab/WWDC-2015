@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attributes
         
         title = timelineEntry.title
-        descriptionLabel.text = timelineEntry.shortDescription
+        descriptionLabel.text = timelineEntry.description
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {

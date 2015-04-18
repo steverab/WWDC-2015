@@ -18,14 +18,16 @@ class TimelineEntry {
     
     var title: String!
     var shortDescription: String!
+    var description: String!
     var date: String!
     var type: TimelineEntryType!
     
     // MARK: - Constructor
     
-    init(title: String, shortDescription: String, date: String, type: TimelineEntryType) {
+    init(title: String, shortDescription: String, description: String, date: String, type: TimelineEntryType) {
         self.title = title
         self.shortDescription = shortDescription
+        self.description = description
         self.date = date
         self.type = type
     }
@@ -34,7 +36,7 @@ class TimelineEntry {
     
     func printDescription() -> Void {
         println("==================")
-        println("Title: \(title)\nShort description: \(shortDescription)\nDate: \(date)")
+        println("Title: \(title)\nShort description: \(shortDescription)\nDescription: \(description)\nDate: \(date)")
         println("==================")
     }
     
