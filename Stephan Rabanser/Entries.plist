@@ -15,6 +15,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Mar 2015</string>
 		<key>type</key>
 		<integer>0</integer>
+		<key>image</key>
+		<string>Singapore</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -29,6 +31,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Jan 2015</string>
 		<key>type</key>
 		<integer>1</integer>
+		<key>image</key>
+		<string>iCATCH</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -43,6 +47,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Oct 2014</string>
 		<key>type</key>
 		<integer>1</integer>
+		<key>image</key>
+		<string>SwiftTeaching</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -57,6 +63,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Jan 2014</string>
 		<key>type</key>
 		<integer>2</integer>
+		<key>image</key>
+		<string>Hours</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -71,6 +79,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Oct 2013</string>
 		<key>type</key>
 		<integer>2</integer>
+		<key>image</key>
+		<string>Piqup</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -85,6 +95,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Jun 2013</string>
 		<key>type</key>
 		<integer>2</integer>
+		<key>image</key>
+		<string>WWDC13</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -99,6 +111,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Oct 2012</string>
 		<key>type</key>
 		<integer>1</integer>
+		<key>image</key>
+		<string>TUM</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -113,6 +127,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Sep 2012</string>
 		<key>type</key>
 		<integer>0</integer>
+		<key>image</key>
+		<string>Munich</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -127,6 +143,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Sep 2012</string>
 		<key>type</key>
 		<integer>0</integer>
+		<key>image</key>
+		<string>Miami</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -141,6 +159,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Feb 2012</string>
 		<key>type</key>
 		<integer>2</integer>
+		<key>image</key>
+		<string>Stripe</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -155,6 +175,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Mar 2008</string>
 		<key>type</key>
 		<integer>2</integer>
+		<key>image</key>
+		<string>iOSDev</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -169,6 +191,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Sep 2007</string>
 		<key>type</key>
 		<integer>1</integer>
+		<key>image</key>
+		<string>TFO</string>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -183,6 +207,8 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<string>Dec 1993</string>
 		<key>type</key>
 		<integer>0</integer>
+		<key>image</key>
+		<string>Southtyrol</string>
 	</dict>
 </array>
 </plist>

@@ -37,6 +37,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attributes
         
         title = timelineEntry.title
+        imageView.image = timelineEntry.image
         descriptionLabel.text = timelineEntry.description
         shortDescriptionLabel.text = timelineEntry.shortDescription
     }
