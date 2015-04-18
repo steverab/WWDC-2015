@@ -117,8 +117,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-dG-v4b">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-RW-izS">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT3-RW-izS">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="602"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Singapore" translatesAutoresizingMaskIntoConstraints="NO" id="Rz5-NY-m5k">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
@@ -133,14 +133,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-ID-F8g">
-                                                <rect key="frame" x="8" y="190" width="359" height="1"/>
+                                                <rect key="frame" x="15" y="190" width="360" height="1"/>
                                                 <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="eGO-oo-7Qc"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shJ-Kj-HPw">
-                                                <rect key="frame" x="15" y="208" width="345" height="390"/>
+                                                <rect key="frame" x="15" y="202" width="345" height="390"/>
                                                 <mutableString key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </mutableString>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                 <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
@@ -149,17 +149,17 @@
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Rww-ID-F8g" secondAttribute="trailing" constant="8" id="5hn-Zr-747"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rww-ID-F8g" secondAttribute="trailing" id="5hn-Zr-747"/>
                                             <constraint firstItem="Rz5-NY-m5k" firstAttribute="leading" secondItem="vT3-RW-izS" secondAttribute="leading" id="64K-Nr-dEM"/>
                                             <constraint firstAttribute="trailing" secondItem="kov-uy-Nn8" secondAttribute="trailing" constant="15" id="DGO-hk-Yw2"/>
-                                            <constraint firstAttribute="bottom" secondItem="shJ-Kj-HPw" secondAttribute="bottom" constant="8" id="Dgg-ps-l0w"/>
+                                            <constraint firstAttribute="bottom" secondItem="shJ-Kj-HPw" secondAttribute="bottom" constant="10" id="Dgg-ps-l0w"/>
                                             <constraint firstAttribute="trailing" secondItem="shJ-Kj-HPw" secondAttribute="trailing" constant="15" id="J0L-P6-hNl"/>
                                             <constraint firstAttribute="trailing" secondItem="Rz5-NY-m5k" secondAttribute="trailing" id="SGO-pl-NQd"/>
                                             <constraint firstItem="Rww-ID-F8g" firstAttribute="top" secondItem="kov-uy-Nn8" secondAttribute="bottom" constant="8" id="XJX-v0-FME"/>
-                                            <constraint firstItem="shJ-Kj-HPw" firstAttribute="top" secondItem="Rww-ID-F8g" secondAttribute="bottom" constant="17" id="dFs-Z8-MfO"/>
+                                            <constraint firstItem="shJ-Kj-HPw" firstAttribute="top" secondItem="Rww-ID-F8g" secondAttribute="bottom" constant="11" id="dFs-Z8-MfO"/>
                                             <constraint firstItem="kov-uy-Nn8" firstAttribute="top" secondItem="Rz5-NY-m5k" secondAttribute="bottom" constant="8" id="dMF-ci-yJG"/>
                                             <constraint firstItem="Rz5-NY-m5k" firstAttribute="top" secondItem="vT3-RW-izS" secondAttribute="top" id="kET-VI-uWS"/>
-                                            <constraint firstItem="Rww-ID-F8g" firstAttribute="leading" secondItem="vT3-RW-izS" secondAttribute="leading" constant="8" id="n1p-No-cUe"/>
+                                            <constraint firstItem="Rww-ID-F8g" firstAttribute="leading" secondItem="vT3-RW-izS" secondAttribute="leading" constant="15" id="n1p-No-cUe"/>
                                             <constraint firstItem="kov-uy-Nn8" firstAttribute="leading" secondItem="vT3-RW-izS" secondAttribute="leading" constant="15" id="oA8-7d-HaI"/>
                                             <constraint firstItem="shJ-Kj-HPw" firstAttribute="leading" secondItem="vT3-RW-izS" secondAttribute="leading" constant="15" id="s3U-ky-v3N"/>
                                         </constraints>
@@ -188,6 +188,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="shJ-Kj-HPw" id="Wsv-uy-FNa"/>
                         <outlet property="imageView" destination="Rz5-NY-m5k" id="8ro-Fq-n3A"/>
+                        <outlet property="lineHeightConstraint" destination="eGO-oo-7Qc" id="kQI-5E-xr9"/>
                         <outlet property="scrollView" destination="hVa-dG-v4b" id="nYx-b7-OWV"/>
                         <outlet property="shortDescriptionLabel" destination="kov-uy-Nn8" id="cfP-hS-1lg"/>
                     </connections>

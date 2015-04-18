@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
+    @IBOutlet weak var lineHeightConstraint: NSLayoutConstraint!
     
     var timelineEntry: TimelineEntry!
     
@@ -35,6 +36,8 @@ class DetailViewController: UIViewController {
             NSFontAttributeName: UIFont(name: "AvenirNext-Medium", size: 18)!
         ]
         self.navigationController?.navigationBar.titleTextAttributes = attributes
+        
+        lineHeightConstraint.constant = 1/UIScreen.mainScreen().scale
         
         title = timelineEntry.title
         imageView.image = timelineEntry.image
