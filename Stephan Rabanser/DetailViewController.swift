@@ -24,6 +24,14 @@ class DetailViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.colorForType(timelineEntry.type)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+        
+        var attributes = [
+            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSFontAttributeName: UIFont(name: "AvenirNext-Medium", size: 18)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
+        
+        title = timelineEntry.title
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
