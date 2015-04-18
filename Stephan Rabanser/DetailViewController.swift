@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var shortDescriptionLabel: UILabel!
     
     var timelineEntry: TimelineEntry!
     
@@ -37,6 +38,7 @@ class DetailViewController: UIViewController {
         
         title = timelineEntry.title
         descriptionLabel.text = timelineEntry.description
+        shortDescriptionLabel.text = timelineEntry.shortDescription
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
