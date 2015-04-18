@@ -10,6 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var timelineEntry: TimelineEntry!
     
     // MARK: - View controller lifecycle
@@ -32,6 +36,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = attributes
         
         title = timelineEntry.title
+        descriptionLabel.text = timelineEntry.shortDescription
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
