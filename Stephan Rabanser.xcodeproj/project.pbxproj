@@ -17,6 +17,7 @@
 		AA9C083C1AE0EB5100617B43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */; };
 		AAA74CCD1AE19D8B0048B117 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA74CCC1AE19D8B0048B117 /* DetailViewController.swift */; };
 		AAE81E901AE448B60031AD4A /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE81E8F1AE448B60031AD4A /* AvatarView.swift */; };
+		AAE81E951AE44FA60031AD4A /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE81E941AE44FA60031AD4A /* FXBlurView.m */; };
 		AAF2954C1AE1266A00D05A9E /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2954B1AE1266A00D05A9E /* OutlineView.swift */; };
 		AAF2954E1AE1268600D05A9E /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,9 @@
 		AA9C083B1AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		AAA74CCC1AE19D8B0048B117 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AAE81E8F1AE448B60031AD4A /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		AAE81E921AE44FA50031AD4A /* Stephan Rabanser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stephan Rabanser-Bridging-Header.h"; sourceTree = "<group>"; };
+		AAE81E931AE44FA60031AD4A /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		AAE81E941AE44FA60031AD4A /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		AAF2954B1AE1266A00D05A9E /* OutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutlineView.swift; sourceTree = "<group>"; };
 		AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,7 @@
 				AA86268A1AE109D5004D995D /* Views */,
 				AA8626871AE0F8DA004D995D /* Models */,
 				AAF2954F1AE1268B00D05A9E /* Extensions */,
+				AAE81E911AE44F8E0031AD4A /* Helpers */,
 				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
 				AA9C082F1AE0EB5100617B43 /* Supporting Files */,
 			);
@@ -119,10 +124,20 @@
 		AA9C082F1AE0EB5100617B43 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AAE81E921AE44FA50031AD4A /* Stephan Rabanser-Bridging-Header.h */,
 				AA8626811AE0F78E004D995D /* Entries.plist */,
 				AA9C08301AE0EB5100617B43 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AAE81E911AE44F8E0031AD4A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AAE81E931AE44FA60031AD4A /* FXBlurView.h */,
+				AAE81E941AE44FA60031AD4A /* FXBlurView.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		AAF2954F1AE1268B00D05A9E /* Extensions */ = {
@@ -212,6 +227,7 @@
 				AAE81E901AE448B60031AD4A /* AvatarView.swift in Sources */,
 				AAF2954E1AE1268600D05A9E /* ColorExtensions.swift in Sources */,
 				AAA74CCD1AE19D8B0048B117 /* DetailViewController.swift in Sources */,
+				AAE81E951AE44FA60031AD4A /* FXBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +338,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Stephan Rabanser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stephan Rabanser/Stephan Rabanser-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -332,9 +351,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Stephan Rabanser/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stephan Rabanser/Stephan Rabanser-Bridging-Header.h";
 			};
 			name = Release;
 		};
