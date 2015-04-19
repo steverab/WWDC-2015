@@ -8,7 +8,7 @@
         <!--Timeline View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="TimelineViewController" customModule="Stephan_Rabanser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="TimelineViewController" customModule="Stephan_Rabanser" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-Jz-Z2N">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-Jz-Z2N">
+                                <rect key="frame" x="0.0" y="20" width="375" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimelineEntryCell" rowHeight="105" id="jky-To-dWq" customClass="TimelineEntryCell" customModule="Stephan_Rabanser" customModuleProvider="target">
@@ -34,10 +34,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-CW-4LH" customClass="OutlineView" customModule="Stephan_Rabanser" customModuleProvider="target">
-                                                    <rect key="frame" x="40" y="0.0" width="25" height="104"/>
+                                                    <rect key="frame" x="40" y="0.0" width="26" height="104"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="25" id="byp-SQ-gOb"/>
+                                                        <constraint firstAttribute="width" constant="26" id="byp-SQ-gOb"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-VO-zcs">
@@ -59,13 +59,13 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Nk5-eg-N4x" firstAttribute="bottom" secondItem="SMt-9d-0CI" secondAttribute="bottomMargin" id="4Hm-Wj-OiC"/>
-                                                <constraint firstItem="Nk5-eg-N4x" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="8" id="60a-Ta-PyC"/>
+                                                <constraint firstItem="Nk5-eg-N4x" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="7" id="60a-Ta-PyC"/>
                                                 <constraint firstItem="Nk5-eg-N4x" firstAttribute="trailing" secondItem="SMt-9d-0CI" secondAttribute="trailingMargin" id="9xa-Rg-enj"/>
                                                 <constraint firstItem="q8h-VO-zcs" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" constant="-6" id="GMa-OW-DXQ"/>
                                                 <constraint firstItem="dXF-CW-4LH" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" constant="-8" id="H9U-qX-lvo"/>
                                                 <constraint firstItem="q8h-VO-zcs" firstAttribute="leading" secondItem="SMt-9d-0CI" secondAttribute="leadingMargin" constant="-2" id="JFu-5z-XcN"/>
                                                 <constraint firstItem="Nk5-eg-N4x" firstAttribute="top" secondItem="bYV-VA-quo" secondAttribute="bottom" constant="8" id="RIc-09-Jc2"/>
-                                                <constraint firstItem="bYV-VA-quo" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="8" id="ccu-MP-NDf"/>
+                                                <constraint firstItem="bYV-VA-quo" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="7" id="ccu-MP-NDf"/>
                                                 <constraint firstItem="bYV-VA-quo" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" id="cgz-as-bdc"/>
                                                 <constraint firstItem="dXF-CW-4LH" firstAttribute="leading" secondItem="q8h-VO-zcs" secondAttribute="trailing" id="m48-ZW-b6q"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="dXF-CW-4LH" secondAttribute="bottom" constant="-8" id="oyn-eZ-Jfz"/>
@@ -82,12 +82,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lq8-w0-jp7" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stephan Rabanser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-YA-Vv2">
+                                        <rect key="frame" x="116" y="125" width="142" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ya5-YA-Vv2" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="125" id="OXA-Yi-i8v"/>
+                                    <constraint firstAttribute="height" constant="125" id="XV8-pV-xZL"/>
+                                    <constraint firstAttribute="centerX" secondItem="ya5-YA-Vv2" secondAttribute="centerX" id="yXe-FS-aOf"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jDJ-Jz-Z2N" secondAttribute="bottom" id="0Wn-xB-CKF"/>
-                            <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="bQH-OU-UsV"/>
+                            <constraint firstItem="lq8-w0-jp7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="8l4-ku-grz"/>
+                            <constraint firstItem="lq8-w0-jp7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="T02-vA-TaW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lq8-w0-jp7" secondAttribute="trailing" constant="-16" id="eoQ-xe-u2l"/>
                             <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="qSO-dX-n8u"/>
+                            <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vuM-Cm-IdB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jDJ-Jz-Z2N" secondAttribute="trailing" constant="-16" id="yoD-lU-o4j"/>
                         </constraints>
                     </view>
@@ -95,12 +115,14 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="600"/>
                     <connections>
+                        <outlet property="header" destination="lq8-w0-jp7" id="VBh-4B-Mls"/>
+                        <outlet property="headerLabel" destination="ya5-YA-Vv2" id="Wvf-4r-KNN"/>
                         <outlet property="timelineTableView" destination="jDJ-Jz-Z2N" id="MNI-35-6MX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="995" y="351"/>
+            <point key="canvasLocation" x="994.5" y="351"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Tud-gW-dyJ">
@@ -141,7 +163,7 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shJ-Kj-HPw">
                                                 <rect key="frame" x="15" y="202" width="345" height="390"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </mutableString>
+                                                <string key="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </string>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                 <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -215,6 +237,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FAN-qz-0uy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="192" y="351"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rAB-Ij-k2r">
+            <objects>
+                <viewController id="GnV-gX-pIO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RUe-OP-GEL"/>
+                        <viewControllerLayoutGuide type="bottom" id="rXs-JI-pUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2rB-eT-NzO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcH-bB-pyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="S4H-Fh-CKR">
+            <objects>
+                <viewController id="KI2-w1-nJM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XMY-cK-Wv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="LpX-GS-CcW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wxo-Qx-Iiy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRw-d8-k07" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
