@@ -51,12 +51,12 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func setupHeader() {
         headerImageView = UIImageView(frame: header.frame)
-        headerImageView?.image = UIImage(named: "Singapore")
+        headerImageView?.image = UIImage(named: "Miami")
         headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         header.insertSubview(headerImageView, belowSubview: headerLabel)
         
         headerBlurImageView = UIImageView(frame: header.frame)
-        headerBlurImageView?.image = UIImage(named: "Singapore")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+        headerBlurImageView?.image = UIImage(named: "Miami")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         headerBlurImageView?.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
@@ -132,7 +132,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.dateLabel.text = currentEntry.date
         cell.type = currentEntry.type
         
-        if indexPath.row == entries.count - 1 {
+        if indexPath.row == 0 {
+            cell.outlineView.type = .First
+        } else if indexPath.row == entries.count - 1 {
             cell.outlineView.type = .Last
         } else {
             cell.outlineView.type = .Default

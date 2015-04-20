@@ -12,6 +12,7 @@ import UIKit
 
 enum OutlineViewType {
     case Default
+    case First
     case Last
 }
 
@@ -64,15 +65,17 @@ class OutlineView: UIView {
         
         CGContextAddArc(ctx,x,y,circleRad,startAngle,endAngle,1)
         
-        CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, 0.0)
-        CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth);
+        if type != .First {
+            CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, 0.0)
+            CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth)
+        }
         
         CGContextMoveToPoint(ctx, 0.0, topDist + circleRad/2 + lineWidth)
-        CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - 2 * circleRad - lineWidth, topDist + circleRad/2 + lineWidth);
+        CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - 2 * circleRad - lineWidth, topDist + circleRad/2 + lineWidth)
         
-        if type == .Default {
+        if type != .Last {
             CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, CGRectGetMaxY(rect))
-            CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth + 2 * circleRad);
+            CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth + 2 * circleRad)
         }
         
         CGContextStrokePath(ctx)
