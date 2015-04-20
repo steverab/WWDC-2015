@@ -25,6 +25,7 @@ class AvatarView: UIView {
     // MARK: - Touch handling
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        println("asd")
         executeInScaleAnimation()
     }
     

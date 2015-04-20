@@ -14,12 +14,13 @@ enum OutlineViewType {
     case Default
     case First
     case Last
+    case NoCircle
 }
 
 @IBDesignable
 class OutlineView: UIView {
     
-    var type: OutlineViewType = .Default {
+    @IBInspectable var type: OutlineViewType = .Default {
         didSet {
             setNeedsDisplay()
         }
@@ -45,39 +46,42 @@ class OutlineView: UIView {
         CGContextSetLineWidth(ctx, lineWidth)
         CGContextSetStrokeColorWithColor(ctx, UIColor.outlineColor().CGColor)
         
-        let x: CGFloat = CGRectGetWidth(rect) - circleRad - lineWidth
-        let y: CGFloat = topDist + circleRad/2 + lineWidth
-        let startAngle: CGFloat = 0.0
-        let endAngle: CGFloat = CGFloat(M_PI) * 2
-        
-        if contentType == TimelineEntryType.Personal {
-            CGContextSetFillColorWithColor(ctx, UIColor.personalColor().CGColor)
-        } else if contentType == TimelineEntryType.Education {
-            CGContextSetFillColorWithColor(ctx, UIColor.educationColor().CGColor)
-        } else if contentType == TimelineEntryType.Development {
-            CGContextSetFillColorWithColor(ctx, UIColor.developmentColor().CGColor)
+        if type == .NoCircle {
+            CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, 0)
+            CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, CGRectGetMaxY(rect))
         } else {
-            CGContextSetFillColorWithColor(ctx, UIColor.outlineColor().CGColor)
-        }
-        
-        CGContextAddArc(ctx,x,y,innerCircleRad,startAngle,endAngle,1)
-        CGContextFillPath(ctx)
-        
-        CGContextAddArc(ctx,x,y,circleRad,startAngle,endAngle,1)
-        
-        //if type != .First {
+            let x: CGFloat = CGRectGetWidth(rect) - circleRad - lineWidth
+            let y: CGFloat = topDist + circleRad/2 + lineWidth
+            let startAngle: CGFloat = 0.0
+            let endAngle: CGFloat = CGFloat(M_PI) * 2
+            
+            if contentType == TimelineEntryType.Personal {
+                CGContextSetFillColorWithColor(ctx, UIColor.personalColor().CGColor)
+            } else if contentType == TimelineEntryType.Education {
+                CGContextSetFillColorWithColor(ctx, UIColor.educationColor().CGColor)
+            } else if contentType == TimelineEntryType.Development {
+                CGContextSetFillColorWithColor(ctx, UIColor.developmentColor().CGColor)
+            } else {
+                CGContextSetFillColorWithColor(ctx, UIColor.outlineColor().CGColor)
+            }
+            
+            CGContextAddArc(ctx,x,y,innerCircleRad,startAngle,endAngle,1)
+            CGContextFillPath(ctx)
+            
+            CGContextAddArc(ctx,x,y,circleRad,startAngle,endAngle,1)
+            
             CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, 0.0)
             CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth)
-        //}
-        
-        CGContextMoveToPoint(ctx, 0.0, topDist + circleRad/2 + lineWidth)
-        CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - 2 * circleRad - lineWidth, topDist + circleRad/2 + lineWidth)
-        
-        if type != .Last {
-            CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, CGRectGetMaxY(rect))
-            CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth + 2 * circleRad)
+            
+            CGContextMoveToPoint(ctx, 0.0, topDist + circleRad/2 + lineWidth)
+            CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - 2 * circleRad - lineWidth, topDist + circleRad/2 + lineWidth)
+            
+            if type != .Last {
+                CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, CGRectGetMaxY(rect))
+                CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth + 2 * circleRad)
+            }
         }
-        
+
         CGContextStrokePath(ctx)
     }
     

@@ -13,6 +13,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var timelineTableView: UITableView!
     @IBOutlet var header:UIView!
     @IBOutlet var headerLabel:UILabel!
+    @IBOutlet var headerDetailLabel:UILabel!
     @IBOutlet weak var avatarView: AvatarView!
     
     var headerImageView:UIImageView!
@@ -22,7 +23,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     let offsetHeaderStop:CGFloat = 60.0
     let offsetLabelHeader:CGFloat = 65.0
     let offsetAvatarHeader:CGFloat = 0.0
-    let blurFadeDuration:CGFloat = 35.0
+    let blurFadeDuration:CGFloat = 88.0
     
     var entries = [TimelineEntry]()
     
@@ -110,10 +111,26 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             
             let labelTransform = CATransform3DMakeTranslation(0, max(-blurFadeDuration, offsetLabelHeader - offset), 0)
             headerLabel.layer.transform = labelTransform
+            headerDetailLabel.layer.transform = labelTransform
             
             avatarTransform = CATransform3DMakeTranslation(0, max(-blurFadeDuration - 30, offsetAvatarHeader - offset), 0)
             
             headerBlurImageView?.alpha = min (1.0, (offset - offsetLabelHeader)/blurFadeDuration)
+            
+            let avatarScaleFactor = (min(offsetHeaderStop, offset)) / avatarView.bounds.height / 1.25 // Slow down the animation
+            let avatarSizeVariation:CGFloat = ((avatarView.bounds.height * (1.0 + avatarScaleFactor)) - avatarView.bounds.height) / 2.0
+            avatarTransform = CATransform3DTranslate(avatarTransform, 0, avatarSizeVariation, 0)
+            avatarTransform = CATransform3DScale(avatarTransform, 1.0 - avatarScaleFactor, 1.0 - avatarScaleFactor, 0)
+            
+            if offset <= offsetHeaderStop {
+                if avatarView.layer.zPosition < header.layer.zPosition{
+                    header.layer.zPosition = 0
+                }
+            } else {
+                if avatarView.layer.zPosition >= header.layer.zPosition{
+                    header.layer.zPosition = 2
+                }
+            }
             
             /*
             if offset >= offsetLabelHeader {
@@ -134,26 +151,42 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entries.count
+        return entries.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
-        configureCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
-        return cell
+        if indexPath.row == 0 {
+            var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileCell
+            configureProfileCell(cell, forIndexPath: indexPath)
+            return cell
+        } else {
+            var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
+            configureEntryCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
+            return cell
+        }
     }
     
-    func configureCell(cell: TimelineEntryCell, forIndexPath indexPath: NSIndexPath, isForOffscreenUse offscreenUse: Bool) {
-        let currentEntry = entries[indexPath.row]
+    func configureProfileCell(cell: ProfileCell, forIndexPath indexPath: NSIndexPath) {
+        cell.nameLabel.text = "Stephan Rabanser"
+        cell.descriptionLabel.text = "CS Student | Developer | America lover"
+        cell.outlineView.type = .NoCircle
+        cell.outlineView.setNeedsDisplay()
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+    }
+    
+    func configureEntryCell(cell: TimelineEntryCell, forIndexPath indexPath: NSIndexPath, isForOffscreenUse offscreenUse: Bool) {
+        let currentEntry = entries[indexPath.row-1]
         
         cell.titleLabel.text = currentEntry.title
         cell.shortDescriptionLabel.text = currentEntry.shortDescription
         cell.dateLabel.text = currentEntry.date
         cell.type = currentEntry.type
         
-        if indexPath.row == 0 {
+        if indexPath.row == 1 {
             cell.outlineView.type = .First
-        } else if indexPath.row == entries.count - 1 {
+        } else if indexPath.row == entries.count {
             cell.outlineView.type = .Last
         } else {
             cell.outlineView.type = .Default
@@ -168,7 +201,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table view delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        if indexPath.row == 0 {
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     // MARK: - Navigation
