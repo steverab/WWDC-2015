@@ -13,6 +13,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var timelineTableView: UITableView!
     @IBOutlet var header:UIView!
     @IBOutlet var headerLabel:UILabel!
+    @IBOutlet weak var avatarView: AvatarView!
     
     var headerImageView:UIImageView!
     var headerBlurImageView:UIImageView!
@@ -20,6 +21,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let offsetHeaderStop:CGFloat = 60.0
     let offsetLabelHeader:CGFloat = 65.0
+    let offsetAvatarHeader:CGFloat = 0.0
     let blurFadeDuration:CGFloat = 35.0
     
     var entries = [TimelineEntry]()
@@ -41,6 +43,10 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+        
+        if let index = timelineTableView.indexPathForSelectedRow() {
+            timelineTableView.deselectRowAtIndexPath(index, animated: true)
+        }
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -73,7 +79,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         timelineTableView.rowHeight = UITableViewAutomaticDimension
         timelineTableView.estimatedRowHeight = 44
         
-        timelineTableView.contentInset = UIEdgeInsetsMake(105, 0, 0, 0)
+        timelineTableView.contentInset = UIEdgeInsetsMake(138, 0, 0, 0)
     }
     
     func loadEntries() {
@@ -96,16 +102,29 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             let headerSizevariation = ((header.bounds.height * (1.0 + headerScaleFactor)) - header.bounds.height)/2.0
             headerTransform = CATransform3DTranslate(headerTransform, 0, headerSizevariation, 0)
             headerTransform = CATransform3DScale(headerTransform, 1.0 + headerScaleFactor, 1.0 + headerScaleFactor, 0)
+            avatarTransform = CATransform3DMakeTranslation(0, -offset, 0)
+            
+            headerBlurImageView?.alpha = -offset/150
         } else {
             headerTransform = CATransform3DTranslate(headerTransform, 0, max(-offsetHeaderStop, -offset), 0)
             
             let labelTransform = CATransform3DMakeTranslation(0, max(-blurFadeDuration, offsetLabelHeader - offset), 0)
             headerLabel.layer.transform = labelTransform
             
+            avatarTransform = CATransform3DMakeTranslation(0, max(-blurFadeDuration - 30, offsetAvatarHeader - offset), 0)
+            
             headerBlurImageView?.alpha = min (1.0, (offset - offsetLabelHeader)/blurFadeDuration)
+            
+            /*
+            if offset >= offsetLabelHeader {
+                let avScaleFactor:CGFloat = -(offset-offsetLabelHeader)*1.75 / avatarView.bounds.height
+                avatarTransform = CATransform3DScale(avatarTransform, 1.0 + avScaleFactor, 1.0 + avScaleFactor, 0)
+            }
+            */
         }
         
         header.layer.transform = headerTransform
+        avatarView.layer.transform = avatarTransform
     }
     
     // MARK: - Table view data source
@@ -149,7 +168,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table view delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        //tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // MARK: - Navigation

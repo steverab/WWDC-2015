@@ -28,20 +28,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYV-VA-quo">
-                                                    <rect key="frame" x="73" y="8" width="294" height="24"/>
+                                                    <rect key="frame" x="68" y="8" width="299" height="24"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-CW-4LH" customClass="OutlineView" customModule="Stephan_Rabanser" customModuleProvider="target">
-                                                    <rect key="frame" x="40" y="0.0" width="26" height="104"/>
+                                                    <rect key="frame" x="35" y="0.0" width="26" height="104"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="26" id="byp-SQ-gOb"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8h-VO-zcs">
-                                                    <rect key="frame" x="6" y="2" width="34" height="35"/>
+                                                    <rect key="frame" x="1" y="2" width="34" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="34" id="JSw-HK-ggt"/>
                                                         <constraint firstAttribute="height" constant="35" id="qAE-Jw-DOE"/>
@@ -51,7 +51,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Short description label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nk5-eg-N4x">
-                                                    <rect key="frame" x="73" y="40" width="294" height="56"/>
+                                                    <rect key="frame" x="68" y="40" width="299" height="56"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                                 <constraint firstItem="Nk5-eg-N4x" firstAttribute="trailing" secondItem="SMt-9d-0CI" secondAttribute="trailingMargin" id="9xa-Rg-enj"/>
                                                 <constraint firstItem="q8h-VO-zcs" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" constant="-6" id="GMa-OW-DXQ"/>
                                                 <constraint firstItem="dXF-CW-4LH" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" constant="-8" id="H9U-qX-lvo"/>
-                                                <constraint firstItem="q8h-VO-zcs" firstAttribute="leading" secondItem="SMt-9d-0CI" secondAttribute="leadingMargin" constant="-2" id="JFu-5z-XcN"/>
+                                                <constraint firstItem="q8h-VO-zcs" firstAttribute="leading" secondItem="SMt-9d-0CI" secondAttribute="leadingMargin" constant="-7" id="JFu-5z-XcN"/>
                                                 <constraint firstItem="Nk5-eg-N4x" firstAttribute="top" secondItem="bYV-VA-quo" secondAttribute="bottom" constant="8" id="RIc-09-Jc2"/>
                                                 <constraint firstItem="bYV-VA-quo" firstAttribute="leading" secondItem="dXF-CW-4LH" secondAttribute="trailing" constant="7" id="ccu-MP-NDf"/>
                                                 <constraint firstItem="bYV-VA-quo" firstAttribute="top" secondItem="SMt-9d-0CI" secondAttribute="topMargin" id="cgz-as-bdc"/>
@@ -92,12 +92,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ya5-YA-Vv2" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="125" id="OXA-Yi-i8v"/>
                                     <constraint firstAttribute="height" constant="125" id="XV8-pV-xZL"/>
                                     <constraint firstAttribute="centerX" secondItem="ya5-YA-Vv2" secondAttribute="centerX" id="yXe-FS-aOf"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-LP-BsY" customClass="AvatarView" customModule="Stephan_Rabanser" customModuleProvider="target">
+                                <rect key="frame" x="22" y="83" width="76" height="76"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Avatar"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
@@ -115,6 +122,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="600"/>
                     <connections>
+                        <outlet property="avatarView" destination="W8d-LP-BsY" id="25a-HR-GLN"/>
                         <outlet property="header" destination="lq8-w0-jp7" id="VBh-4B-Mls"/>
                         <outlet property="headerLabel" destination="ya5-YA-Vv2" id="Wvf-4r-KNN"/>
                         <outlet property="timelineTableView" destination="jDJ-Jz-Z2N" id="MNI-35-6MX"/>
@@ -274,6 +282,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Avatar" width="75" height="75"/>
         <image name="Singapore" width="375" height="150"/>
     </resources>
 </document>

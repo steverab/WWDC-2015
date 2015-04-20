@@ -65,10 +65,10 @@ class OutlineView: UIView {
         
         CGContextAddArc(ctx,x,y,circleRad,startAngle,endAngle,1)
         
-        if type != .First {
+        //if type != .First {
             CGContextMoveToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, 0.0)
             CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth)
-        }
+        //}
         
         CGContextMoveToPoint(ctx, 0.0, topDist + circleRad/2 + lineWidth)
         CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - 2 * circleRad - lineWidth, topDist + circleRad/2 + lineWidth)

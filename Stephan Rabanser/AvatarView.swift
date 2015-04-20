@@ -58,7 +58,7 @@ class AvatarView: UIView {
         
         let circlePath = UIBezierPath(roundedRect: CGRectMake(lineWidth, lineWidth, rect.size.width - 2 * lineWidth, rect.size.height - 2 * lineWidth), cornerRadius: rect.width/2.0)
         circlePath.lineWidth = lineWidth
-        UIColor.whiteColor().setStroke()
+        UIColor.outlineColor().setStroke()
         circlePath.stroke()
         circlePath.addClip()
         image?.drawInRect(CGRectMake(lineWidth, lineWidth, rect.size.width - 2 * lineWidth, rect.size.height - 2 * lineWidth))
