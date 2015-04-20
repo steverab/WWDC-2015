@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Stephan Rabanser. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 enum OutlineViewType {
@@ -20,7 +18,7 @@ enum OutlineViewType {
 @IBDesignable
 class OutlineView: UIView {
     
-    @IBInspectable var type: OutlineViewType = .Default {
+    var type: OutlineViewType = .Default {
         didSet {
             setNeedsDisplay()
         }
@@ -81,7 +79,7 @@ class OutlineView: UIView {
                 CGContextAddLineToPoint(ctx, CGRectGetWidth(rect) - circleRad - lineWidth, topDist - 2 * lineWidth + 2 * circleRad)
             }
         }
-
+        
         CGContextStrokePath(ctx)
     }
     

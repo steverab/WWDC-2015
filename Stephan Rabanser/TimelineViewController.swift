@@ -50,11 +50,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    // MARK: - Status bar appearance
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
-    // MARK: - Functions
+    // MARK: - Custom functions
     
     func setupHeader() {
         headerImageView = UIImageView(frame: header.frame)
@@ -91,7 +93,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    // MARL: - Scroll view delegate
+    // MARK: - Scroll view delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y + timelineTableView.contentInset.top
@@ -105,7 +107,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             headerTransform = CATransform3DScale(headerTransform, 1.0 + headerScaleFactor, 1.0 + headerScaleFactor, 0)
             avatarTransform = CATransform3DMakeTranslation(0, -offset, 0)
             
-            headerBlurImageView?.alpha = -offset/150
+            headerBlurImageView.alpha = -offset/150
         } else {
             headerTransform = CATransform3DTranslate(headerTransform, 0, max(-offsetHeaderStop, -offset), 0)
             
@@ -115,7 +117,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             
             avatarTransform = CATransform3DMakeTranslation(0, max(-blurFadeDuration - 30, offsetAvatarHeader - offset), 0)
             
-            headerBlurImageView?.alpha = min (1.0, (offset - offsetLabelHeader)/blurFadeDuration)
+            headerBlurImageView.alpha = min (1.0, (offset - offsetLabelHeader)/blurFadeDuration)
             
             let avatarScaleFactor = (min(offsetHeaderStop, offset)) / avatarView.bounds.height / 1.25 // Slow down the animation
             let avatarSizeVariation:CGFloat = ((avatarView.bounds.height * (1.0 + avatarScaleFactor)) - avatarView.bounds.height) / 2.0
@@ -131,13 +133,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                     header.layer.zPosition = 2
                 }
             }
-            
-            /*
-            if offset >= offsetLabelHeader {
-                let avScaleFactor:CGFloat = -(offset-offsetLabelHeader)*1.75 / avatarView.bounds.height
-                avatarTransform = CATransform3DScale(avatarTransform, 1.0 + avScaleFactor, 1.0 + avScaleFactor, 0)
-            }
-            */
         }
         
         header.layer.transform = headerTransform
@@ -170,7 +165,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.nameLabel.text = "Stephan Rabanser"
         cell.descriptionLabel.text = "CS Student | Developer | America lover"
         cell.outlineView.type = .NoCircle
-        cell.outlineView.setNeedsDisplay()
         
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
@@ -192,8 +186,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.outlineView.type = .Default
         }
         
-        cell.outlineView.setNeedsDisplay()
-        
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
     }
@@ -210,13 +202,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let detailViewController = segue.destinationViewController as! DetailViewController
-        
         let indexPath = timelineTableView.indexPathForSelectedRow()?.row
         
         if let indexPath = indexPath {
-            detailViewController.timelineEntry = entries[indexPath]
+            detailViewController.timelineEntry = entries[indexPath - 1]
         }
-        
     }
     
     // MARK: - Memory management

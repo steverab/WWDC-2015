@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 Stephan Rabanser. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 
 @IBDesignable
@@ -64,4 +62,5 @@ class AvatarView: UIView {
         circlePath.addClip()
         image?.drawInRect(CGRectMake(lineWidth, lineWidth, rect.size.width - 2 * lineWidth, rect.size.height - 2 * lineWidth))
     }
+    
 }

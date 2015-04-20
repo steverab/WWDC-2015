@@ -41,15 +41,17 @@ class DetailViewController: UIViewController {
         
         title = timelineEntry.title
         imageView.image = timelineEntry.image
-        descriptionLabel.text = timelineEntry.description
+        descriptionLabel.text = timelineEntry.longDescription
         shortDescriptionLabel.text = timelineEntry.shortDescription
     }
+    
+    // MARK: - Status bar appearance
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
-    // MARK: - Functions
+    // MARK: - Custom functions
     
     // MARK: - Navigation
     

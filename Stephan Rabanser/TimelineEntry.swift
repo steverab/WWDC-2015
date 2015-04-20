@@ -14,11 +14,11 @@ enum TimelineEntryType: Int {
     case Development
 }
 
-class TimelineEntry {
+class TimelineEntry: NSObject, Printable {
     
     var title: String!
     var shortDescription: String!
-    var description: String!
+    var longDescription: String!
     var date: String!
     var type: TimelineEntryType!
     var imageString: String!
@@ -29,18 +29,24 @@ class TimelineEntry {
     init(title: String, shortDescription: String, description: String, date: String, type: TimelineEntryType, imageString: String) {
         self.title = title
         self.shortDescription = shortDescription
-        self.description = description
+        self.longDescription = description
         self.date = date
         self.type = type
         self.imageString = imageString
         self.image = UIImage(named: imageString)
     }
     
+    // MARK: - Printable protocol
+    
+    override var description: String {
+        return "Title: \(title)\nShort description: \(shortDescription)\nDescription: \(description)\nDate: \(date)\nImage named: \(date)"
+    }
+    
     // MARK: - Functions
     
     func printDescription() -> Void {
         println("==================")
-        println("Title: \(title)\nShort description: \(shortDescription)\nDescription: \(description)\nDate: \(date)\nImage named: \(date)")
+        println(description)
         println("==================")
     }
     
