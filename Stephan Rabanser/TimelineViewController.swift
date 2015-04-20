@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TimelineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var timelineTableView: UITableView!
     @IBOutlet var header:UIView!
@@ -27,6 +28,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var entries = [TimelineEntry]()
     
+    var showProfile = true
+    
     // MARK: - View controller lifecycle
     
     override func viewDidLoad() {
@@ -34,6 +37,21 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         navigationController?.interactivePopGestureRecognizer.delegate = nil
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        /*
+        avatarView.action = { [unowned self] in
+            self.showProfile = !self.showProfile
+            if self.showProfile == true {
+                self.timelineTableView.beginUpdates()
+                self.timelineTableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Automatic)
+                self.timelineTableView.endUpdates()
+            } else {
+                self.timelineTableView.beginUpdates()
+                self.timelineTableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Automatic)
+                self.timelineTableView.endUpdates()
+            }
+        }
+        */
         
         setupHeader()
         setupTableView()
@@ -93,6 +111,41 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
+    func setupActionSheet() {
+        let alertController = UIAlertController(title: nil, message: "Get in touch with me!", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
+        alertController.addAction(cancelAction)
+        let emailAction = UIAlertAction(title: "E-Mail", style: .Default) { (action) in
+            let mailComposerVC = MFMailComposeViewController()
+            mailComposerVC.mailComposeDelegate = self
+            
+            mailComposerVC.setToRecipients(["steverab@me.com"])
+            mailComposerVC.setSubject("Hey there!")
+            mailComposerVC.setMessageBody("Hi Stephan,\n\n", isHTML: false)
+            
+            if MFMailComposeViewController.canSendMail() {
+                self.presentViewController(mailComposerVC, animated: true, completion: nil)
+            } else {
+                let sendMailErrorAlert = UIAlertView(title: "Error", message: "E-Mail sending failed. Please check your E-Mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+                sendMailErrorAlert.show()
+            }
+        }
+        alertController.addAction(emailAction)
+        let twitterAction = UIAlertAction(title: "Twitter", style: .Default) { (action) in
+            if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=steverab")!){
+                UIApplication.sharedApplication().openURL(NSURL(string:"https://twitter.com/steverab")!)
+            }
+        }
+        alertController.addAction(twitterAction)
+        let websiteAction = UIAlertAction(title: "Website", style: .Default) { (action) in
+            UIApplication.sharedApplication().openURL(NSURL(string:"http://steverab.com")!)
+        }
+        alertController.addAction(websiteAction)
+        
+        self.presentViewController(alertController, animated: true) {}
+    }
+    
     // MARK: - Scroll view delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -118,7 +171,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             avatarTransform = CATransform3DMakeTranslation(0, max(-blurFadeDuration - 30, offsetAvatarHeader - offset), 0)
             
             headerBlurImageView.alpha = min (1.0, (offset - offsetLabelHeader)/blurFadeDuration)
-            
+
             let avatarScaleFactor = (min(offsetHeaderStop, offset)) / avatarView.bounds.height / 1.25 // Slow down the animation
             let avatarSizeVariation:CGFloat = ((avatarView.bounds.height * (1.0 + avatarScaleFactor)) - avatarView.bounds.height) / 2.0
             avatarTransform = CATransform3DTranslate(avatarTransform, 0, avatarSizeVariation, 0)
@@ -146,14 +199,24 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return entries.count + 1
+        if showProfile == true {
+            return entries.count + 1
+        } else {
+            return entries.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileCell
-            configureProfileCell(cell, forIndexPath: indexPath)
-            return cell
+        if showProfile == true {
+            if indexPath.row == 0 {
+                var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileCell
+                configureProfileCell(cell, forIndexPath: indexPath)
+                return cell
+            } else {
+                var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
+                configureEntryCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
+                return cell
+            }
         } else {
             var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
             configureEntryCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
@@ -163,7 +226,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func configureProfileCell(cell: ProfileCell, forIndexPath indexPath: NSIndexPath) {
         cell.nameLabel.text = "Stephan Rabanser"
-        cell.descriptionLabel.text = "CS Student | Developer | America lover"
+        cell.descriptionLabel.text = "CS Student | Developer | Tech and USA lover"
         cell.outlineView.type = .NoCircle
         
         cell.setNeedsUpdateConstraints()
@@ -171,19 +234,34 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func configureEntryCell(cell: TimelineEntryCell, forIndexPath indexPath: NSIndexPath, isForOffscreenUse offscreenUse: Bool) {
-        let currentEntry = entries[indexPath.row-1]
+        let currentEntry:TimelineEntry
+        if showProfile == true {
+            currentEntry = entries[indexPath.row-1]
+        } else {
+            currentEntry = entries[indexPath.row]
+        }
         
         cell.titleLabel.text = currentEntry.title
         cell.shortDescriptionLabel.text = currentEntry.shortDescription
         cell.dateLabel.text = currentEntry.date
         cell.type = currentEntry.type
         
-        if indexPath.row == 1 {
-            cell.outlineView.type = .First
-        } else if indexPath.row == entries.count {
-            cell.outlineView.type = .Last
+        if showProfile == true {
+            if indexPath.row == 1 {
+                cell.outlineView.type = .First
+            } else if indexPath.row == entries.count {
+                cell.outlineView.type = .Last
+            } else {
+                cell.outlineView.type = .Default
+            }
         } else {
-            cell.outlineView.type = .Default
+            if indexPath.row == 0 {
+                cell.outlineView.type = .First
+            } else if indexPath.row == entries.count - 1 {
+                cell.outlineView.type = .Last
+            } else {
+                cell.outlineView.type = .Default
+            }
         }
         
         cell.setNeedsUpdateConstraints()
@@ -193,9 +271,16 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Table view delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
+        if showProfile == true && indexPath.row == 0 {
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            setupActionSheet()
         }
+    }
+    
+    // MARK: - Mail composer delegate
+    
+    func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: - Navigation
@@ -205,7 +290,11 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let indexPath = timelineTableView.indexPathForSelectedRow()?.row
         
         if let indexPath = indexPath {
-            detailViewController.timelineEntry = entries[indexPath - 1]
+            if showProfile == true {
+                detailViewController.timelineEntry = entries[indexPath - 1]
+            } else {
+                detailViewController.timelineEntry = entries[indexPath]
+            }
         }
     }
     

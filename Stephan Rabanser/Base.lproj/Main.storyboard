@@ -35,13 +35,13 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsm-sg-36M">
-                                                    <rect key="frame" x="69" y="8" width="298" height="21"/>
+                                                    <rect key="frame" x="69" y="8" width="298" height="24"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2q-Fm-MCN">
-                                                    <rect key="frame" x="69" y="40" width="298" height="48"/>
+                                                    <rect key="frame" x="69" y="40" width="298" height="52"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -53,11 +53,11 @@
                                                 <constraint firstItem="S2q-Fm-MCN" firstAttribute="trailing" secondItem="CCt-qS-mkC" secondAttribute="trailingMargin" id="R9H-jb-DGs"/>
                                                 <constraint firstItem="xsp-Va-qOW" firstAttribute="top" secondItem="CCt-qS-mkC" secondAttribute="topMargin" constant="-8" id="Rdy-bk-aOJ"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="xsp-Va-qOW" secondAttribute="bottom" constant="-8" id="RnB-s0-EKN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="S2q-Fm-MCN" secondAttribute="bottom" constant="8" id="V3J-oK-wcr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S2q-Fm-MCN" secondAttribute="bottom" constant="4" id="V3J-oK-wcr"/>
                                                 <constraint firstItem="xsp-Va-qOW" firstAttribute="leading" secondItem="CCt-qS-mkC" secondAttribute="leadingMargin" constant="27" id="aNU-9p-Fbv"/>
-                                                <constraint firstItem="S2q-Fm-MCN" firstAttribute="top" secondItem="Nsm-sg-36M" secondAttribute="bottom" constant="8" id="cUk-JS-nbf"/>
+                                                <constraint firstItem="S2q-Fm-MCN" firstAttribute="top" secondItem="Nsm-sg-36M" secondAttribute="bottom" constant="2" id="cUk-JS-nbf"/>
                                                 <constraint firstItem="Nsm-sg-36M" firstAttribute="trailing" secondItem="CCt-qS-mkC" secondAttribute="trailingMargin" id="hz3-p6-5Ci"/>
-                                                <constraint firstItem="Nsm-sg-36M" firstAttribute="top" secondItem="CCt-qS-mkC" secondAttribute="topMargin" id="rCO-1e-lUm"/>
+                                                <constraint firstItem="Nsm-sg-36M" firstAttribute="top" secondItem="CCt-qS-mkC" secondAttribute="topMargin" constant="2" id="rCO-1e-lUm"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -136,7 +136,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CS Student | Developer | America lover " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-i0-0bf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CS Student | Developer | Tech and USA lover " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kh-i0-0bf">
                                         <rect key="frame" x="53" y="185" width="269" height="21"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -153,8 +153,8 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-LP-BsY" customClass="AvatarView" customModule="Stephan_Rabanser" customModuleProvider="target">
-                                <rect key="frame" x="22" y="84" width="76" height="76"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="23" y="84" width="76" height="76"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="TWH-Ts-mqq"/>
                                     <constraint firstAttribute="height" constant="76" id="YVH-Je-YG0"/>
@@ -167,14 +167,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jDJ-Jz-Z2N" secondAttribute="bottom" id="0Wn-xB-CKF"/>
-                            <constraint firstItem="lq8-w0-jp7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="8l4-ku-grz"/>
-                            <constraint firstItem="W8d-LP-BsY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="6" id="Fui-U6-5I9"/>
+                            <constraint firstItem="lq8-w0-jp7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8l4-ku-grz"/>
+                            <constraint firstItem="W8d-LP-BsY" firstAttribute="leadingMargin" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="Fui-U6-5I9"/>
                             <constraint firstItem="W8d-LP-BsY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="RP0-0p-q3S"/>
                             <constraint firstItem="lq8-w0-jp7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="T02-vA-TaW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lq8-w0-jp7" secondAttribute="trailing" constant="-16" id="eoQ-xe-u2l"/>
-                            <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="qSO-dX-n8u"/>
+                            <constraint firstAttribute="trailing" secondItem="lq8-w0-jp7" secondAttribute="trailing" id="eoQ-xe-u2l"/>
+                            <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="centerXWithinMargins" secondItem="kh9-bI-dsS" secondAttribute="centerXWithinMargins" id="qSO-dX-n8u"/>
                             <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vuM-Cm-IdB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="jDJ-Jz-Z2N" secondAttribute="trailing" constant="-16" id="yoD-lU-o4j"/>
+                            <constraint firstAttribute="trailing" secondItem="jDJ-Jz-Z2N" secondAttribute="trailing" id="yoD-lU-o4j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aJj-g3-YAC"/>
@@ -236,6 +236,13 @@
                                                 <color key="textColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-4g-qdx" customClass="AvatarView" customModule="Stephan_Rabanser" customModuleProvider="target">
+                                                <rect key="frame" x="124" y="11" width="127" height="127"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="image" value="Avatar"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>

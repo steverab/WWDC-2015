@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class AvatarView: UIView {
+class AvatarView: UIControl, UIGestureRecognizerDelegate {
     
     @IBInspectable var image: UIImage?
     
@@ -23,7 +23,6 @@ class AvatarView: UIView {
     // MARK: - Touch handling
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        println("asd")
         executeInScaleAnimation()
     }
     
@@ -40,7 +39,7 @@ class AvatarView: UIView {
     
     func executeInScaleAnimation() {
         UIView.animateWithDuration(scaleAnimationDuration, delay: 0.0, usingSpringWithDamping: scaleAnimationSpringDamping, initialSpringVelocity: scaleAnimationSpringVelocity, options: scaleAnimationOptions, animations: ({
-            self.transform = CGAffineTransformMakeScale(0.9, 0.9)
+            self.transform = CGAffineTransformMakeScale(0.8, 0.8)
         }), completion: nil)
     }
     
