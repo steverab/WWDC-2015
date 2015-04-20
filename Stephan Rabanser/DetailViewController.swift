@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var shortDescriptionLabel: UILabel!
+    @IBOutlet weak var borderButton: BorderedButton!
     @IBOutlet weak var lineHeightConstraint: NSLayoutConstraint!
     
     var timelineEntry: TimelineEntry!
@@ -22,10 +23,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+        
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = UIColor.colorForType(timelineEntry.type)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -43,6 +41,18 @@ class DetailViewController: UIViewController {
         imageView.image = timelineEntry.image
         descriptionLabel.text = timelineEntry.longDescription
         shortDescriptionLabel.text = timelineEntry.shortDescription
+        shortDescriptionLabel.textColor = UIColor.colorForType(timelineEntry.type)
+        
+        borderButton.borderColor = UIColor.colorForType(timelineEntry.type)
+        borderButton.labelColor = UIColor.colorForType(timelineEntry.type)
+        borderButton.labelText = "Check this out"
+        borderButton.action = {(sender: UIButton) in
+            println("Action")
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     // MARK: - Status bar appearance
