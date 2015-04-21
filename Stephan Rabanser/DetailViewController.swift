@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
             NSForegroundColorAttributeName: UIColor.whiteColor(),
             NSFontAttributeName: UIFont(name: "AvenirNext-Medium", size: 18)!
         ]
-        self.navigationController?.navigationBar.titleTextAttributes = attributes
+        navigationController?.navigationBar.titleTextAttributes = attributes
         
         lineHeightConstraint.constant = 1/UIScreen.mainScreen().scale
         

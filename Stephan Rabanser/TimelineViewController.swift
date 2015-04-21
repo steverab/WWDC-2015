@@ -78,12 +78,12 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func setupHeader() {
         headerImageView = UIImageView(frame: header.frame)
-        headerImageView?.image = UIImage(named: "Miami")
+        headerImageView?.image = UIImage(named: "MiamiHeader")
         headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         header.insertSubview(headerImageView, belowSubview: headerLabel)
         
         headerBlurImageView = UIImageView(frame: header.frame)
-        headerBlurImageView?.image = UIImage(named: "Miami")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+        headerBlurImageView?.image = UIImage(named: "MiamiHeader")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         headerBlurImageView?.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
