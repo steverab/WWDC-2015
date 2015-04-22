@@ -82,36 +82,34 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let headerImg: UIImage!
         
-        if view.frame.size.width < 375.0 {
-            descriptionText = "CS Student | Developer | Tech"
-            headerImg = UIImage(named: "MiamiHeader5")
-        } else if view.frame.size.width > 375.0 {
-            descriptionText = "CS Student | Developer | Tech and USA lover"
-            headerImg = UIImage(named: "MiamiHeader6P")
-        } else {
-            headerImg = UIImage(named: "MiamiHeader6")
-        }
-        
         headerImageView = UIImageView(frame: CGRectMake(0.0, 0.0, header.frame.size.width, header.frame.size.height))
-        println(header.frame.size.height)
-        println(header.frame.size.width)
-        headerImageView.image = headerImg
-        headerImageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        headerImageView.contentMode = UIViewContentMode.ScaleAspectFit
         headerImageView.backgroundColor = UIColor.redColor()
+        headerImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         header.insertSubview(headerImageView, belowSubview: headerLabel)
         
         headerBlurImageView = UIImageView(frame: headerImageView.frame)
-        headerBlurImageView?.image = headerImg?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
-        headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        headerBlurImageView?.alpha = 0.0
+        headerBlurImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        headerBlurImageView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        headerBlurImageView.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
         
-        header.clipsToBounds = true
+        if view.frame.size.width == 375.0 {
+            headerImg = UIImage(named: "MiamiHeader6")
+            headerBlurImageView.image = headerImg?.blurredImageWithRadius(8, iterations: 20, tintColor: UIColor.clearColor())
+        } else if view.frame.size.width > 375.0 {
+            descriptionText = "CS Student | Developer | Tech and USA lover"
+            headerImg = UIImage(named: "MiamiHeader6P")
+            headerBlurImageView.image = headerImg?.blurredImageWithRadius(20, iterations: 20, tintColor: UIColor.clearColor())
+        } else {
+            descriptionText = "CS Student | Developer | Tech"
+            headerImg = UIImage(named: "MiamiHeader5")
+            headerBlurImageView.image = headerImg?.blurredImageWithRadius(8, iterations: 20, tintColor: UIColor.clearColor())
+        }
         
-        /*
-        header.layer.borderWidth = 1
-        header.layer.borderColor = UIColor.outlineColor().CGColor
-        */
+        headerImageView.image = headerImg
+        
+        header.clipsToBounds = true
 
         headerDetailLabel.text = descriptionText
     }

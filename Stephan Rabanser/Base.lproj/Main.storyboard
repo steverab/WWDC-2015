@@ -128,10 +128,10 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lq8-w0-jp7" userLabel="Header">
-                                <rect key="frame" x="-1" y="-5" width="377" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stephan Rabanser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-YA-Vv2">
-                                        <rect key="frame" x="118" y="165" width="142" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stephan Rabanser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-YA-Vv2">
+                                        <rect key="frame" x="118" y="168" width="142" height="24"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -153,7 +153,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-LP-BsY" customClass="AvatarView" customModule="Stephan_Rabanser" customModuleProvider="target">
-                                <rect key="frame" x="23" y="84" width="76" height="76"/>
+                                <rect key="frame" x="23" y="89" width="76" height="76"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="76" id="TWH-Ts-mqq"/>
@@ -167,11 +167,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="jDJ-Jz-Z2N" secondAttribute="bottom" id="0Wn-xB-CKF"/>
-                            <constraint firstItem="lq8-w0-jp7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-1" id="8l4-ku-grz"/>
+                            <constraint firstItem="lq8-w0-jp7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="8l4-ku-grz"/>
                             <constraint firstItem="W8d-LP-BsY" firstAttribute="leadingMargin" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="Fui-U6-5I9"/>
-                            <constraint firstItem="W8d-LP-BsY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="RP0-0p-q3S"/>
-                            <constraint firstItem="lq8-w0-jp7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-25" id="T02-vA-TaW"/>
-                            <constraint firstAttribute="trailing" secondItem="lq8-w0-jp7" secondAttribute="trailing" constant="-1" id="eoQ-xe-u2l"/>
+                            <constraint firstItem="W8d-LP-BsY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="69" id="RP0-0p-q3S"/>
+                            <constraint firstItem="lq8-w0-jp7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="T02-vA-TaW"/>
+                            <constraint firstAttribute="trailing" secondItem="lq8-w0-jp7" secondAttribute="trailing" id="eoQ-xe-u2l"/>
                             <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="centerXWithinMargins" secondItem="kh9-bI-dsS" secondAttribute="centerXWithinMargins" id="qSO-dX-n8u"/>
                             <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vuM-Cm-IdB"/>
                             <constraint firstAttribute="trailing" secondItem="jDJ-Jz-Z2N" secondAttribute="trailing" id="yoD-lU-o4j"/>
