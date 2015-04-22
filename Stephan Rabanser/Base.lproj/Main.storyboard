@@ -128,7 +128,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lq8-w0-jp7" userLabel="Header">
-                                <rect key="frame" x="-1" y="-1" width="377" height="125"/>
+                                <rect key="frame" x="-1" y="-5" width="377" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stephan Rabanser" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ya5-YA-Vv2">
                                         <rect key="frame" x="118" y="165" width="142" height="24"/>
@@ -146,7 +146,7 @@
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ya5-YA-Vv2" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="165" id="OXA-Yi-i8v"/>
-                                    <constraint firstAttribute="height" constant="125" id="XV8-pV-xZL"/>
+                                    <constraint firstAttribute="height" constant="130" id="XV8-pV-xZL"/>
                                     <constraint firstAttribute="centerX" secondItem="2kh-i0-0bf" secondAttribute="centerX" id="cDU-EJ-zMJ"/>
                                     <constraint firstItem="2kh-i0-0bf" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="188" id="s6N-jy-Sfd"/>
                                     <constraint firstAttribute="centerX" secondItem="ya5-YA-Vv2" secondAttribute="centerX" id="yXe-FS-aOf"/>
@@ -170,7 +170,7 @@
                             <constraint firstItem="lq8-w0-jp7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="-1" id="8l4-ku-grz"/>
                             <constraint firstItem="W8d-LP-BsY" firstAttribute="leadingMargin" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="15" id="Fui-U6-5I9"/>
                             <constraint firstItem="W8d-LP-BsY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="64" id="RP0-0p-q3S"/>
-                            <constraint firstItem="lq8-w0-jp7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-21" id="T02-vA-TaW"/>
+                            <constraint firstItem="lq8-w0-jp7" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-25" id="T02-vA-TaW"/>
                             <constraint firstAttribute="trailing" secondItem="lq8-w0-jp7" secondAttribute="trailing" constant="-1" id="eoQ-xe-u2l"/>
                             <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="centerXWithinMargins" secondItem="kh9-bI-dsS" secondAttribute="centerXWithinMargins" id="qSO-dX-n8u"/>
                             <constraint firstItem="jDJ-Jz-Z2N" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="vuM-Cm-IdB"/>

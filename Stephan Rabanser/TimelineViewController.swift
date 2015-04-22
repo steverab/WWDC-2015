@@ -77,19 +77,20 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Custom functions
     
     func setupHeader() {
-        headerImageView = UIImageView(frame: header.frame)
+        headerImageView = UIImageView(frame: CGRectMake(header.frame.origin.x, header.frame.origin.y + 5, header.frame.size.width, header.frame.size.height))
         headerImageView?.image = UIImage(named: "MiamiHeader")
         headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        headerImageView.backgroundColor = UIColor.redColor()
         header.insertSubview(headerImageView, belowSubview: headerLabel)
         
-        headerBlurImageView = UIImageView(frame: header.frame)
+        headerBlurImageView = UIImageView(frame: headerImageView.frame)
         headerBlurImageView?.image = UIImage(named: "MiamiHeader")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
         headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
         headerBlurImageView?.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
         
         header.clipsToBounds = true
-        header.layer.borderWidth = 1
+        header.layer.borderWidth = 0.5
         header.layer.borderColor = UIColor.outlineColor().CGColor
     }
     
