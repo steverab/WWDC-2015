@@ -13,6 +13,7 @@
 		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
 		AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626881AE0FC8C004D995D /* TimelineViewController.swift */; };
 		AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */; };
+		AA86EF851AE864770091EFE9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86EF841AE864770091EFE9 /* WebViewController.swift */; };
 		AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08311AE0EB5100617B43 /* AppDelegate.swift */; };
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
 		AA9C08391AE0EB5100617B43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08381AE0EB5100617B43 /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 		AA8626831AE0F832004D995D /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		AA8626881AE0FC8C004D995D /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntryCell.swift; sourceTree = "<group>"; };
+		AA86EF841AE864770091EFE9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9C08301AE0EB5100617B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA9C08311AE0EB5100617B43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				AA8626881AE0FC8C004D995D /* TimelineViewController.swift */,
 				AAA74CCC1AE19D8B0048B117 /* DetailViewController.swift */,
+				AA86EF841AE864770091EFE9 /* WebViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */,
 				AAE81E901AE448B60031AD4A /* AvatarView.swift in Sources */,
 				AA33D4701AE5ACF300F215EE /* BorderedButton.swift in Sources */,
+				AA86EF851AE864770091EFE9 /* WebViewController.swift in Sources */,
 				AAF2954E1AE1268600D05A9E /* ColorExtensions.swift in Sources */,
 				AAA74CCD1AE19D8B0048B117 /* DetailViewController.swift in Sources */,
 				AAE81E951AE44FA60031AD4A /* FXBlurView.m in Sources */,

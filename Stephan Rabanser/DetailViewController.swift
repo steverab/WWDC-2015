@@ -29,7 +29,6 @@ class DetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = UIColor.colorForType(timelineEntry.type)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
         
         var attributes = [
             NSForegroundColorAttributeName: UIColor.whiteColor(),
@@ -53,8 +52,13 @@ class DetailViewController: UIViewController {
             borderButton.borderColor = UIColor.colorForType(timelineEntry.type)
             borderButton.labelColor = UIColor.colorForType(timelineEntry.type)
             borderButton.labelText = timelineEntry.buttonTitle
-            borderButton.action = {(sender: UIButton) in
-                UIApplication.sharedApplication().openURL(timelineEntry.buttonURL)
+            borderButton.action = {[unowned self] in
+                if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
+                    if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
+                        webViewController.url = self.timelineEntry.buttonURL
+                        self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                    }
+                }
             }
         }
         
@@ -62,12 +66,8 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    // MARK: - Status bar appearance
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
+        
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
     }
     
     // MARK: - Custom functions
@@ -75,7 +75,6 @@ class DetailViewController: UIViewController {
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
     }
     
     // MARK: - Memory management

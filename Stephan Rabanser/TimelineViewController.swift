@@ -70,16 +70,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    // MARK: - Status bar appearance
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
-    
     // MARK: - Custom functions
     
     func setupHeader() {
-        
         let headerImg: UIImage!
         
         headerImageView = UIImageView(frame: CGRectMake(0.0, 0.0, header.frame.size.width, header.frame.size.height))
@@ -108,10 +101,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         headerImageView.image = headerImg
+        headerDetailLabel.text = descriptionText
         
         header.clipsToBounds = true
-
-        headerDetailLabel.text = descriptionText
     }
     
     func setupTableView() {
@@ -159,12 +151,22 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         alertController.addAction(emailAction)
         let twitterAction = UIAlertAction(title: "Twitter", style: .Default) { (action) in
             if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=steverab")!){
-                UIApplication.sharedApplication().openURL(NSURL(string:"https://twitter.com/steverab")!)
+                if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
+                    if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
+                        webViewController.url = NSURL(string:"https://twitter.com/steverab")!
+                        self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                    }
+                }
             }
         }
         alertController.addAction(twitterAction)
         let websiteAction = UIAlertAction(title: "Website", style: .Default) { (action) in
-            UIApplication.sharedApplication().openURL(NSURL(string:"http://steverab.com")!)
+            if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
+                if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
+                    webViewController.url = NSURL(string:"http://steverab.com")!
+                    self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                }
+            }
         }
         alertController.addAction(websiteAction)
         

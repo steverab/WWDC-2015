@@ -10,8 +10,8 @@ import UIKit
 
 @IBDesignable class BorderedButton: UIView {
     
-    typealias buttonTouched = (sender: UIButton) -> ()
-    var action: buttonTouched!
+    typealias buttonTouched = () -> ()
+    var action: buttonTouched?
     
     var button : UIButton = UIButton(frame: CGRectZero)
     let animationDuration = 0.15
@@ -104,7 +104,9 @@ import UIKit
     }
     
     func onRealPress(sender: AnyObject) {
-        action(sender: sender as! UIButton)
+        if let action = action {
+            action()
+        }
     }
     
 }
