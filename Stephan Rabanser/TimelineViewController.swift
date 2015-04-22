@@ -24,11 +24,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     let offsetHeaderStop:CGFloat = 60.0
     let offsetLabelHeader:CGFloat = 65.0
     let offsetAvatarHeader:CGFloat = 0.0
-    let blurFadeDuration:CGFloat = 88.0
+    let blurFadeDuration:CGFloat = 85.0
     
     var entries = [TimelineEntry]()
     
     var showProfile = true
+    
+    var descriptionText = "CS Student | Developer | Tech and USA"
     
     // MARK: - View controller lifecycle
     
@@ -77,21 +79,41 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - Custom functions
     
     func setupHeader() {
-        headerImageView = UIImageView(frame: CGRectMake(header.frame.origin.x, header.frame.origin.y + 5, header.frame.size.width, header.frame.size.height))
-        headerImageView?.image = UIImage(named: "MiamiHeader")
-        headerImageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        let headerImg: UIImage!
+        
+        if view.frame.size.width < 375.0 {
+            descriptionText = "CS Student | Developer | Tech"
+            headerImg = UIImage(named: "MiamiHeader5")
+        } else if view.frame.size.width > 375.0 {
+            descriptionText = "CS Student | Developer | Tech and USA lover"
+            headerImg = UIImage(named: "MiamiHeader6P")
+        } else {
+            headerImg = UIImage(named: "MiamiHeader6")
+        }
+        
+        headerImageView = UIImageView(frame: CGRectMake(0.0, 0.0, header.frame.size.width, header.frame.size.height))
+        println(header.frame.size.height)
+        println(header.frame.size.width)
+        headerImageView.image = headerImg
+        headerImageView?.contentMode = UIViewContentMode.ScaleAspectFit
         headerImageView.backgroundColor = UIColor.redColor()
         header.insertSubview(headerImageView, belowSubview: headerLabel)
         
         headerBlurImageView = UIImageView(frame: headerImageView.frame)
-        headerBlurImageView?.image = UIImage(named: "MiamiHeader")?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
-        headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFill
+        headerBlurImageView?.image = headerImg?.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+        headerBlurImageView?.contentMode = UIViewContentMode.ScaleAspectFit
         headerBlurImageView?.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
         
         header.clipsToBounds = true
-        header.layer.borderWidth = 0.5
+        
+        /*
+        header.layer.borderWidth = 1
         header.layer.borderColor = UIColor.outlineColor().CGColor
+        */
+
+        headerDetailLabel.text = descriptionText
     }
     
     func setupTableView() {
@@ -229,7 +251,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func configureProfileCell(cell: ProfileCell, forIndexPath indexPath: NSIndexPath) {
         cell.nameLabel.text = "Stephan Rabanser"
-        cell.descriptionLabel.text = "CS Student | Developer | Tech and USA lover"
+        cell.descriptionLabel.text = descriptionText
         cell.outlineView.type = .NoCircle
         
         cell.setNeedsUpdateConstraints()
