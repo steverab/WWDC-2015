@@ -89,6 +89,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
         
         header.clipsToBounds = true
+        header.layer.borderWidth = 1
+        header.layer.borderColor = UIColor.outlineColor().CGColor
     }
     
     func setupTableView() {
