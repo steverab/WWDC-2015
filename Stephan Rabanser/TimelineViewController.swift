@@ -24,7 +24,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     let offsetHeaderStop:CGFloat = 60.0
     let offsetLabelHeader:CGFloat = 65.0
     let offsetAvatarHeader:CGFloat = 0.0
-    let blurFadeDuration:CGFloat = 85.0
+    let blurFadeDuration:CGFloat = 90.0
     
     var entries = [TimelineEntry]()
     
@@ -123,7 +123,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         timelineTableView.rowHeight = UITableViewAutomaticDimension
         timelineTableView.estimatedRowHeight = 44
         
-        timelineTableView.contentInset = UIEdgeInsetsMake(138, 0, 0, 0)
+        timelineTableView.contentInset = UIEdgeInsetsMake(144, 0, 0, 0)
     }
     
     func loadEntries() {
