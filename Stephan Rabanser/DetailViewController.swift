@@ -16,6 +16,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var shortDescriptionLabel: UILabel!
     @IBOutlet weak var borderButton: BorderedButton!
     @IBOutlet weak var lineHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
     
     var timelineEntry: TimelineEntry!
     
@@ -43,12 +45,19 @@ class DetailViewController: UIViewController {
         shortDescriptionLabel.text = timelineEntry.shortDescription
         shortDescriptionLabel.textColor = UIColor.colorForType(timelineEntry.type)
         
-        borderButton.borderColor = UIColor.colorForType(timelineEntry.type)
-        borderButton.labelColor = UIColor.colorForType(timelineEntry.type)
-        borderButton.labelText = "Check this out"
-        borderButton.action = {(sender: UIButton) in
-            println("Action")
+        if timelineEntry.buttonTitle == "" {
+            buttonHeightConstraint.constant = 0
+            buttonBottomConstraint.constant = 0
+            borderButton.setNeedsUpdateConstraints()
+        } else {
+            borderButton.borderColor = UIColor.colorForType(timelineEntry.type)
+            borderButton.labelColor = UIColor.colorForType(timelineEntry.type)
+            borderButton.labelText = timelineEntry.buttonTitle
+            borderButton.action = {(sender: UIButton) in
+                UIApplication.sharedApplication().openURL(timelineEntry.buttonURL)
+            }
         }
+        
     }
     
     override func viewWillAppear(animated: Bool) {

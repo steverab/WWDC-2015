@@ -17,6 +17,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>0</integer>
 		<key>image</key>
 		<string>Singapore</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string></string>
+			<key>link</key>
+			<string></string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -33,6 +40,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>1</integer>
 		<key>image</key>
 		<string>iCATCH</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Watch presentation on YouTube</string>
+			<key>link</key>
+			<string>https://www.youtube.com/watch?v=3tmGqeAqJT8</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -49,6 +63,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>1</integer>
 		<key>image</key>
 		<string>SwiftTeaching</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Take a look at the slides</string>
+			<key>link</key>
+			<string>http://home.cs.tum.edu/~rabanser/uni/teaching-ios/RESTful_Services_Talk.pdf</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -65,6 +86,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>2</integer>
 		<key>image</key>
 		<string>Hours</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Take a look at temporary website</string>
+			<key>link</key>
+			<string>http://hours.im</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -81,6 +109,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>2</integer>
 		<key>image</key>
 		<string>Piqup</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Buy on the App Store</string>
+			<key>link</key>
+			<string>https://itunes.apple.com/de/app/piqup/id718548316?l=en&amp;mt=8</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -97,6 +132,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>2</integer>
 		<key>image</key>
 		<string>WWDC13</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string></string>
+			<key>link</key>
+			<string></string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -113,6 +155,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>1</integer>
 		<key>image</key>
 		<string>TUM</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Visit TUM homepage</string>
+			<key>link</key>
+			<string>http://www.tum.de/en/homepage/</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -129,6 +178,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>0</integer>
 		<key>image</key>
 		<string>Munich</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string></string>
+			<key>link</key>
+			<string></string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -145,6 +201,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>0</integer>
 		<key>image</key>
 		<string>Miami</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string></string>
+			<key>link</key>
+			<string></string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -161,6 +224,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>2</integer>
 		<key>image</key>
 		<string>Stripe</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Check out blog post</string>
+			<key>link</key>
+			<string>https://stripe.com/blog/capture-the-flag</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -177,6 +247,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>2</integer>
 		<key>image</key>
 		<string>iOSDev</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string></string>
+			<key>link</key>
+			<string></string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -193,6 +270,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>1</integer>
 		<key>image</key>
 		<string>TFO</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string>Visit TFO website</string>
+			<key>link</key>
+			<string>http://www.tfobz.it</string>
+		</dict>
 	</dict>
 	<dict>
 		<key>title</key>
@@ -209,6 +293,13 @@ Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie co
 		<integer>0</integer>
 		<key>image</key>
 		<string>Southtyrol</string>
+		<key>button</key>
+		<dict>
+			<key>title</key>
+			<string></string>
+			<key>link</key>
+			<string></string>
+		</dict>
 	</dict>
 </array>
 </plist>

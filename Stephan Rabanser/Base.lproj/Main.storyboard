@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PLf-sz-bgi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PLf-sz-bgi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -287,6 +287,8 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="borderButton" destination="Cwq-Va-WV4" id="eXN-lm-esm"/>
+                        <outlet property="buttonBottomConstraint" destination="e1e-56-Qz6" id="omQ-VY-5c3"/>
+                        <outlet property="buttonHeightConstraint" destination="EZV-dy-MPX" id="fO4-QM-Jls"/>
                         <outlet property="descriptionLabel" destination="shJ-Kj-HPw" id="Wsv-uy-FNa"/>
                         <outlet property="imageView" destination="Rz5-NY-m5k" id="8ro-Fq-n3A"/>
                         <outlet property="lineHeightConstraint" destination="eGO-oo-7Qc" id="kQI-5E-xr9"/>

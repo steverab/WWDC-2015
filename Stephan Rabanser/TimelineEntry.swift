@@ -16,17 +16,19 @@ enum TimelineEntryType: Int {
 
 class TimelineEntry: NSObject, Printable {
     
-    var title: String!
-    var shortDescription: String!
-    var longDescription: String!
-    var date: String!
-    var type: TimelineEntryType!
-    var imageString: String!
+    var title = ""
+    var shortDescription = ""
+    var longDescription = ""
+    var date = ""
+    var type = TimelineEntryType.Personal
+    var imageString = ""
     var image: UIImage!
+    var buttonTitle = ""
+    var buttonURL: NSURL!
     
     // MARK: - Constructor
     
-    init(title: String, shortDescription: String, description: String, date: String, type: TimelineEntryType, imageString: String) {
+    init(title: String, shortDescription: String, description: String, date: String, type: TimelineEntryType, imageString: String, buttonTitle: String, buttonURL: String) {
         self.title = title
         self.shortDescription = shortDescription
         self.longDescription = description
@@ -34,6 +36,8 @@ class TimelineEntry: NSObject, Printable {
         self.type = type
         self.imageString = imageString
         self.image = UIImage(named: imageString)
+        self.buttonTitle = buttonTitle
+        self.buttonURL = NSURL(string: buttonURL)
     }
     
     // MARK: - Printable protocol

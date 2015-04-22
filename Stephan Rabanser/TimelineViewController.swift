@@ -129,7 +129,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     func loadEntries() {
         let loadedEntries = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Entries", ofType: "plist")!)
         for dict in loadedEntries ?? [] {
-            let entry = TimelineEntry(title: dict["title"] as! String, shortDescription: dict["shortDescription"] as! String, description: dict["description"] as! String, date: dict["date"] as! String, type: TimelineEntryType(rawValue: dict["type"] as! Int)!, imageString: dict["image"] as! String)
+            let buttonDict = dict["button"] as! [String : String]
+            let buttonTitle = buttonDict["title"]!
+            let entry = TimelineEntry(title: dict["title"] as! String, shortDescription: dict["shortDescription"] as! String, description: dict["description"] as! String, date: dict["date"] as! String, type: TimelineEntryType(rawValue: dict["type"] as! Int)!, imageString: dict["image"] as! String, buttonTitle: buttonDict["title"]!, buttonURL: buttonDict["link"]!)
             entries.append(entry)
         }
     }
