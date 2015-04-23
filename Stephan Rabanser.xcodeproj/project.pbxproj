@@ -13,6 +13,13 @@
 		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
 		AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626881AE0FC8C004D995D /* TimelineViewController.swift */; };
 		AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */; };
+		AA867EC21AE98AE300A3948E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867EC11AE98AE300A3948E /* InterfaceController.swift */; };
+		AA867EC41AE98AE300A3948E /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867EC31AE98AE300A3948E /* GlanceController.swift */; };
+		AA867EC61AE98AE300A3948E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA867EC51AE98AE300A3948E /* Images.xcassets */; };
+		AA867ECA1AE98AE300A3948E /* Stephan Rabanser WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = AA867EC91AE98AE300A3948E /* Stephan Rabanser WatchKit App.app */; };
+		AA867ED21AE98AE300A3948E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA867ED01AE98AE300A3948E /* Interface.storyboard */; };
+		AA867ED41AE98AE300A3948E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA867ED31AE98AE300A3948E /* Images.xcassets */; };
+		AA867ED71AE98AE300A3948E /* Stephan Rabanser WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA867EBD1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA86EF851AE864770091EFE9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86EF841AE864770091EFE9 /* WebViewController.swift */; };
 		AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08311AE0EB5100617B43 /* AppDelegate.swift */; };
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
@@ -25,6 +32,37 @@
 		AAF2954E1AE1268600D05A9E /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AA867ECB1AE98AE300A3948E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA9C08241AE0EB5000617B43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA867EC81AE98AE300A3948E;
+			remoteInfo = "Stephan Rabanser WatchKit App";
+		};
+		AA867ED51AE98AE300A3948E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA9C08241AE0EB5000617B43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA867EBC1AE98AE300A3948E;
+			remoteInfo = "Stephan Rabanser WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA867EDE1AE98AE300A3948E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA867ED71AE98AE300A3948E /* Stephan Rabanser WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AA215B7F1AE537BE00B29C47 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		AA33D46F1AE5ACF300F215EE /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
@@ -32,6 +70,15 @@
 		AA8626831AE0F832004D995D /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		AA8626881AE0FC8C004D995D /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntryCell.swift; sourceTree = "<group>"; };
+		AA867EBD1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Stephan Rabanser WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA867EC01AE98AE300A3948E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA867EC11AE98AE300A3948E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		AA867EC31AE98AE300A3948E /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		AA867EC51AE98AE300A3948E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AA867EC91AE98AE300A3948E /* Stephan Rabanser WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA867ECF1AE98AE300A3948E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA867ED11AE98AE300A3948E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		AA867ED31AE98AE300A3948E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA86EF841AE864770091EFE9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9C08301AE0EB5100617B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +96,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA867EBA1AE98AE300A3948E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA9C08291AE0EB5000617B43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,10 +159,49 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		AA867EBE1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA867EC11AE98AE300A3948E /* InterfaceController.swift */,
+				AA867EC31AE98AE300A3948E /* GlanceController.swift */,
+				AA867EC51AE98AE300A3948E /* Images.xcassets */,
+				AA867EBF1AE98AE300A3948E /* Supporting Files */,
+			);
+			path = "Stephan Rabanser WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		AA867EBF1AE98AE300A3948E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA867EC01AE98AE300A3948E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AA867ECD1AE98AE300A3948E /* Stephan Rabanser WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				AA867ED01AE98AE300A3948E /* Interface.storyboard */,
+				AA867ED31AE98AE300A3948E /* Images.xcassets */,
+				AA867ECE1AE98AE300A3948E /* Supporting Files */,
+			);
+			path = "Stephan Rabanser WatchKit App";
+			sourceTree = "<group>";
+		};
+		AA867ECE1AE98AE300A3948E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA867ECF1AE98AE300A3948E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AA9C08231AE0EB5000617B43 = {
 			isa = PBXGroup;
 			children = (
 				AA9C082E1AE0EB5100617B43 /* Stephan Rabanser */,
+				AA867EBE1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension */,
+				AA867ECD1AE98AE300A3948E /* Stephan Rabanser WatchKit App */,
 				AA9C082D1AE0EB5100617B43 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */,
+				AA867EBD1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension.appex */,
+				AA867EC91AE98AE300A3948E /* Stephan Rabanser WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +263,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AA867EBC1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA867EDD1AE98AE300A3948E /* Build configuration list for PBXNativeTarget "Stephan Rabanser WatchKit Extension" */;
+			buildPhases = (
+				AA867EB91AE98AE300A3948E /* Sources */,
+				AA867EBA1AE98AE300A3948E /* Frameworks */,
+				AA867EBB1AE98AE300A3948E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA867ECC1AE98AE300A3948E /* PBXTargetDependency */,
+			);
+			name = "Stephan Rabanser WatchKit Extension";
+			productName = "Stephan Rabanser WatchKit Extension";
+			productReference = AA867EBD1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		AA867EC81AE98AE300A3948E /* Stephan Rabanser WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA867EDC1AE98AE300A3948E /* Build configuration list for PBXNativeTarget "Stephan Rabanser WatchKit App" */;
+			buildPhases = (
+				AA867EC71AE98AE300A3948E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stephan Rabanser WatchKit App";
+			productName = "Stephan Rabanser WatchKit App";
+			productReference = AA867EC91AE98AE300A3948E /* Stephan Rabanser WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		AA9C082B1AE0EB5000617B43 /* Stephan Rabanser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA9C084B1AE0EB5100617B43 /* Build configuration list for PBXNativeTarget "Stephan Rabanser" */;
@@ -175,10 +303,12 @@
 				AA9C08281AE0EB5000617B43 /* Sources */,
 				AA9C08291AE0EB5000617B43 /* Frameworks */,
 				AA9C082A1AE0EB5000617B43 /* Resources */,
+				AA867EDE1AE98AE300A3948E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA867ED61AE98AE300A3948E /* PBXTargetDependency */,
 			);
 			name = "Stephan Rabanser";
 			productName = "Stephan Rabanser";
@@ -194,6 +324,12 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Stephan Rabanser";
 				TargetAttributes = {
+					AA867EBC1AE98AE300A3948E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					AA867EC81AE98AE300A3948E = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
 					AA9C082B1AE0EB5000617B43 = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -213,11 +349,31 @@
 			projectRoot = "";
 			targets = (
 				AA9C082B1AE0EB5000617B43 /* Stephan Rabanser */,
+				AA867EBC1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension */,
+				AA867EC81AE98AE300A3948E /* Stephan Rabanser WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AA867EBB1AE98AE300A3948E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA867EC61AE98AE300A3948E /* Images.xcassets in Resources */,
+				AA867ECA1AE98AE300A3948E /* Stephan Rabanser WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA867EC71AE98AE300A3948E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA867ED21AE98AE300A3948E /* Interface.storyboard in Resources */,
+				AA867ED41AE98AE300A3948E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA9C082A1AE0EB5000617B43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +388,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA867EB91AE98AE300A3948E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA867EC21AE98AE300A3948E /* InterfaceController.swift in Sources */,
+				AA867EC41AE98AE300A3948E /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA9C08281AE0EB5000617B43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,7 +418,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		AA867ECC1AE98AE300A3948E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA867EC81AE98AE300A3948E /* Stephan Rabanser WatchKit App */;
+			targetProxy = AA867ECB1AE98AE300A3948E /* PBXContainerItemProxy */;
+		};
+		AA867ED61AE98AE300A3948E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA867EBC1AE98AE300A3948E /* Stephan Rabanser WatchKit Extension */;
+			targetProxy = AA867ED51AE98AE300A3948E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		AA867ED01AE98AE300A3948E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA867ED11AE98AE300A3948E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		AA9C08351AE0EB5100617B43 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -273,6 +459,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA867ED81AE98AE300A3948E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Stephan Rabanser WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AA867ED91AE98AE300A3948E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Stephan Rabanser WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AA867EDA1AE98AE300A3948E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Stephan_Rabanser_WatchKit_Extension;
+				INFOPLIST_FILE = "Stephan Rabanser WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		AA867EDB1AE98AE300A3948E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Stephan_Rabanser_WatchKit_Extension;
+				INFOPLIST_FILE = "Stephan Rabanser WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 		AA9C08491AE0EB5100617B43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -382,6 +624,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA867EDC1AE98AE300A3948E /* Build configuration list for PBXNativeTarget "Stephan Rabanser WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA867EDA1AE98AE300A3948E /* Debug */,
+				AA867EDB1AE98AE300A3948E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AA867EDD1AE98AE300A3948E /* Build configuration list for PBXNativeTarget "Stephan Rabanser WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA867ED81AE98AE300A3948E /* Debug */,
+				AA867ED91AE98AE300A3948E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AA9C08271AE0EB5000617B43 /* Build configuration list for PBXProject "Stephan Rabanser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
