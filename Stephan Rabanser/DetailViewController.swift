@@ -45,7 +45,7 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
         shortDescriptionLabel.text = timelineEntry.shortDescription
         shortDescriptionLabel.textColor = UIColor.colorForType(timelineEntry.type)
         
-        if timelineEntry.buttonTitle == "" {
+        if timelineEntry.buttonTitle == "" || (UIDevice.currentDevice().model == "iPhone Simulator" && timelineEntry.title == "Piqup") {
             buttonHeightConstraint.constant = 0
             buttonBottomConstraint.constant = 0
             borderButton.setNeedsUpdateConstraints()
