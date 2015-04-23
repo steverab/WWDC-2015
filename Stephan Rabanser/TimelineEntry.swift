@@ -14,7 +14,8 @@ enum TimelineEntryType: Int {
     case Development
 }
 
-class TimelineEntry: NSObject, Printable {
+@objc(TimelineEntry)
+class TimelineEntry: NSObject, Printable, NSCoding {
     
     var title = ""
     var shortDescription = ""
@@ -38,6 +39,29 @@ class TimelineEntry: NSObject, Printable {
         self.image = UIImage(named: imageString)
         self.buttonTitle = buttonTitle
         self.buttonURL = NSURL(string: buttonURL)
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        title = aDecoder.decodeObjectForKey("title") as! String
+        shortDescription = aDecoder.decodeObjectForKey("shortDescription") as! String
+        longDescription = aDecoder.decodeObjectForKey("longDescription") as! String
+        date = aDecoder.decodeObjectForKey("date") as! String
+        type = TimelineEntryType(rawValue: aDecoder.decodeIntegerForKey("type") as Int)!
+        imageString = aDecoder.decodeObjectForKey("imageString") as! String
+        image = UIImage(named: imageString)
+        imageString = aDecoder.decodeObjectForKey("buttonTitle") as! String
+        buttonURL = NSURL(string: aDecoder.decodeObjectForKey("buttonURLString") as! String)
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(title, forKey: "title")
+        aCoder.encodeObject(shortDescription, forKey: "shortDescription")
+        aCoder.encodeObject(longDescription, forKey: "longDescription")
+        aCoder.encodeObject(date, forKey: "date")
+        aCoder.encodeInteger(type.rawValue, forKey: "type")
+        aCoder.encodeObject(imageString, forKey: "imageString")
+        aCoder.encodeObject(buttonTitle, forKey: "buttonTitle")
+        aCoder.encodeObject(buttonURL.absoluteString!, forKey: "buttonURLString")
     }
     
     // MARK: - Printable protocol
