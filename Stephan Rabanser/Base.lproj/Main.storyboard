@@ -145,10 +145,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ya5-YA-Vv2" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="170" id="OXA-Yi-i8v"/>
+                                    <constraint firstItem="ya5-YA-Vv2" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="176" id="OXA-Yi-i8v"/>
                                     <constraint firstAttribute="height" constant="130" id="XV8-pV-xZL"/>
                                     <constraint firstAttribute="centerX" secondItem="2kh-i0-0bf" secondAttribute="centerX" id="cDU-EJ-zMJ"/>
-                                    <constraint firstItem="2kh-i0-0bf" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="194" id="s6N-jy-Sfd"/>
+                                    <constraint firstItem="2kh-i0-0bf" firstAttribute="top" secondItem="lq8-w0-jp7" secondAttribute="top" constant="200" id="s6N-jy-Sfd"/>
                                     <constraint firstAttribute="centerX" secondItem="ya5-YA-Vv2" secondAttribute="centerX" id="yXe-FS-aOf"/>
                                 </constraints>
                             </view>
@@ -309,29 +309,30 @@
                         <viewControllerLayoutGuide type="bottom" id="aav-3C-tZQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nj8-7k-sMV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-0H-WzQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-0H-WzQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vnS-0H-WzQ" firstAttribute="top" secondItem="Nj8-7k-sMV" secondAttribute="top" id="HnW-Pz-OZI"/>
-                            <constraint firstItem="vnS-0H-WzQ" firstAttribute="leading" secondItem="Nj8-7k-sMV" secondAttribute="leading" id="NPw-pM-hT5"/>
-                            <constraint firstItem="vnS-0H-WzQ" firstAttribute="bottom" secondItem="aav-3C-tZQ" secondAttribute="top" id="qE5-FH-px4"/>
-                            <constraint firstAttribute="trailing" secondItem="vnS-0H-WzQ" secondAttribute="trailing" id="weI-Sd-0Bn"/>
+                            <constraint firstItem="vnS-0H-WzQ" firstAttribute="leading" secondItem="Nj8-7k-sMV" secondAttribute="leading" id="GW2-DS-nhT"/>
+                            <constraint firstAttribute="trailing" secondItem="vnS-0H-WzQ" secondAttribute="trailing" id="kWM-dC-Pdb"/>
+                            <constraint firstItem="vnS-0H-WzQ" firstAttribute="top" secondItem="M7Q-5C-QdO" secondAttribute="bottom" constant="-64" id="mRn-pL-ILj"/>
+                            <constraint firstItem="aav-3C-tZQ" firstAttribute="top" secondItem="vnS-0H-WzQ" secondAttribute="bottom" constant="-44" id="poG-Yd-Wzq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vR9-ng-bkR">
-                        <barButtonItem key="leftBarButtonItem" title="Dismiss" style="done" id="ZTr-fe-6aH">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="ZTr-fe-6aH">
                             <connections>
                                 <action selector="dismiss:" destination="zsD-YP-GDT" id="5FT-cs-oy5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="600"/>
                     <connections>

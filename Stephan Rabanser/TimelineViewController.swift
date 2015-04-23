@@ -21,10 +21,10 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     var headerBlurImageView:UIImageView!
     var blurredHeaderImageView:UIImageView?
     
-    let offsetHeaderStop:CGFloat = 60.0
+    let offsetHeaderStop:CGFloat = 65.5
     let offsetLabelHeader:CGFloat = 65.0
     let offsetAvatarHeader:CGFloat = 0.0
-    let blurFadeDuration:CGFloat = 90.0
+    let blurFadeDuration:CGFloat = 94.0
     
     var entries = [TimelineEntry]()
     
@@ -53,7 +53,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.timelineTableView.endUpdates()
             }
         }
-        */
+*/
         
         setupHeader()
         setupTableView()
