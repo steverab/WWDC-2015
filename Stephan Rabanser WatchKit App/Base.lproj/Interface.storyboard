@@ -1,29 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--SR-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="SR" id="AgC-eL-Hgc" customClass="TimelineInterfaceController" customModule="Stephan_Rabanser_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="pFh-eS-okQ">
+                            <items>
+                                <group width="118" alignment="center" id="EiQ-Aj-Rtf">
+                                    <items>
+                                        <imageView width="50" height="50" alignment="left" image="Me" id="ZKz-Sl-9z4"/>
+                                        <label alignment="right" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="XZU-qT-7Fc"/>
+                                    </items>
+                                    <variation key="device=watch42mm" width="130"/>
+                                </group>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="0Aa-2K-tyh">
+                            <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <table alignment="left" id="Cb9-fo-XU7">
+                            <items>
+                                <tableRow identifier="entriesRowType" id="j25-OB-XqX" customClass="EntryRowController" customModule="Stephan_Rabanser_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="yuH-EJ-fdR">
+                                        <items>
+                                            <group width="1" alignment="left" id="N65-v9-uzQ">
+                                                <items>
+                                                    <imageView width="4" alignment="left" id="9BC-iP-SUM"/>
+                                                    <imageView width="4" alignment="left" id="ETE-Lg-NrD"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="fOy-4P-UX8"/>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <connections>
+                                            <segue destination="bM1-3k-EKT" kind="push" identifier="pushDetail" id="S2w-38-Tgj"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="colorImage" destination="9BC-iP-SUM" id="WcT-2b-4K7"/>
+                                        <outlet property="headlineLabel" destination="fOy-4P-UX8" id="1ue-hj-NqO"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="avatarImage" destination="ZKz-Sl-9z4" id="Dma-hQ-4xa"/>
+                        <outlet property="nameLabel" destination="XZU-qT-7Fc" id="zMR-om-DlY"/>
+                        <outlet property="tableView" destination="Cb9-fo-XU7" id="y8O-Z9-k0Z"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="217"/>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="yv0-6m-Cz0">
+            <objects>
+                <controller id="bM1-3k-EKT" customClass="DetailInterfaceController" customModule="Stephan_Rabanser_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" numberOfLines="0" id="D9I-O9-1R4">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="dsY-ZW-yec">
+                            <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label alignment="left" text="Label" numberOfLines="0" id="kGd-Fq-m52">
+                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="headlineLabel" destination="D9I-O9-1R4" id="api-Yf-de6"/>
+                        <outlet property="shortDescriptionLabel" destination="kGd-Fq-m52" id="kCn-zB-gKG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="510" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
-        <scene sceneID="rjY-Ar-IMT">
+        <scene sceneID="BOz-TT-tkC">
             <objects>
-                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModuleProvider="target">
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="Stephan_Rabanser_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" id="eew-Gs-W6Y"/>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="164" y="514"/>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Stephan_Rabanser_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
         </scene>
     </scenes>
 </document>
