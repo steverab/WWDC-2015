@@ -31,8 +31,8 @@
                                         <items>
                                             <group width="1" alignment="left" id="N65-v9-uzQ">
                                                 <items>
-                                                    <imageView width="4" alignment="left" id="9BC-iP-SUM"/>
-                                                    <imageView width="4" alignment="left" id="ETE-Lg-NrD"/>
+                                                    <imageView width="4" height="1" alignment="left" id="9BC-iP-SUM"/>
+                                                    <imageView width="4" height="1" alignment="left" id="ETE-Lg-NrD"/>
                                                     <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="fOy-4P-UX8"/>
                                                 </items>
                                             </group>

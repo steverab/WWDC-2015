@@ -57,11 +57,11 @@ class TimelineInterfaceController: WKInterfaceController {
                             let rowController = self.tableView.rowControllerAtIndex(index) as! EntryRowController
                             rowController.headlineLabel.setText(entry.title)
                             if entry.type == .Personal {
-                                rowController.colorImage.setImage(UIImage(named: "Green"))
+                                rowController.colorImage.setImage(UIImage(named: "Green")?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
                             } else if entry.type == .Education {
-                                rowController.colorImage.setImage(UIImage(named: "Red"))
+                                rowController.colorImage.setImage(UIImage(named: "Red")?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
                             } else {
-                                rowController.colorImage.setImage(UIImage(named: "Blue"))
+                                rowController.colorImage.setImage(UIImage(named: "Blue")?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
                             }
                             
                         }
