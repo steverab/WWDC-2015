@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import StoreKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
@@ -53,12 +54,30 @@ class DetailViewController: UIViewController {
             borderButton.labelColor = UIColor.colorForType(timelineEntry.type)
             borderButton.labelText = timelineEntry.buttonTitle
             borderButton.action = {[unowned self] in
-                if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
-                    if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
-                        webViewController.url = self.timelineEntry.buttonURL
-                        self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                if self.timelineEntry.title != "Piqup" {
+                    if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
+                        if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
+                            webViewController.url = self.timelineEntry.buttonURL
+                            self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                        }
                     }
+                } else {
+                    let storeViewController = SKStoreProductViewController()
+                    storeViewController.delegate = self
+                    
+                    let parameters = [SKStoreProductParameterITunesItemIdentifier :
+                        NSNumber(integer: 718548316)]
+                    
+                    storeViewController.loadProductWithParameters(parameters,
+                        completionBlock: {result, error in
+                            if result {
+                                self.presentViewController(storeViewController, 
+                                    animated: true, completion: nil)
+                            }
+                            
+                    })
                 }
+                
             }
         }
         
@@ -71,6 +90,14 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: - Custom functions
+    
+    // MARK: - SKStoreProductViewController delegate
+    
+    func productViewControllerDidFinish(viewController:
+        SKStoreProductViewController!) {
+            viewController.dismissViewControllerAnimated(true,
+                completion: nil)
+    }
     
     // MARK: - Navigation
     
