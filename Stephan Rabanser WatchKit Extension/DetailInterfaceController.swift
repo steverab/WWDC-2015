@@ -13,6 +13,7 @@ class DetailInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var headlineLabel: WKInterfaceLabel!
     @IBOutlet weak var shortDescriptionLabel: WKInterfaceLabel!
+    @IBOutlet weak var dateLabel: WKInterfaceLabel!
     
     var entry: TimelineEntry!
     
@@ -23,6 +24,7 @@ class DetailInterfaceController: WKInterfaceController {
         headlineLabel.setText(entry.title)
         headlineLabel.setTextColor(UIColor.colorForType(entry.type))
         shortDescriptionLabel.setText(entry.shortDescription)
+        dateLabel.setText(entry.date)
         // Configure interface objects here.
     }
     

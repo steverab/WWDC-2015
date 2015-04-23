@@ -27,15 +27,10 @@
                         <table alignment="left" id="Cb9-fo-XU7">
                             <items>
                                 <tableRow identifier="entriesRowType" id="j25-OB-XqX" customClass="EntryRowController" customModule="Stephan_Rabanser_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="yuH-EJ-fdR">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="yuH-EJ-fdR">
                                         <items>
-                                            <group width="1" alignment="left" id="N65-v9-uzQ">
-                                                <items>
-                                                    <imageView width="4" height="1" alignment="left" id="9BC-iP-SUM"/>
-                                                    <imageView width="4" height="1" alignment="left" id="ETE-Lg-NrD"/>
-                                                    <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="fOy-4P-UX8"/>
-                                                </items>
-                                            </group>
+                                            <imageView width="4" height="1" alignment="left" id="9BC-iP-SUM"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="fOy-4P-UX8"/>
                                         </items>
                                         <connections>
                                             <segue destination="bM1-3k-EKT" kind="push" identifier="pushDetail" id="S2w-38-Tgj"/>
@@ -63,17 +58,26 @@
             <objects>
                 <controller id="bM1-3k-EKT" customClass="DetailInterfaceController" customModule="Stephan_Rabanser_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" numberOfLines="0" id="D9I-O9-1R4">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
-                        <separator alignment="left" id="dsY-ZW-yec">
-                            <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                        </separator>
-                        <label alignment="left" text="Label" numberOfLines="0" id="kGd-Fq-m52">
-                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
-                        </label>
+                        <group width="1" alignment="left" layout="vertical" id="7l3-Kd-KuW">
+                            <items>
+                                <label alignment="left" text="Label" numberOfLines="0" id="D9I-O9-1R4">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                                <label alignment="right" text="Label" id="J9h-oE-zav">
+                                    <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                                </label>
+                                <separator alignment="left" id="dsY-ZW-yec">
+                                    <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <label alignment="left" text="Label" numberOfLines="0" id="kGd-Fq-m52">
+                                    <fontDescription key="font" type="system" pointSize="16"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="5"/>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="dateLabel" destination="J9h-oE-zav" id="LS4-US-jwh"/>
                         <outlet property="headlineLabel" destination="D9I-O9-1R4" id="api-Yf-de6"/>
                         <outlet property="shortDescriptionLabel" destination="kGd-Fq-m52" id="kCn-zB-gKG"/>
                     </connections>
