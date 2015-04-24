@@ -92,7 +92,7 @@
                                 <group width="1" alignment="left" layout="vertical" id="cNd-Me-5nP">
                                     <items>
                                         <label width="1" alignment="left" text="E-Mail:" textAlignment="center" id="uBO-iz-cGB"/>
-                                        <label width="1" alignment="left" text="steverab@me.com" textAlignment="center" id="txL-37-Lo9">
+                                        <label width="1" alignment="left" text="Label" textAlignment="center" id="txL-37-Lo9">
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
                                         <separator alignment="left" id="ocs-Ul-yjH">
@@ -103,7 +103,7 @@
                                 <group width="1" alignment="left" layout="vertical" id="qO7-cC-baq">
                                     <items>
                                         <label width="1" alignment="left" text="Twitter:" textAlignment="center" id="3hU-xS-EeA"/>
-                                        <label width="1" alignment="left" text="@steverab" textAlignment="center" id="1B5-O2-aRH">
+                                        <label width="1" alignment="left" text="Label" textAlignment="center" id="1B5-O2-aRH">
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
                                         <separator alignment="left" id="UQa-B6-ZMp">
@@ -114,7 +114,7 @@
                                 <group width="1" alignment="left" layout="vertical" id="aDP-eX-UEW">
                                     <items>
                                         <label width="1" alignment="left" text="Website:" textAlignment="center" id="Cs7-ZF-A7l"/>
-                                        <label width="1" alignment="left" text="steverab.com" textAlignment="center" id="WbW-MJ-QLv">
+                                        <label width="1" alignment="left" text="Label" textAlignment="center" id="WbW-MJ-QLv">
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
                                         <separator alignment="left" id="jFz-ZI-mYp">
@@ -129,7 +129,10 @@
                     <connections>
                         <outlet property="avatarImage" destination="9ye-7v-Yzj" id="geV-ir-uJN"/>
                         <outlet property="descriptionLabel" destination="iXU-6M-0PM" id="fR2-0l-lpd"/>
+                        <outlet property="emailLabel" destination="txL-37-Lo9" id="rid-pw-O0e"/>
                         <outlet property="nameLabel" destination="C6g-7t-yhf" id="FPG-dc-Hzc"/>
+                        <outlet property="twitterLabel" destination="1B5-O2-aRH" id="GS1-B6-nMJ"/>
+                        <outlet property="websiteLabel" destination="WbW-MJ-QLv" id="Rxm-hN-Vo0"/>
                     </connections>
                 </controller>
             </objects>

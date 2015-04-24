@@ -17,7 +17,7 @@ class DetailInterfaceController: WKInterfaceController {
     
     var entry: TimelineEntry!
     
-    //MARK: InterfaceController lifecycle
+    // MARK: - InterfaceController lifecycle
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)

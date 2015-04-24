@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Stephan Rabanser</string>
+	<key>description</key>
+	<string>CS student, Dev, Tech and USA lover</string>
+	<key>email</key>
+	<string>steverab@me.com</string>
+	<key>twitter</key>
+	<string>steverab</string>
+	<key>website</key>
+	<string>steverab.com</string>
+</dict>
+</plist>

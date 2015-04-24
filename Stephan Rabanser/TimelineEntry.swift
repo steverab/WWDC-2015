@@ -70,7 +70,7 @@ class TimelineEntry: NSObject, Printable, NSCoding {
         return "Title: \(title)\nShort description: \(shortDescription)\nDescription: \(description)\nDate: \(date)\nImage named: \(date)"
     }
     
-    // MARK: - Functions
+    // MARK: - Custom functions
     
     func printDescription() -> Void {
         println("==================")

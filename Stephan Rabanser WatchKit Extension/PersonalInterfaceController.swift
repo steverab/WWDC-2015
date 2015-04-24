@@ -14,15 +14,18 @@ class PersonalInterfaceController: WKInterfaceController {
     @IBOutlet weak var avatarImage: WKInterfaceImage!
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
     @IBOutlet weak var descriptionLabel: WKInterfaceLabel!
+    @IBOutlet weak var emailLabel: WKInterfaceLabel!
+    @IBOutlet weak var twitterLabel: WKInterfaceLabel!
+    @IBOutlet weak var websiteLabel: WKInterfaceLabel!
     
-    //MARK: InterfaceController lifecycle
+    // MARK: - InterfaceController lifecycle
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         avatarImage.setImage(UIImage(named: "Me"))
-        nameLabel.setText("Stephan Rabanser")
-        descriptionLabel.setText("Computer science student, Developer, Tech and USA lover")
+        
+        setupMe()
     }
     
     override func willActivate() {
@@ -31,6 +34,27 @@ class PersonalInterfaceController: WKInterfaceController {
     
     override func didDeactivate() {
         super.didDeactivate()
+    }
+    
+    // MARK: - Custom functions
+    
+    func setupMe() {
+        WKInterfaceController.openParentApplication(["request": "loadMe"],
+            reply: { (replyInfo, error) -> Void in
+                if error != nil {
+                    println("Error: \(error.description)")
+                }
+                
+                if let meData = replyInfo["meData"] as? NSData {
+                    if let me = NSKeyedUnarchiver.unarchiveObjectWithData(meData) as? Me {
+                        self.nameLabel.setText(me.name)
+                        self.descriptionLabel.setText(me.shortDescription)
+                        self.emailLabel.setText(me.email)
+                        self.twitterLabel.setText(me.twitter)
+                        self.websiteLabel.setText(me.website)
+                    }
+                }
+        })
     }
     
 }

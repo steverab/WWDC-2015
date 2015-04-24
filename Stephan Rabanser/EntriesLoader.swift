@@ -10,7 +10,7 @@ import Foundation
 
 class EntriesLoader: NSObject {
     
-    class func loadEntries() -> [TimelineEntry] {
+    class func loadTimelineEntries() -> [TimelineEntry] {
         var entries = [TimelineEntry]()
         let loadedEntries = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Entries", ofType: "plist")!)
         for dict in loadedEntries ?? [] {
@@ -20,6 +20,11 @@ class EntriesLoader: NSObject {
             entries.append(entry)
         }
         return entries
+    }
+    
+    class func loadMe() -> Me {
+        let meDict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Me", ofType: "plist")!)!
+        return Me(name: meDict["name"] as! String, shortDescription: meDict["description"] as! String, email: meDict["email"] as! String, twitter: meDict["twitter"] as! String, website: meDict["website"] as! String)
     }
     
 }

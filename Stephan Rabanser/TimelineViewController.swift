@@ -41,7 +41,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var showProfile = true
     
-    var descriptionText = "CS Student | Developer | Tech and USA"
+    var me = Me()
     
     // MARK: - View controller lifecycle
     
@@ -66,11 +66,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         */
         
+        me = EntriesLoader.loadMe()
+        
         setupStartAnimation()
         setupHeader()
         setupTableView()
         
-        entries = EntriesLoader.loadEntries()
+        entries = EntriesLoader.loadTimelineEntries()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -131,17 +133,15 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             headerImg = UIImage(named: "MiamiHeader6")
             headerBlurImageView.image = headerImg?.blurredImageWithRadius(8, iterations: 20, tintColor: UIColor.clearColor())
         } else if view.frame.size.width > 375.0 {
-            descriptionText = "CS Student | Developer | Tech and USA lover"
             headerImg = UIImage(named: "MiamiHeader6P")
             headerBlurImageView.image = headerImg?.blurredImageWithRadius(20, iterations: 20, tintColor: UIColor.clearColor())
         } else {
-            descriptionText = "CS Student | Developer | Tech"
             headerImg = UIImage(named: "MiamiHeader5")
             headerBlurImageView.image = headerImg?.blurredImageWithRadius(8, iterations: 20, tintColor: UIColor.clearColor())
         }
         
         headerImageView.image = headerImg
-        headerDetailLabel.text = descriptionText
+        headerDetailLabel.text = me.shortDescription
         
         header.clipsToBounds = true
     }
@@ -167,7 +167,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             let mailComposerVC = MFMailComposeViewController()
             mailComposerVC.mailComposeDelegate = self
             
-            mailComposerVC.setToRecipients(["steverab@me.com"])
+            mailComposerVC.setToRecipients([self.me.email])
             mailComposerVC.setSubject("Hey there!")
             mailComposerVC.setMessageBody("Hi Stephan,\n\n", isHTML: false)
             
@@ -180,7 +180,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         alertController.addAction(emailAction)
         let twitterAction = UIAlertAction(title: "Twitter", style: .Default) { (action) in
-            if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=steverab")!){
+            if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=\(self.me.twitter)")!){
                 if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
                     if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
                         webViewController.url = NSURL(string:"https://twitter.com/steverab")!
@@ -193,7 +193,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let websiteAction = UIAlertAction(title: "Website", style: .Default) { (action) in
             if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
                 if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
-                    webViewController.url = NSURL(string:"http://steverab.com")!
+                    webViewController.url = NSURL(string:"http://\(self.me.website)")!
                     self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
                 }
             }
@@ -282,8 +282,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func configureProfileCell(cell: ProfileCell, forIndexPath indexPath: NSIndexPath) {
-        cell.nameLabel.text = "Stephan Rabanser"
-        cell.descriptionLabel.text = descriptionText
+        cell.nameLabel.text = me.name
+        cell.descriptionLabel.text = me.shortDescription
         cell.outlineView.type = .NoCircle
         
         cell.setNeedsUpdateConstraints()

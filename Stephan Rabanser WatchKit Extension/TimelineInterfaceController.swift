@@ -22,6 +22,8 @@ class TimelineInterfaceController: WKInterfaceController {
     
     var entries = [TimelineEntry]()
     
+    // MARK: - InterfaceController lifecycle
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -32,17 +34,16 @@ class TimelineInterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
+    // MARK: - Custom functions
+    
     func setupTableView() {
-        
         WKInterfaceController.openParentApplication(["request": "loadEntries"],
             reply: { (replyInfo, error) -> Void in
                 if error != nil {
