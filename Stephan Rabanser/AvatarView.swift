@@ -22,7 +22,6 @@ class AvatarView: UIControl, UIGestureRecognizerDelegate {
     
     // MARK: - Touch handling
     
-    /*
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         executeInScaleAnimation()
     }
@@ -49,7 +48,6 @@ class AvatarView: UIControl, UIGestureRecognizerDelegate {
             self.transform = CGAffineTransformMakeScale(1.0, 1.0)
         }), completion: nil)
     }
-    */
     
     // MARK: - Drawing
     
