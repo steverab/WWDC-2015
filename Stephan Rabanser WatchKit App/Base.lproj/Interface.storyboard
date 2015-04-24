@@ -10,48 +10,130 @@
             <objects>
                 <controller title="SR" id="AgC-eL-Hgc" customClass="TimelineInterfaceController" customModule="Stephan_Rabanser_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="pFh-eS-okQ">
+                        <group width="1" alignment="left" layout="vertical" id="EX9-jd-ofJ">
                             <items>
-                                <group width="118" alignment="center" id="EiQ-Aj-Rtf">
+                                <group width="1" alignment="left" id="pFh-eS-okQ">
                                     <items>
-                                        <imageView width="50" height="50" alignment="left" image="Me" id="ZKz-Sl-9z4"/>
-                                        <label alignment="right" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="XZU-qT-7Fc"/>
+                                        <group width="118" alignment="center" id="EiQ-Aj-Rtf">
+                                            <items>
+                                                <button width="50" height="50" alignment="left" id="DgV-Zz-uOh">
+                                                    <connections>
+                                                        <segue destination="cd7-aj-bP9" kind="push" id="8Nk-w3-iFJ"/>
+                                                    </connections>
+                                                </button>
+                                                <label alignment="right" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="XZU-qT-7Fc"/>
+                                            </items>
+                                            <variation key="device=watch42mm" width="130"/>
+                                        </group>
                                     </items>
-                                    <variation key="device=watch42mm" width="130"/>
                                 </group>
+                                <separator alignment="left" id="0Aa-2K-tyh">
+                                    <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <table alignment="left" id="Cb9-fo-XU7">
+                                    <items>
+                                        <tableRow identifier="entriesRowType" id="j25-OB-XqX" customClass="EntryRowController" customModule="Stephan_Rabanser_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="yuH-EJ-fdR">
+                                                <items>
+                                                    <imageView width="4" height="1" alignment="left" id="9BC-iP-SUM"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="fOy-4P-UX8"/>
+                                                </items>
+                                                <connections>
+                                                    <segue destination="bM1-3k-EKT" kind="push" identifier="pushDetail" id="S2w-38-Tgj"/>
+                                                </connections>
+                                            </group>
+                                            <connections>
+                                                <outlet property="colorImage" destination="9BC-iP-SUM" id="WcT-2b-4K7"/>
+                                                <outlet property="headlineLabel" destination="fOy-4P-UX8" id="1ue-hj-NqO"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
                             </items>
+                            <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="5"/>
                         </group>
-                        <separator alignment="left" id="0Aa-2K-tyh">
-                            <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                        </separator>
-                        <table alignment="left" id="Cb9-fo-XU7">
-                            <items>
-                                <tableRow identifier="entriesRowType" id="j25-OB-XqX" customClass="EntryRowController" customModule="Stephan_Rabanser_WatchKit_Extension">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="6" id="yuH-EJ-fdR">
-                                        <items>
-                                            <imageView width="4" height="1" alignment="left" id="9BC-iP-SUM"/>
-                                            <label alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="fOy-4P-UX8"/>
-                                        </items>
-                                        <connections>
-                                            <segue destination="bM1-3k-EKT" kind="push" identifier="pushDetail" id="S2w-38-Tgj"/>
-                                        </connections>
-                                    </group>
-                                    <connections>
-                                        <outlet property="colorImage" destination="9BC-iP-SUM" id="WcT-2b-4K7"/>
-                                        <outlet property="headlineLabel" destination="fOy-4P-UX8" id="1ue-hj-NqO"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
                     </items>
                     <connections>
-                        <outlet property="avatarImage" destination="ZKz-Sl-9z4" id="Dma-hQ-4xa"/>
+                        <outlet property="avatarButton" destination="DgV-Zz-uOh" id="yAz-bc-vFE"/>
                         <outlet property="nameLabel" destination="XZU-qT-7Fc" id="zMR-om-DlY"/>
                         <outlet property="tableView" destination="Cb9-fo-XU7" id="y8O-Z9-k0Z"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Personal Interface Controller-->
+        <scene sceneID="KvY-1m-oMx">
+            <objects>
+                <controller id="cd7-aj-bP9" customClass="PersonalInterfaceController" customModule="Stephan_Rabanser_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="Ja2-HU-LMO">
+                            <items>
+                                <group width="1" alignment="left" id="UeH-dk-OHc">
+                                    <items>
+                                        <group width="118" alignment="center" id="NlH-3d-zGt">
+                                            <items>
+                                                <imageView width="50" height="50" alignment="left" id="9ye-7v-Yzj"/>
+                                                <label alignment="right" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="0" id="C6g-7t-yhf"/>
+                                            </items>
+                                            <variation key="device=watch42mm" width="130"/>
+                                        </group>
+                                    </items>
+                                </group>
+                                <separator alignment="left" id="4OD-RI-8By">
+                                    <color key="color" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <label width="1" alignment="left" text="Label" textAlignment="center" numberOfLines="0" id="iXU-6M-0PM">
+                                    <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                                </label>
+                                <separator alignment="left" id="8Sv-sx-yt1">
+                                    <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </separator>
+                                <group width="1" alignment="left" layout="vertical" id="cNd-Me-5nP">
+                                    <items>
+                                        <label width="1" alignment="left" text="E-Mail:" textAlignment="center" id="uBO-iz-cGB"/>
+                                        <label width="1" alignment="left" text="steverab@me.com" textAlignment="center" id="txL-37-Lo9">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <separator alignment="left" id="ocs-Ul-yjH">
+                                            <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </separator>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="qO7-cC-baq">
+                                    <items>
+                                        <label width="1" alignment="left" text="Twitter:" textAlignment="center" id="3hU-xS-EeA"/>
+                                        <label width="1" alignment="left" text="@steverab" textAlignment="center" id="1B5-O2-aRH">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <separator alignment="left" id="UQa-B6-ZMp">
+                                            <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </separator>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" id="aDP-eX-UEW">
+                                    <items>
+                                        <label width="1" alignment="left" text="Website:" textAlignment="center" id="Cs7-ZF-A7l"/>
+                                        <label width="1" alignment="left" text="steverab.com" textAlignment="center" id="WbW-MJ-QLv">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                        <separator alignment="left" id="jFz-ZI-mYp">
+                                            <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </separator>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="5"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="avatarImage" destination="9ye-7v-Yzj" id="geV-ir-uJN"/>
+                        <outlet property="descriptionLabel" destination="iXU-6M-0PM" id="fR2-0l-lpd"/>
+                        <outlet property="nameLabel" destination="C6g-7t-yhf" id="FPG-dc-Hzc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="489" y="138"/>
         </scene>
         <!--Detail Interface Controller-->
         <scene sceneID="yv0-6m-Cz0">
@@ -83,43 +165,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="510" y="347"/>
-        </scene>
-        <!--Glance Interface Controller-->
-        <scene sceneID="BOz-TT-tkC">
-            <objects>
-                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController" customModule="Stephan_Rabanser_WatchKit_App" customModuleProvider="target">
-                    <items>
-                        <group alignment="left" id="t8f-Gd-c4y"/>
-                        <group alignment="left" id="uCw-4Q-Ouw"/>
-                    </items>
-                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
-                </glanceController>
-            </objects>
-            <point key="canvasLocation" x="235" y="672"/>
-        </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
-                    <items>
-                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
-                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="235" y="1001"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="KIl-fV-djm">
-            <objects>
-                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="Stephan_Rabanser_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="553" y="1001"/>
+            <point key="canvasLocation" x="489" y="440"/>
         </scene>
     </scenes>
 </document>

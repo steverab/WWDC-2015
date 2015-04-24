@@ -18,7 +18,7 @@ class TimelineInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var tableView: WKInterfaceTable!
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
-    @IBOutlet weak var avatarImage: WKInterfaceImage!
+    @IBOutlet weak var avatarButton: WKInterfaceButton!
     
     var entries = [TimelineEntry]()
     
@@ -26,7 +26,7 @@ class TimelineInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         nameLabel.setText("Stephan Rabanser")
-        avatarImage.setImage(UIImage(named: "Me"))
+        avatarButton.setBackgroundImage(UIImage(named: "Me"))
         
         setupTableView()
     }

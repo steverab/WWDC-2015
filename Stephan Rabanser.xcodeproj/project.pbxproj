@@ -14,8 +14,6 @@
 		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
 		AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626881AE0FC8C004D995D /* TimelineViewController.swift */; };
 		AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */; };
-		AA867F361AE98C0A00A3948E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867F351AE98C0A00A3948E /* NotificationController.swift */; };
-		AA867F381AE98C0A00A3948E /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867F371AE98C0A00A3948E /* GlanceController.swift */; };
 		AA867F3A1AE98C0A00A3948E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA867F391AE98C0A00A3948E /* Images.xcassets */; };
 		AA867F3E1AE98C0A00A3948E /* Stephan Rabanser WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = AA867F3D1AE98C0A00A3948E /* Stephan Rabanser WatchKit App.app */; };
 		AA867F461AE98C0A00A3948E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA867F441AE98C0A00A3948E /* Interface.storyboard */; };
@@ -30,6 +28,7 @@
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
 		AA9C08391AE0EB5100617B43 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08381AE0EB5100617B43 /* Images.xcassets */; };
 		AA9C083C1AE0EB5100617B43 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA9C083A1AE0EB5100617B43 /* LaunchScreen.xib */; };
+		AAA69DB81AEAECFB002B612A /* PersonalInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA69DB71AEAECFB002B612A /* PersonalInterfaceController.swift */; };
 		AAA74CCD1AE19D8B0048B117 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA74CCC1AE19D8B0048B117 /* DetailViewController.swift */; };
 		AAE81E901AE448B60031AD4A /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE81E8F1AE448B60031AD4A /* AvatarView.swift */; };
 		AAE81E951AE44FA60031AD4A /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE81E941AE44FA60031AD4A /* FXBlurView.m */; };
@@ -78,8 +77,6 @@
 		AA867F2E1AE98C0A00A3948E /* Stephan Rabanser WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Stephan Rabanser WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA867F311AE98C0A00A3948E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA867F321AE98C0A00A3948E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		AA867F351AE98C0A00A3948E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		AA867F371AE98C0A00A3948E /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		AA867F391AE98C0A00A3948E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA867F3D1AE98C0A00A3948E /* Stephan Rabanser WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA867F431AE98C0A00A3948E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +92,7 @@
 		AA9C08361AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA9C08381AE0EB5100617B43 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA9C083B1AE0EB5100617B43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AAA69DB71AEAECFB002B612A /* PersonalInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInterfaceController.swift; sourceTree = "<group>"; };
 		AAA74CCC1AE19D8B0048B117 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AAE81E8F1AE448B60031AD4A /* AvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		AAE81E921AE44FA50031AD4A /* Stephan Rabanser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stephan Rabanser-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -173,9 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				AA867F521AE98CE000A3948E /* TimelineInterfaceController.swift */,
+				AAA69DB71AEAECFB002B612A /* PersonalInterfaceController.swift */,
 				AA867F541AE98D2700A3948E /* DetailInterfaceController.swift */,
-				AA867F351AE98C0A00A3948E /* NotificationController.swift */,
-				AA867F371AE98C0A00A3948E /* GlanceController.swift */,
 				AA867F391AE98C0A00A3948E /* Images.xcassets */,
 				AA867F301AE98C0A00A3948E /* Supporting Files */,
 			);
@@ -406,10 +403,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA69DB81AEAECFB002B612A /* PersonalInterfaceController.swift in Sources */,
 				AA867F531AE98CE000A3948E /* TimelineInterfaceController.swift in Sources */,
-				AA867F361AE98C0A00A3948E /* NotificationController.swift in Sources */,
 				AA867F591AE98F9300A3948E /* TimelineEntry.swift in Sources */,
-				AA867F381AE98C0A00A3948E /* GlanceController.swift in Sources */,
 				AA867F551AE98D2700A3948E /* DetailInterfaceController.swift in Sources */,
 				AA06B5D61AE9AC1700CBE67F /* ColorExtensions.swift in Sources */,
 			);
