@@ -152,7 +152,7 @@
                                     <constraint firstAttribute="centerX" secondItem="ya5-YA-Vv2" secondAttribute="centerX" id="yXe-FS-aOf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-LP-BsY" customClass="AvatarView" customModule="Stephan_Rabanser" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-LP-BsY" customClass="AvatarView" customModule="Stephan_Rabanser" customModuleProvider="target">
                                 <rect key="frame" x="23" y="89" width="76" height="76"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -389,7 +389,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Avatar" width="75" height="75"/>
+        <image name="Avatar" width="60" height="60"/>
         <image name="Singapore" width="375" height="150"/>
     </resources>
 </document>
