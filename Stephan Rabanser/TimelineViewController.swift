@@ -17,6 +17,15 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var headerDetailLabel:UILabel!
     @IBOutlet weak var avatarView: AvatarView!
     
+    
+    @IBOutlet weak var avatarHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var avatarWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var avatarLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var avatarTopConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var headerTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var headerHeightConstraint: NSLayoutConstraint!
+    
     var headerImageView:UIImageView!
     var headerBlurImageView:UIImageView!
     var blurredHeaderImageView:UIImageView?
@@ -25,6 +34,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     let offsetLabelHeader:CGFloat = 65.0
     let offsetAvatarHeader:CGFloat = 0.0
     let blurFadeDuration:CGFloat = 94.0
+    
+    let avatarWidth:CGFloat = 76.0
     
     var entries = [TimelineEntry]()
     
@@ -53,8 +64,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.timelineTableView.endUpdates()
             }
         }
-*/
+        */
         
+        setupStartAnimation()
         setupHeader()
         setupTableView()
         
@@ -72,6 +84,33 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     // MARK: - Custom functions
+    
+    func setupStartAnimation() {
+        avatarHeightConstraint.constant = 0
+        avatarWidthConstraint.constant = 0
+        avatarTopConstraint.constant += avatarWidth/2
+        avatarLeftConstraint.constant += avatarWidth/2
+        self.avatarView.setNeedsUpdateConstraints()
+        self.avatarView.layoutIfNeeded()
+        
+        avatarHeightConstraint.constant = avatarWidth
+        avatarWidthConstraint.constant = avatarWidth
+        avatarTopConstraint.constant -= avatarWidth/2
+        avatarLeftConstraint.constant -= avatarWidth/2
+        self.avatarView.setNeedsUpdateConstraints()
+        
+        timelineTableView.alpha = 0.0
+        header.alpha = 0.0
+        
+        UIView.animateWithDuration(1.0, delay: 0.1, usingSpringWithDamping: 0.4, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: ({
+            self.avatarView.layoutIfNeeded()
+        }), completion: nil)
+        
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.timelineTableView.alpha = 1.0
+            self.header.alpha = 1.0
+        })
+    }
     
     func setupHeader() {
         let headerImg: UIImage!

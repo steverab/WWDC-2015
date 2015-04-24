@@ -10,7 +10,6 @@
 		AA06B5D61AE9AC1700CBE67F /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2954D1AE1268600D05A9E /* ColorExtensions.swift */; };
 		AA215B801AE537BF00B29C47 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA215B7F1AE537BE00B29C47 /* ProfileCell.swift */; };
 		AA33D4701AE5ACF300F215EE /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA33D46F1AE5ACF300F215EE /* BorderedButton.swift */; };
-		AA7D42C01AEAC95F0028518D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7D42BF1AEAC95F0028518D /* StartViewController.swift */; };
 		AA8626821AE0F78E004D995D /* Entries.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8626811AE0F78E004D995D /* Entries.plist */; };
 		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
 		AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626881AE0FC8C004D995D /* TimelineViewController.swift */; };
@@ -72,7 +71,6 @@
 /* Begin PBXFileReference section */
 		AA215B7F1AE537BE00B29C47 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		AA33D46F1AE5ACF300F215EE /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
-		AA7D42BF1AEAC95F0028518D /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		AA8626811AE0F78E004D995D /* Entries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entries.plist; sourceTree = "<group>"; };
 		AA8626831AE0F832004D995D /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
 		AA8626881AE0FC8C004D995D /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		AA8626851AE0F8AA004D995D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA7D42BF1AEAC95F0028518D /* StartViewController.swift */,
 				AA8626881AE0FC8C004D995D /* TimelineViewController.swift */,
 				AAA74CCC1AE19D8B0048B117 /* DetailViewController.swift */,
 				AA86EF841AE864770091EFE9 /* WebViewController.swift */,
@@ -423,7 +420,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */,
-				AA7D42C01AEAC95F0028518D /* StartViewController.swift in Sources */,
 				AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */,
 				AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */,
 				AAF2954C1AE1266A00D05A9E /* OutlineView.swift in Sources */,
