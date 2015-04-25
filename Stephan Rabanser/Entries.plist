@@ -56,7 +56,7 @@
 		<key>type</key>
 		<integer>1</integer>
 		<key>image</key>
-		<string>SwiftTeaching</string>
+		<string>Swift</string>
 		<key>button</key>
 		<dict>
 			<key>title</key>
@@ -67,11 +67,13 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Hours</string>
+		<string>Multiply &amp; Hours</string>
 		<key>shortDescription</key>
 		<string>Hours is a new way for finding time to meet with friends, at work or anything in between.</string>
 		<key>description</key>
-		<string></string>
+		<string>From January 2014 to September 2014, I was an essential part in the establishment of a startup named Multiply, whose purpose is to reinvent calendaring with a new app called Hours.
+            
+In order not to loose focus on my academic career, I had to leave Multiply in September, unfortunately.</string>
 		<key>date</key>
 		<string>Jan 2014</string>
 		<key>type</key>
@@ -81,7 +83,7 @@
 		<key>button</key>
 		<dict>
 			<key>title</key>
-			<string>Take a look at temporary website</string>
+			<string>Take a look at the website</string>
 			<key>link</key>
 			<string>http://hours.im</string>
 		</dict>
@@ -92,7 +94,18 @@
 		<key>shortDescription</key>
 		<string>Piqup is a Dropbox client which makes it easy to take exclusive pictures and allows you to share them with your private group of choice.</string>
 		<key>description</key>
-		<string></string>
+        <string>Whether you are a journalist who has to deal with branded images day by day, or an individual who simply wants to take, upload and share a watermarked picture, Piqup is your ideal companion.
+            
+With Piqup you can:
+    - Browse your entire Dropbox and view any image in there. Folders and images are cached, so Piqup doesn't unnecessarily waste your network bandwidth. Up- and downloads continue in the background.
+    - Create folders inside your Dropbox and delete any file or directory in there.
+    - Upload images to any folder in your Dropbox. Images can be taken by the camera, chosen from the library or used from the clipboard. A shareable link will be copied to your clipboard after the upload is finished, so you can instantly share the uploaded image.
+    - Apply a watermark to your images. The Settings area allows you to select different watermark positions and change the watermark's transparency.
+    - Set your desired output format (JPEG or PNG). Additionally you can define the compression rate of JPEG images.
+    - Share your images to social services like Facebook and Twitter or send them via E-Mail, SMS or AirDrop by using a generated link or the image itself, which makes sharing extremely easy.
+    - Recieve local notifications for background uploads.
+    - Remove your Dropbox account or link to a different one at any time.
+    - Switch between a light (default) and a dark mode.</string>
 		<key>date</key>
 		<string>Oct 2013</string>
 		<key>type</key>
@@ -102,7 +115,7 @@
 		<key>button</key>
 		<dict>
 			<key>title</key>
-			<string>Buy on the App Store</string>
+			<string>Available on the App Store</string>
 			<key>link</key>
 			<string>https://itunes.apple.com/de/app/piqup/id718548316?l=en&amp;mt=8</string>
 		</dict>
@@ -111,9 +124,9 @@
 		<key>title</key>
 		<string>WWDC &apos;13 Scholarship</string>
 		<key>shortDescription</key>
-		<string>Apple chose me to attend 2013’s Worldwide Developers Conference in San Francisco on a student scholarship.</string>
+		<string>Apple chose me to attend 2013’s Worldwide Developers Conference in San Francisco on a Student Scholarship.</string>
 		<key>description</key>
-		<string></string>
+		<string>I had the great privilege to be among the 150 student scholarship recipients for Apple’s WWDC, hosted in San Francisco. This was a longtime dream come true and I had the chance to meet and talk to extremely talented, like-minded people from around the entire world.</string>
 		<key>date</key>
 		<string>Jun 2013</string>
 		<key>type</key>
@@ -283,7 +296,7 @@ After two years of general studies, I focused on Information Technology in the n
 		<key>title</key>
 		<string>Birth and growing up</string>
 		<key>shortDescription</key>
-		<string>I was born on December 12th 1993 in the beatiful region of South Tyrol, Italy.</string>
+		<string>I was born on December 12th 1993 in the beautiful region of South Tyrol, Italy.</string>
 		<key>description</key>
 		<string>Even though I&apos;m an Italian citicen, I grew up as a German native speaker, because South Tyrol has once been part of Austria, but was a gift to Italy after World War I. Round about 70% of the population of South Tyrol speaks German as their first language, altough most of them prefer a quite aggressive dialect in their average day-to-day conversations.
             
