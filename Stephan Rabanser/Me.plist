@@ -12,5 +12,9 @@
 	<string>steverab</string>
 	<key>website</key>
 	<string>steverab.com</string>
+	<key>latitude</key>
+	<real>48.1333</real>
+	<key>longitude</key>
+	<real>11.5667</real>
 </dict>
 </plist>

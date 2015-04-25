@@ -17,6 +17,7 @@ class PersonalInterfaceController: WKInterfaceController {
     @IBOutlet weak var emailLabel: WKInterfaceLabel!
     @IBOutlet weak var twitterLabel: WKInterfaceLabel!
     @IBOutlet weak var websiteLabel: WKInterfaceLabel!
+    @IBOutlet weak var map: WKInterfaceMap!
     
     // MARK: - InterfaceController lifecycle
     
@@ -52,6 +53,13 @@ class PersonalInterfaceController: WKInterfaceController {
                         self.emailLabel.setText(me.email)
                         self.twitterLabel.setText(me.twitter)
                         self.websiteLabel.setText(me.website)
+                        
+                        let location = CLLocationCoordinate2D(latitude: me.locationLatitude, longitude: me.locationLongitude)
+                        
+                        let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
+                        
+                        self.map.setRegion(region)
+                        
                     }
                 }
         })

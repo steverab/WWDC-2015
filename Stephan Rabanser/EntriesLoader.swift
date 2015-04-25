@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Stephan Rabanser. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import MapKit
 
 class EntriesLoader: NSObject {
     
@@ -24,7 +25,7 @@ class EntriesLoader: NSObject {
     
     class func loadMe() -> Me {
         let meDict = NSDictionary(contentsOfFile: NSBundle.mainBundle().pathForResource("Me", ofType: "plist")!)!
-        return Me(name: meDict["name"] as! String, shortDescription: meDict["description"] as! String, email: meDict["email"] as! String, twitter: meDict["twitter"] as! String, website: meDict["website"] as! String)
+        return Me(name: meDict["name"] as! String, shortDescription: meDict["description"] as! String, email: meDict["email"] as! String, twitter: meDict["twitter"] as! String, website: meDict["website"] as! String, locationLatitude: meDict["latitude"] as! CLLocationDegrees, locationLongitude: meDict["longitude"] as! CLLocationDegrees)
     }
     
 }

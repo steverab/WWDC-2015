@@ -122,6 +122,7 @@
                                         </separator>
                                     </items>
                                 </group>
+                                <map height="100" alignment="left" id="044-9I-n2G"/>
                             </items>
                             <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="5"/>
                         </group>
@@ -130,13 +131,14 @@
                         <outlet property="avatarImage" destination="9ye-7v-Yzj" id="geV-ir-uJN"/>
                         <outlet property="descriptionLabel" destination="iXU-6M-0PM" id="fR2-0l-lpd"/>
                         <outlet property="emailLabel" destination="txL-37-Lo9" id="rid-pw-O0e"/>
+                        <outlet property="map" destination="044-9I-n2G" id="qQk-kn-M5s"/>
                         <outlet property="nameLabel" destination="C6g-7t-yhf" id="FPG-dc-Hzc"/>
                         <outlet property="twitterLabel" destination="1B5-O2-aRH" id="GS1-B6-nMJ"/>
                         <outlet property="websiteLabel" destination="WbW-MJ-QLv" id="Rxm-hN-Vo0"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="489" y="138"/>
+            <point key="canvasLocation" x="489" y="58.75"/>
         </scene>
         <!--Detail Interface Controller-->
         <scene sceneID="yv0-6m-Cz0">
