@@ -10,7 +10,7 @@
             <objects>
                 <controller title="SR" id="AgC-eL-Hgc" customClass="TimelineInterfaceController" customModule="Stephan_Rabanser_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="EX9-jd-ofJ">
+                        <group width="1" alignment="left" layout="vertical" spacing="8" id="EX9-jd-ofJ">
                             <items>
                                 <group width="1" alignment="left" id="pFh-eS-okQ">
                                     <items>
