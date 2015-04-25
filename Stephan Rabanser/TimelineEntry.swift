@@ -49,6 +49,8 @@ class TimelineEntry: NSObject, Printable, NSCoding {
         self.buttonURL = NSURL(string: buttonURL)
     }
     
+    // MARK: - NSCoding functions
+    
     required init(coder aDecoder: NSCoder) {
         title = aDecoder.decodeObjectForKey("title") as! String
         shortDescription = aDecoder.decodeObjectForKey("shortDescription") as! String
@@ -78,7 +80,7 @@ class TimelineEntry: NSObject, Printable, NSCoding {
         return "Title: \(title)\nShort description: \(shortDescription)\nDescription: \(description)\nDate: \(date)\nImage named: \(date)"
     }
     
-    // MARK: - Custom functions
+    // MARK: Custom functions
     
     func printDescription() -> Void {
         println("==================")

@@ -23,10 +23,8 @@ class DetailInterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         entry = context as! TimelineEntry
-        headlineLabel.setText(entry.title)
-        headlineLabel.setTextColor(UIColor.colorForType(entry.type))
-        shortDescriptionLabel.setText(entry.shortDescription)
-        dateLabel.setText(entry.date)
+        
+        setupDetailView()
     }
     
     override func willActivate() {
@@ -35,6 +33,15 @@ class DetailInterfaceController: WKInterfaceController {
     
     override func didDeactivate() {
         super.didDeactivate()
+    }
+    
+    // MARK: Custom functions
+    
+    func setupDetailView() {
+        headlineLabel.setText(entry.title)
+        headlineLabel.setTextColor(UIColor.colorForType(entry.type))
+        shortDescriptionLabel.setText(entry.shortDescription)
+        dateLabel.setText(entry.date)
     }
     
 }

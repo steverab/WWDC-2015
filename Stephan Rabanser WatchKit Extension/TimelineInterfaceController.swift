@@ -41,39 +41,47 @@ class TimelineInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    // MARK: - Custom functions
+    // MARK: Custom functions
     
     func setupTableView() {
-        WKInterfaceController.openParentApplication(["request": "loadEntries"],
-            reply: { (replyInfo, error) -> Void in
-                if error != nil {
-                    println("Error: \(error.description)")
-                }
-                
-                if let entriesData = replyInfo["entriesData"] as? NSData {
-                    if let entries = NSKeyedUnarchiver.unarchiveObjectWithData(entriesData) as? [TimelineEntry] {
-                        self.entries = entries
-                        self.tableView.setNumberOfRows(self.entries.count, withRowType: "entriesRowType")
-                        for (index, entry) in enumerate(self.entries) {
-                            let rowController = self.tableView.rowControllerAtIndex(index) as! EntryRowController
-                            rowController.headlineLabel.setText(entry.title)
-                            if entry.type == .Personal {
-                                rowController.colorImage.setImage(UIImage(named: "Green")?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
-                            } else if entry.type == .Education {
-                                rowController.colorImage.setImage(UIImage(named: "Red")?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
-                            } else {
-                                rowController.colorImage.setImage(UIImage(named: "Blue")?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
-                            }
-                            
+        WKInterfaceController.openParentApplication(["request": "loadEntries"], reply: { (replyInfo, error) -> Void in
+            if error != nil {
+                println("Error loading table view: \(error.description)")
+            }
+            
+            if let entriesData = replyInfo["entriesData"] as? NSData {
+                if let entries = NSKeyedUnarchiver.unarchiveObjectWithData(entriesData) as? [TimelineEntry] {
+                    self.entries = entries
+                    self.tableView.setNumberOfRows(self.entries.count, withRowType: "entriesRowType")
+                    for (index, entry) in enumerate(self.entries) {
+                        let rowController = self.tableView.rowControllerAtIndex(index) as! EntryRowController
+                        rowController.headlineLabel.setText(entry.title)
+                        let imageName: String
+                        if entry.type == .Personal {
+                            imageName = "Green"
+                        } else if entry.type == .Education {
+                            imageName = "Red"
+                        } else {
+                            imageName = "Blue"
                         }
+                        rowController.colorImage.setImage(UIImage(named: imageName)?.resizableImageWithCapInsets(UIEdgeInsetsMake(2, 2, 2, 2)))
                     }
+                } else {
+                    println("Error converting entriesData")
                 }
+            } else {
+                println("Error looking up entriesData")
+            }
         })
     }
+    
+    // MARK: - Navigation
     
     override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
         if segueIdentifier == "pushDetail" {
             return entries[rowIndex]
+        } else {
+            println("Segue identifier not handled")
         }
         return nil
     }

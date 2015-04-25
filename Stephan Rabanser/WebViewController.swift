@@ -26,13 +26,34 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupNavigationBar()
+        setupWebView()
+        setupToolbar()
+        updateToolbar()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         
+        tearDownWebView()
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+    }
+    
+    // MARK: Custom functions
+    
+    func setupNavigationBar() {
         UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
-        
+        navigationController?.setToolbarHidden(false, animated: true)
+    }
+    
+    func setupWebView() {
         webView.loadRequest(NSURLRequest(URL: url))
         webView.delegate = self
         webView.opaque = false
-        
+    }
+    
+    func setupToolbar() {
         refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: webView, action: "reload")
         stopButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: webView, action: "stopLoading")
         nextButton = UIBarButtonItem(image: UIImage(named: "ArrowRight"), style: .Plain, target: webView, action: "goForward")
@@ -42,21 +63,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
         refreshStopButton = refreshButton
-        
-        navigationController?.setToolbarHidden(false, animated: true)
-        
-        updateToolbar()
     }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        webView.stopLoading()
-        webView.delegate = nil
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-    }
-    
-    // MARK: - Custom functions
     
     func updateToolbar() {
         nextButton.enabled = webView.canGoForward
@@ -87,6 +94,11 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         alertController.addAction(twitterAction)
         
         self.presentViewController(alertController, animated: true) {}
+    }
+    
+    func tearDownWebView() {
+        webView.stopLoading()
+        webView.delegate = nil
     }
     
     // MARK: - UIWebView delegate

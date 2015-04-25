@@ -12,10 +12,14 @@ class SafariActivity: UIActivity {
     
     var url: NSURL!
     
+    // MARK: - Constructor
+    
     init(url: NSURL) {
         super.init()
         self.url = url
     }
+    
+    // MARK: - UIActivity functions
     
     override func activityType() -> String? {
         return "com.steverab.openSafari"

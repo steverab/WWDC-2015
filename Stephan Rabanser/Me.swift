@@ -35,6 +35,8 @@ class Me: NSObject, Printable, NSCoding {
         self.locationLongitude = locationLongitude
     }
     
+    // MARK: - NSCoding functions
+    
     required init(coder aDecoder: NSCoder) {
         name = aDecoder.decodeObjectForKey("name") as! String
         shortDescription = aDecoder.decodeObjectForKey("shortDescription") as! String
@@ -61,7 +63,7 @@ class Me: NSObject, Printable, NSCoding {
         return "Name: \(name)\nShort description: \(shortDescription)\nE-Mail: \(email)\nTwitter: \(twitter)\nWebsite: \(website)"
     }
     
-    // MARK: - Custom functions
+    // MARK: Custom functions
     
     func printDescription() -> Void {
         println("==================")

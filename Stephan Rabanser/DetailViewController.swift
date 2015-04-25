@@ -27,6 +27,19 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigationBar()
+        setupDetailView()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
+    }
+    
+    // MARK: Custom functions
+    
+    func setupNavigationBar() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = UIColor.colorForType(timelineEntry.type)
         navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -36,7 +49,9 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
             NSFontAttributeName: UIFont(name: "AvenirNext-Medium", size: 18)!
         ]
         navigationController?.navigationBar.titleTextAttributes = attributes
-        
+    }
+    
+    func setupDetailView() {
         lineHeightConstraint.constant = 1/UIScreen.mainScreen().scale
         
         title = timelineEntry.title
@@ -71,25 +86,15 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
                     storeViewController.loadProductWithParameters(parameters,
                         completionBlock: {result, error in
                             if result {
-                                self.presentViewController(storeViewController, 
+                                self.presentViewController(storeViewController,
                                     animated: true, completion: nil)
                             }
                             
                     })
                 }
-                
             }
         }
-        
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
-    }
-    
-    // MARK: - Custom functions
     
     // MARK: - SKStoreProductViewController delegate
     
@@ -97,11 +102,6 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
         SKStoreProductViewController!) {
             viewController.dismissViewControllerAnimated(true,
                 completion: nil)
-    }
-    
-    // MARK: - Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
     
     // MARK: - Memory management

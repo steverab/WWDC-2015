@@ -40,28 +40,31 @@ class PersonalInterfaceController: WKInterfaceController {
     // MARK: - Custom functions
     
     func setupMe() {
-        WKInterfaceController.openParentApplication(["request": "loadMe"],
-            reply: { (replyInfo, error) -> Void in
-                if error != nil {
-                    println("Error: \(error.description)")
+        WKInterfaceController.openParentApplication(["request": "loadMe"], reply: { (replyInfo, error) -> Void in
+            if error != nil {
+                println("Error loading me: \(error.description)")
+            }
+            
+            if let meData = replyInfo["meData"] as? NSData {
+                if let me = NSKeyedUnarchiver.unarchiveObjectWithData(meData) as? Me {
+                    self.nameLabel.setText(me.name)
+                    self.descriptionLabel.setText(me.shortDescription)
+                    self.emailLabel.setText(me.email)
+                    self.twitterLabel.setText(me.twitter)
+                    self.websiteLabel.setText(me.website)
+                    
+                    let location = CLLocationCoordinate2D(latitude: me.locationLatitude, longitude: me.locationLongitude)
+                    
+                    let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
+                    
+                    self.map.setRegion(region)
+                    
+                } else {
+                    println("Error converting meData")
                 }
-                
-                if let meData = replyInfo["meData"] as? NSData {
-                    if let me = NSKeyedUnarchiver.unarchiveObjectWithData(meData) as? Me {
-                        self.nameLabel.setText(me.name)
-                        self.descriptionLabel.setText(me.shortDescription)
-                        self.emailLabel.setText(me.email)
-                        self.twitterLabel.setText(me.twitter)
-                        self.websiteLabel.setText(me.website)
-                        
-                        let location = CLLocationCoordinate2D(latitude: me.locationLatitude, longitude: me.locationLongitude)
-                        
-                        let region = MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
-                        
-                        self.map.setRegion(region)
-                        
-                    }
-                }
+            } else {
+                println("Error looking up meData")
+            }
         })
     }
     

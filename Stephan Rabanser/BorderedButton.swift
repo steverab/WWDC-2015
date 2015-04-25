@@ -52,14 +52,19 @@ import UIKit
         }
     }
     
+    // MARK: - Constructor
+    
     required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
         self.setup()
     }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setup()
     }
+    
+    // MARK: Custom functions
     
     func setup() {
         userInteractionEnabled = true
@@ -71,6 +76,8 @@ import UIKit
         button.addTarget(self, action: "onReset:", forControlEvents: .TouchDragExit)
         button.addTarget(self, action: "onReset:", forControlEvents: .TouchCancel)
     }
+    
+    // MARK: - Layouting
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -87,7 +94,7 @@ import UIKit
         addSubview(button)
     }
     
-    // MARK: Actions
+    // MARK: - Actions
     
     func onPress(sender: AnyObject) {
         UIView.animateWithDuration(self.animationDuration, animations: {
@@ -106,6 +113,8 @@ import UIKit
     func onRealPress(sender: AnyObject) {
         if let action = action {
             action()
+        } else {
+            println("Action no specified")
         }
     }
     

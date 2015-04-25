@@ -37,10 +37,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     let avatarWidth:CGFloat = 76.0
     
     var entries = [TimelineEntry]()
+    var me = Me()
     
     var showProfile = true
-    
-    var me = Me()
     
     // MARK: - View controller lifecycle
     
@@ -84,7 +83,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    // MARK: - Custom functions
+    // MARK: Custom functions
     
     func setupStartAnimation() {
         avatarHeightConstraint.constant = 0
@@ -154,52 +153,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         timelineTableView.contentInset = UIEdgeInsetsMake(144, 0, 0, 0)
     }
     
-    func setupActionSheet() {
-        let alertController = UIAlertController(title: nil, message: "Get in touch with me!", preferredStyle: .ActionSheet)
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
-        alertController.addAction(cancelAction)
-        let emailAction = UIAlertAction(title: "E-Mail", style: .Default) { (action) in
-            let mailComposerVC = MFMailComposeViewController()
-            mailComposerVC.mailComposeDelegate = self
-            
-            mailComposerVC.setToRecipients([self.me.email])
-            mailComposerVC.setSubject("Hey there!")
-            mailComposerVC.setMessageBody("Hi Stephan,\n\n", isHTML: false)
-            
-            if MFMailComposeViewController.canSendMail() {
-                self.presentViewController(mailComposerVC, animated: true, completion: nil)
-            } else {
-                let sendMailErrorAlert = UIAlertView(title: "Error", message: "E-Mail sending failed. Please check your E-Mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-                sendMailErrorAlert.show()
-            }
-        }
-        alertController.addAction(emailAction)
-        let twitterAction = UIAlertAction(title: "Twitter", style: .Default) { (action) in
-            if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=\(self.me.twitter)")!){
-                if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
-                    if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
-                        webViewController.url = NSURL(string:"https://twitter.com/steverab")!
-                        self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
-                    }
-                }
-            }
-        }
-        alertController.addAction(twitterAction)
-        let websiteAction = UIAlertAction(title: "Website", style: .Default) { (action) in
-            if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
-                if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
-                    webViewController.url = NSURL(string:"http://\(self.me.website)")!
-                    self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
-                }
-            }
-        }
-        alertController.addAction(websiteAction)
-        
-        self.presentViewController(alertController, animated: true) {}
-    }
-    
-    // MARK: - Scroll view delegate
+    // MARK: - UIScrollView delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y + timelineTableView.contentInset.top
@@ -245,7 +199,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         avatarView.layer.transform = avatarTransform
     }
     
-    // MARK: - Table view data source
+    // MARK: - UITableView data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -276,6 +230,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             return cell
         }
     }
+    
+    // MARK: Custom functions
     
     func configureProfileCell(cell: ProfileCell, forIndexPath indexPath: NSIndexPath) {
         cell.nameLabel.text = me.name
@@ -321,7 +277,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.updateConstraintsIfNeeded()
     }
     
-    // MARK: - Table view delegate
+    // MARK: - UITableView delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if showProfile == true && indexPath.row == 0 {
@@ -330,13 +286,60 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    // MARK: - Mail composer delegate
+    // MARK: Custom functions
+    
+    func setupActionSheet() {
+        let alertController = UIAlertController(title: nil, message: "Get in touch with me!", preferredStyle: .ActionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in }
+        alertController.addAction(cancelAction)
+        let emailAction = UIAlertAction(title: "E-Mail", style: .Default) { (action) in
+            let mailComposerVC = MFMailComposeViewController()
+            mailComposerVC.mailComposeDelegate = self
+            
+            mailComposerVC.setToRecipients([self.me.email])
+            mailComposerVC.setSubject("Hey there!")
+            mailComposerVC.setMessageBody("Hi Stephan,\n\n", isHTML: false)
+            
+            if MFMailComposeViewController.canSendMail() {
+                self.presentViewController(mailComposerVC, animated: true, completion: nil)
+            } else {
+                let sendMailErrorAlert = UIAlertView(title: "Error", message: "E-Mail sending failed. Please check your E-Mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+                sendMailErrorAlert.show()
+            }
+        }
+        alertController.addAction(emailAction)
+        let twitterAction = UIAlertAction(title: "Twitter", style: .Default) { (action) in
+            if !UIApplication.sharedApplication().openURL(NSURL(string:"twitter://user?screen_name=\(self.me.twitter)")!){
+                if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
+                    if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
+                        webViewController.url = NSURL(string:"https://twitter.com/steverab")!
+                        self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                    }
+                }
+            }
+        }
+        alertController.addAction(twitterAction)
+        let websiteAction = UIAlertAction(title: "Website", style: .Default) { (action) in
+            if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
+                if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
+                    webViewController.url = NSURL(string:"http://\(self.me.website)")!
+                    self.navigationController?.presentViewController(destinationViewController, animated: true, completion: { () -> Void in })
+                }
+            }
+        }
+        alertController.addAction(websiteAction)
+        
+        self.presentViewController(alertController, animated: true) {}
+    }
+    
+    // MARK: - MFMailComposeViewController delegate
     
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    // MARK: - Navigation
+    // MARK: - Navigation handling
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let detailViewController = segue.destinationViewController as! DetailViewController
