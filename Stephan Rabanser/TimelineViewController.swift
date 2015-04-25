@@ -17,7 +17,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet var headerDetailLabel:UILabel!
     @IBOutlet weak var avatarView: AvatarView!
     
-    
     @IBOutlet weak var avatarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var avatarWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var avatarLeftConstraint: NSLayoutConstraint!
@@ -129,12 +128,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         headerBlurImageView.alpha = 0.0
         header.insertSubview(headerBlurImageView, belowSubview: headerLabel)
         
-        if view.frame.size.width == 375.0 {
-            headerImg = UIImage(named: "MiamiHeader6")
+        if view.frame.size.width >= 375.0 {
+            headerImg = UIImage(named: "MiamiHeader")
             headerBlurImageView.image = headerImg?.blurredImageWithRadius(8, iterations: 20, tintColor: UIColor.clearColor())
-        } else if view.frame.size.width > 375.0 {
-            headerImg = UIImage(named: "MiamiHeader6P")
-            headerBlurImageView.image = headerImg?.blurredImageWithRadius(20, iterations: 20, tintColor: UIColor.clearColor())
         } else {
             headerImg = UIImage(named: "MiamiHeader5")
             headerBlurImageView.image = headerImg?.blurredImageWithRadius(8, iterations: 20, tintColor: UIColor.clearColor())

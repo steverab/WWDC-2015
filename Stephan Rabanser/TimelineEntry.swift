@@ -35,8 +35,16 @@ class TimelineEntry: NSObject, Printable, NSCoding {
         self.longDescription = description
         self.date = date
         self.type = type
-        self.imageString = imageString
-        self.image = UIImage(named: imageString)
+        
+        let screenWidth = CGFloat(NSUserDefaults.standardUserDefaults().floatForKey("screenWidth"))
+        
+        if screenWidth >= 375.0 {
+            self.imageString = imageString
+        } else {
+            self.imageString = imageString + "_5"
+        }
+        
+        self.image = UIImage(named: self.imageString)
         self.buttonTitle = buttonTitle
         self.buttonURL = NSURL(string: buttonURL)
     }

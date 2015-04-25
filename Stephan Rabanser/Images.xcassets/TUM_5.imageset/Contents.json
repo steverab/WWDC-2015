@@ -7,12 +7,11 @@
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Miami@2x.png"
+      "filename" : "TUM_5@2x.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "Miami@3x.png"
+      "scale" : "3x"
     }
   ],
   "info" : {
