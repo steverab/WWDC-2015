@@ -37,7 +37,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         stopButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: webView, action: "stopLoading")
         nextButton = UIBarButtonItem(image: UIImage(named: "ArrowRight"), style: .Plain, target: webView, action: "goForward")
         previousButton = UIBarButtonItem(image: UIImage(named: "ArrowLeft"), style: .Plain, target: webView, action: "goBack")
-        actionsButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "presentActions")
+        actionsButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "presentActivities")
         
         space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         
@@ -63,6 +63,13 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         previousButton.enabled = webView.canGoBack
         
         setToolbarItems([previousButton, space, nextButton, space, refreshStopButton, space, actionsButton], animated: false)
+    }
+    
+    func presentActivities() {
+        let shareObjects = [title!, url] as [AnyObject]
+        let act = [SafariActivity(url: url)] as [AnyObject]
+        let avc = UIActivityViewController(activityItems: shareObjects, applicationActivities: act)
+        navigationController?.presentViewController(avc, animated: true, completion: nil)
     }
     
     func presentActions() {
