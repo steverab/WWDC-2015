@@ -26,10 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let userInfo = userInfo {
             if let request = userInfo["request"] as? String {
                 if request == "loadEntries" {
-                    reply(["entriesData": NSKeyedArchiver.archivedDataWithRootObject(EntriesLoader.loadTimelineEntries())])
+                    reply(["entriesData": NSKeyedArchiver.archivedDataWithRootObject(DataLoader.loadTimelineEntries())])
                     return
                 } else if request == "loadMe" {
-                    reply(["meData": NSKeyedArchiver.archivedDataWithRootObject(EntriesLoader.loadMe())])
+                    reply(["meData": NSKeyedArchiver.archivedDataWithRootObject(DataLoader.loadMe())])
                     return
                 }
             }

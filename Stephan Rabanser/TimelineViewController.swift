@@ -36,7 +36,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     
     let avatarWidth:CGFloat = 76.0
     
-    var entries = [TimelineEntry]()
+    var entries = [Entry]()
     var me = Me()
     
     var showProfile = true
@@ -64,13 +64,13 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         */
         
-        me = EntriesLoader.loadMe()
+        me = DataLoader.loadMe()
         
         setupStartAnimation()
         setupHeader()
         setupTableView()
         
-        entries = EntriesLoader.loadTimelineEntries()
+        entries = DataLoader.loadTimelineEntries()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -243,7 +243,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func configureEntryCell(cell: TimelineEntryCell, forIndexPath indexPath: NSIndexPath, isForOffscreenUse offscreenUse: Bool) {
-        let currentEntry:TimelineEntry
+        let currentEntry:Entry
         if showProfile == true {
             currentEntry = entries[indexPath.row-1]
         } else {

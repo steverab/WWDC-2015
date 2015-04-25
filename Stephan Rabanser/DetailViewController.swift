@@ -20,7 +20,7 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
     @IBOutlet weak var buttonHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
     
-    var timelineEntry: TimelineEntry!
+    var timelineEntry: Entry!
     
     // MARK: - View controller lifecycle
     

@@ -9,15 +9,15 @@
 import UIKit
 import MapKit
 
-class EntriesLoader: NSObject {
+class DataLoader: NSObject {
     
-    class func loadTimelineEntries() -> [TimelineEntry] {
-        var entries = [TimelineEntry]()
+    class func loadTimelineEntries() -> [Entry] {
+        var entries = [Entry]()
         let loadedEntries = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Entries", ofType: "plist")!)
         for dict in loadedEntries ?? [] {
             let buttonDict = dict["button"] as! [String : String]
             let buttonTitle = buttonDict["title"]!
-            let entry = TimelineEntry(title: dict["title"] as! String, shortDescription: dict["shortDescription"] as! String, description: dict["description"] as! String, date: dict["date"] as! String, type: TimelineEntryType(rawValue: dict["type"] as! Int)!, imageString: dict["image"] as! String, buttonTitle: buttonDict["title"]!, buttonURL: buttonDict["link"]!)
+            let entry = Entry(title: dict["title"] as! String, shortDescription: dict["shortDescription"] as! String, description: dict["description"] as! String, date: dict["date"] as! String, type: TimelineEntryType(rawValue: dict["type"] as! Int)!, imageString: dict["image"] as! String, buttonTitle: buttonDict["title"]!, buttonURL: buttonDict["link"]!)
             entries.append(entry)
         }
         return entries

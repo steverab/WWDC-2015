@@ -14,8 +14,8 @@ enum TimelineEntryType: Int {
     case Development
 }
 
-@objc(TimelineEntry)
-class TimelineEntry: NSObject, Printable, NSCoding {
+@objc(Entry)
+class Entry: NSObject, Printable, NSCoding {
     
     var title = ""
     var shortDescription = ""

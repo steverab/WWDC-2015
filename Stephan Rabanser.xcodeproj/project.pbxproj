@@ -14,7 +14,7 @@
 		AA2866AB1AEAFC0B001AB0A9 /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2866A91AEAF915001AB0A9 /* Me.swift */; };
 		AA33D4701AE5ACF300F215EE /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA33D46F1AE5ACF300F215EE /* BorderedButton.swift */; };
 		AA8626821AE0F78E004D995D /* Entries.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8626811AE0F78E004D995D /* Entries.plist */; };
-		AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
+		AA8626841AE0F832004D995D /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* Entry.swift */; };
 		AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626881AE0FC8C004D995D /* TimelineViewController.swift */; };
 		AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */; };
 		AA867F3A1AE98C0A00A3948E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA867F391AE98C0A00A3948E /* Images.xcassets */; };
@@ -24,8 +24,8 @@
 		AA867F4B1AE98C0A00A3948E /* Stephan Rabanser WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA867F2E1AE98C0A00A3948E /* Stephan Rabanser WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA867F531AE98CE000A3948E /* TimelineInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867F521AE98CE000A3948E /* TimelineInterfaceController.swift */; };
 		AA867F551AE98D2700A3948E /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867F541AE98D2700A3948E /* DetailInterfaceController.swift */; };
-		AA867F581AE98F1200A3948E /* EntriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867F571AE98F1200A3948E /* EntriesLoader.swift */; };
-		AA867F591AE98F9300A3948E /* TimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* TimelineEntry.swift */; };
+		AA867F581AE98F1200A3948E /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA867F571AE98F1200A3948E /* DataLoader.swift */; };
+		AA867F591AE98F9300A3948E /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8626831AE0F832004D995D /* Entry.swift */; };
 		AA86EF851AE864770091EFE9 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA86EF841AE864770091EFE9 /* WebViewController.swift */; };
 		AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9C08311AE0EB5100617B43 /* AppDelegate.swift */; };
 		AA9C08371AE0EB5100617B43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA9C08351AE0EB5100617B43 /* Main.storyboard */; };
@@ -77,7 +77,7 @@
 		AA2866A91AEAF915001AB0A9 /* Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
 		AA33D46F1AE5ACF300F215EE /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		AA8626811AE0F78E004D995D /* Entries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entries.plist; sourceTree = "<group>"; };
-		AA8626831AE0F832004D995D /* TimelineEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntry.swift; sourceTree = "<group>"; };
+		AA8626831AE0F832004D995D /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		AA8626881AE0FC8C004D995D /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		AA86268D1AE109FB004D995D /* TimelineEntryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEntryCell.swift; sourceTree = "<group>"; };
 		AA867F2E1AE98C0A00A3948E /* Stephan Rabanser WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Stephan Rabanser WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +90,7 @@
 		AA867F471AE98C0A00A3948E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AA867F521AE98CE000A3948E /* TimelineInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineInterfaceController.swift; sourceTree = "<group>"; };
 		AA867F541AE98D2700A3948E /* DetailInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
-		AA867F571AE98F1200A3948E /* EntriesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesLoader.swift; sourceTree = "<group>"; };
+		AA867F571AE98F1200A3948E /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		AA86EF841AE864770091EFE9 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		AA9C082C1AE0EB5100617B43 /* Stephan Rabanser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stephan Rabanser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9C08301AE0EB5100617B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,10 +157,8 @@
 		AA8626871AE0F8DA004D995D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AA8626831AE0F832004D995D /* TimelineEntry.swift */,
+				AA8626831AE0F832004D995D /* Entry.swift */,
 				AA2866A91AEAF915001AB0A9 /* Me.swift */,
-				AA867F571AE98F1200A3948E /* EntriesLoader.swift */,
-				AAD411A71AEC06F000102C95 /* SafariActivity.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -243,10 +241,11 @@
 				AA8626851AE0F8AA004D995D /* View Controllers */,
 				AA33D4711AE5AD0000F215EE /* Controls */,
 				AA86268A1AE109D5004D995D /* Views */,
+				AAA3F2041AEC240600857EBE /* Loader */,
 				AA8626871AE0F8DA004D995D /* Models */,
+				AAA3F2051AEC241E00857EBE /* Activities */,
 				AAF2954F1AE1268B00D05A9E /* Extensions */,
-				AAE81E911AE44F8E0031AD4A /* Helpers */,
-				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
+				AAE81E911AE44F8E0031AD4A /* External Helpers */,
 				AA9C082F1AE0EB5100617B43 /* Supporting Files */,
 			);
 			path = "Stephan Rabanser";
@@ -259,17 +258,34 @@
 				AA2866A71AEAF837001AB0A9 /* Me.plist */,
 				AA8626811AE0F78E004D995D /* Entries.plist */,
 				AA9C08301AE0EB5100617B43 /* Info.plist */,
+				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AAE81E911AE44F8E0031AD4A /* Helpers */ = {
+		AAA3F2041AEC240600857EBE /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				AA867F571AE98F1200A3948E /* DataLoader.swift */,
+			);
+			name = Loader;
+			sourceTree = "<group>";
+		};
+		AAA3F2051AEC241E00857EBE /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				AAD411A71AEC06F000102C95 /* SafariActivity.swift */,
+			);
+			name = Activities;
+			sourceTree = "<group>";
+		};
+		AAE81E911AE44F8E0031AD4A /* External Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				AAE81E931AE44FA60031AD4A /* FXBlurView.h */,
 				AAE81E941AE44FA60031AD4A /* FXBlurView.m */,
 			);
-			name = Helpers;
+			name = "External Helpers";
 			sourceTree = "<group>";
 		};
 		AAF2954F1AE1268B00D05A9E /* Extensions */ = {
@@ -416,7 +432,7 @@
 			files = (
 				AAA69DB81AEAECFB002B612A /* PersonalInterfaceController.swift in Sources */,
 				AA867F531AE98CE000A3948E /* TimelineInterfaceController.swift in Sources */,
-				AA867F591AE98F9300A3948E /* TimelineEntry.swift in Sources */,
+				AA867F591AE98F9300A3948E /* Entry.swift in Sources */,
 				AA867F551AE98D2700A3948E /* DetailInterfaceController.swift in Sources */,
 				AA06B5D61AE9AC1700CBE67F /* ColorExtensions.swift in Sources */,
 				AA2866AB1AEAFC0B001AB0A9 /* Me.swift in Sources */,
@@ -427,14 +443,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA8626841AE0F832004D995D /* TimelineEntry.swift in Sources */,
+				AA8626841AE0F832004D995D /* Entry.swift in Sources */,
 				AA9C08321AE0EB5100617B43 /* AppDelegate.swift in Sources */,
 				AA8626891AE0FC8C004D995D /* TimelineViewController.swift in Sources */,
 				AAF2954C1AE1266A00D05A9E /* OutlineView.swift in Sources */,
 				AA86268E1AE109FB004D995D /* TimelineEntryCell.swift in Sources */,
 				AA2866AA1AEAF915001AB0A9 /* Me.swift in Sources */,
 				AAE81E901AE448B60031AD4A /* AvatarView.swift in Sources */,
-				AA867F581AE98F1200A3948E /* EntriesLoader.swift in Sources */,
+				AA867F581AE98F1200A3948E /* DataLoader.swift in Sources */,
 				AA33D4701AE5ACF300F215EE /* BorderedButton.swift in Sources */,
 				AA86EF851AE864770091EFE9 /* WebViewController.swift in Sources */,
 				AAD411A81AEC06F000102C95 /* SafariActivity.swift in Sources */,

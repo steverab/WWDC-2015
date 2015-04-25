@@ -20,7 +20,7 @@ class TimelineInterfaceController: WKInterfaceController {
     @IBOutlet weak var nameLabel: WKInterfaceLabel!
     @IBOutlet weak var avatarButton: WKInterfaceButton!
     
-    var entries = [TimelineEntry]()
+    var entries = [Entry]()
     
     // MARK: - InterfaceController lifecycle
     
@@ -50,7 +50,7 @@ class TimelineInterfaceController: WKInterfaceController {
             }
             
             if let entriesData = replyInfo["entriesData"] as? NSData {
-                if let entries = NSKeyedUnarchiver.unarchiveObjectWithData(entriesData) as? [TimelineEntry] {
+                if let entries = NSKeyedUnarchiver.unarchiveObjectWithData(entriesData) as? [Entry] {
                     self.entries = entries
                     self.tableView.setNumberOfRows(self.entries.count, withRowType: "entriesRowType")
                     for (index, entry) in enumerate(self.entries) {

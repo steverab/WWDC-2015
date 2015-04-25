@@ -15,14 +15,14 @@ class DetailInterfaceController: WKInterfaceController {
     @IBOutlet weak var shortDescriptionLabel: WKInterfaceLabel!
     @IBOutlet weak var dateLabel: WKInterfaceLabel!
     
-    var entry: TimelineEntry!
+    var entry: Entry!
     
     // MARK: - InterfaceController lifecycle
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        entry = context as! TimelineEntry
+        entry = context as! Entry
         
         setupDetailView()
     }
