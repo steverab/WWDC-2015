@@ -39,8 +39,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     var entries = [Entry]()
     var me = Me()
     
-    var showProfile = true
-    
     // MARK: - View controller lifecycle
     
     override func viewDidLoad() {
@@ -49,20 +47,9 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         navigationController?.interactivePopGestureRecognizer.delegate = nil
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         
-        /*
         avatarView.action = { [unowned self] in
-            self.showProfile = !self.showProfile
-            if self.showProfile == true {
-                self.timelineTableView.beginUpdates()
-                self.timelineTableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Automatic)
-                self.timelineTableView.endUpdates()
-            } else {
-                self.timelineTableView.beginUpdates()
-                self.timelineTableView.deleteRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Automatic)
-                self.timelineTableView.endUpdates()
-            }
+            self.setupActionSheet()
         }
-        */
         
         me = DataLoader.loadMe()
         
@@ -150,7 +137,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         timelineTableView.rowHeight = UITableViewAutomaticDimension
         timelineTableView.estimatedRowHeight = 44
         
-        timelineTableView.contentInset = UIEdgeInsetsMake(144, 0, 0, 0)
+        timelineTableView.contentInset = UIEdgeInsetsMake(131, 0, 0, 0)
     }
     
     // MARK: - UIScrollView delegate
@@ -179,10 +166,16 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             
             headerBlurImageView.alpha = min (1.0, (offset - offsetLabelHeader)/blurFadeDuration)
 
-            let avatarScaleFactor = (min(offsetHeaderStop, offset)) / avatarView.bounds.height / 1.25 // Slow down the animation
+            let avatarScaleFactor = (min(offsetHeaderStop, offset)) / avatarView.bounds.height / 1.25
             let avatarSizeVariation:CGFloat = ((avatarView.bounds.height * (1.0 + avatarScaleFactor)) - avatarView.bounds.height) / 2.0
             avatarTransform = CATransform3DTranslate(avatarTransform, 0, avatarSizeVariation, 0)
             avatarTransform = CATransform3DScale(avatarTransform, 1.0 - avatarScaleFactor, 1.0 - avatarScaleFactor, 0)
+            
+            if avatarScaleFactor == 0 {
+                avatarView.userInteractionEnabled = true
+            } else {
+                avatarView.userInteractionEnabled = false
+            }
             
             if offset <= offsetHeaderStop {
                 if avatarView.layer.zPosition < header.layer.zPosition{
@@ -196,7 +189,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
         header.layer.transform = headerTransform
-        avatarView.layer.transform = avatarTransform
+        avatarView.transform = CGAffineTransformMake(avatarTransform.m11, avatarTransform.m12, avatarTransform.m21, avatarTransform.m22, avatarTransform.m41, avatarTransform.m42)
     }
     
     // MARK: - UITableView data source
@@ -206,24 +199,14 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if showProfile == true {
-            return entries.count + 1
-        } else {
-            return entries.count
-        }
+        return entries.count + 1
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if showProfile == true {
-            if indexPath.row == 0 {
-                var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileCell
-                configureProfileCell(cell, forIndexPath: indexPath)
-                return cell
-            } else {
-                var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
-                configureEntryCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
-                return cell
-            }
+        if indexPath.row == 0 {
+            var cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileCell
+            configureProfileCell(cell, forIndexPath: indexPath)
+            return cell
         } else {
             var cell = tableView.dequeueReusableCellWithIdentifier("TimelineEntryCell") as! TimelineEntryCell
             configureEntryCell(cell, forIndexPath: indexPath, isForOffscreenUse: false)
@@ -238,39 +221,27 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.descriptionLabel.text = me.shortDescription
         cell.outlineView.type = .NoCircle
         
+        cell.selectionStyle = .None
+        
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
     }
     
     func configureEntryCell(cell: TimelineEntryCell, forIndexPath indexPath: NSIndexPath, isForOffscreenUse offscreenUse: Bool) {
         let currentEntry:Entry
-        if showProfile == true {
-            currentEntry = entries[indexPath.row-1]
-        } else {
-            currentEntry = entries[indexPath.row]
-        }
+        currentEntry = entries[indexPath.row-1]
         
         cell.titleLabel.text = currentEntry.title
         cell.shortDescriptionLabel.text = currentEntry.shortDescription
         cell.dateLabel.text = currentEntry.date
         cell.type = currentEntry.type
-        
-        if showProfile == true {
-            if indexPath.row == 1 {
-                cell.outlineView.type = .First
-            } else if indexPath.row == entries.count {
-                cell.outlineView.type = .Last
-            } else {
-                cell.outlineView.type = .Default
-            }
+
+        if indexPath.row == 1 {
+            cell.outlineView.type = .First
+        } else if indexPath.row == entries.count {
+            cell.outlineView.type = .Last
         } else {
-            if indexPath.row == 0 {
-                cell.outlineView.type = .First
-            } else if indexPath.row == entries.count - 1 {
-                cell.outlineView.type = .Last
-            } else {
-                cell.outlineView.type = .Default
-            }
+            cell.outlineView.type = .Default
         }
         
         cell.setNeedsUpdateConstraints()
@@ -280,10 +251,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: - UITableView delegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if showProfile == true && indexPath.row == 0 {
-            tableView.deselectRowAtIndexPath(indexPath, animated: true)
-            setupActionSheet()
-        }
     }
     
     // MARK: Custom functions
@@ -346,11 +313,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         let indexPath = timelineTableView.indexPathForSelectedRow()?.row
         
         if let indexPath = indexPath {
-            if showProfile == true {
-                detailViewController.timelineEntry = entries[indexPath - 1]
-            } else {
-                detailViewController.timelineEntry = entries[indexPath]
-            }
+            detailViewController.timelineEntry = entries[indexPath - 1]
         }
     }
     
