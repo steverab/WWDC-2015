@@ -8,10 +8,10 @@
 		<key>shortDescription</key>
 		<string>Singapore is a cultural melting pot, has a great skyline and a tropical climate. Those are all facts that are justifying a 12h flight and a stay for a week.</string>
 		<key>description</key>
-		<string>Also, a good friend of mine is doing an exchange semester at the Nanyang Technological University, so I and another friend of mine decided to pay him a visit during our semester holdays in March.
-        
+        <string>Also, a good friend of mine is doing an exchange semester at the Nanyang Technological University, so I and another friend of mine decided to pay him a visit during our semester holidays in March.
+            
 During our one week stay we visited Sentosa, Chinatown, Little India and Downtown, but also the NTU campus, the zoo, various botanic gardens and of course the Gardens by the Bay and the very cool Marina Bay Sands Hotel. We also travelled to Johor Bahru, Malaysia, for a single day.
-
+            
 I really liked the merger between eastern and western culture and that's also why I am really considering doing an exchange semester there during my graduate studies.</string>
 		<key>date</key>
 		<string>Mar 2015</string>
@@ -31,11 +31,11 @@ I really liked the merger between eastern and western culture and that's also wh
 		<key>title</key>
 		<string>Siemens iCATCH</string>
 		<key>shortDescription</key>
-		<string>iCATCH is a physical interactive interface which combines information, communication technologies, advertisements, games and other services in the form of a modernized and redesigned &quot;Litfass&quot; column.</string>
+		<string>iCATCH is a physical interactive interface which combines information, communication technologies, advertisements, games and other services in the form of a modernized and redesigned "Litfass" column.</string>
 		<key>description</key>
-		<string>During 2014's winter's prestigious iOS pratical course, I was chosen to be on the Siemens iCATCH team. iCATCH stands for Intelligent Context Aware Telematic City Hub.
+        <string>During 2014's winter's prestigious iOS practical course, I was chosen to be on the Siemens iCATCH team. iCATCH stands for Intelligent Context Aware Telematic City Hub.
             
-During the course, I was mainly responsible for the modelling, architecture and documentation process of the entire system. Additionally, I also headed the &quot;Fun&quot; subteam, which was responsible for developing a multiplayer rafting game for OS X. iPhones connected to the same hotspot as the iCATCH, were able to influence the raft in the game via the gyroscope sensor.</string>
+During the course, I was mainly responsible for the modelling, architecture and documentation process of the entire system. Additionally, I also headed the "Fun" subteam, which was responsible for developing a multiplayer rafting game for OS X. iPhones connected to the same hotspot as the iCATCH were able to influence the raft in the game via the gyroscope sensor.</string>
 		<key>date</key>
 		<string>Jan 2015</string>
 		<key>type</key>
@@ -54,10 +54,10 @@ During the course, I was mainly responsible for the modelling, architecture and 
 		<key>title</key>
 		<string>Swift Teaching Assistant</string>
 		<key>shortDescription</key>
-		<string>In 2014's winter term&apos;s &quot;iOS Praktikum&quot; at TUM, I was chosen to be a teaching assistant in the Swift introduction course.</string>
+		<string>In 2014's winter term's "iOS Praktikum" at TUM, I was chosen to be a teaching assistant in the Swift introduction course.</string>
 		<key>description</key>
-        <string>In autumn 2014, I was a teaching assistant in TUM's iOS Praktikum's introduction course, whose purpose was to introduce students to Swift, Apple's new programming language, which was announced at WWDC 2014. During this course, I supported the course administration by writing and reviewing course assignments and held a 2h talk and prepared the corresponding tutorial about RESTful interaction with webservices within iOS and OS X apps.
-        
+        <string>In autumn 2014, I was a teaching assistant in TUM's iOS Praktikum's introduction course, which purpose was to introduce students to Swift, Apple's new programming language, which was announced at WWDC 2014. During this course, I supported the course administration by writing and reviewing course assignments and held a 2h talk and prepared the corresponding tutorial about RESTful interaction with webservices within iOS and OS X apps.
+            
 At Apple's special event in October 2014, this course was even highlighted as one of the first Swift courses at major universities.</string>
 		<key>date</key>
 		<string>Oct 2014</string>
@@ -79,9 +79,9 @@ At Apple's special event in October 2014, this course was even highlighted as on
 		<key>shortDescription</key>
 		<string>Hours is a new way for finding time to meet with friends, at work or anything in between.</string>
 		<key>description</key>
-		<string>From January 2014 to September 2014, I was an essential part in the establishment of a startup named Multiply at a very early stage. Together with Marcus Hauer (design) and Stephan Seidt (backend) I set out to reinvent calendaring with a new app called Hours.
+        <string>From January 2014 to September 2014, I was an essential member in the establishment of a startup named Multiply at a very early stage. Together with Marcus Hauer (design) and Stephan Seidt (backend) I set out to reinvent calendaring with a new app called Hours.
             
-In order not to loose focus on my academic career, I had to leave Multiply in September 2014, unfortunately. Marcus and Stephan are currently setting up the company and you may hear about their stripped down version of Hours, Triangle, soon.</string>
+In order not to loose focus on my academic career, I had to leave Multiply in September 2014, much to my regret. Marcus and Stephan are currently setting up the company and you may hear about their stripped down version of Hours, Triangle, soon.</string>
 		<key>date</key>
 		<string>Jan 2014</string>
 		<key>type</key>
@@ -105,13 +105,13 @@ In order not to loose focus on my academic career, I had to leave Multiply in Se
         <string>Whether you are a journalist who has to deal with branded images day by day, or an individual who simply wants to take, upload and share a watermarked picture, Piqup is your ideal companion.
             
 With Piqup you can:
-    - Browse your entire Dropbox and view any image in there. Folders and images are cached, so Piqup doesn't unnecessarily waste your network bandwidth. Up- and downloads continue in the background.
+    - Browse your entire Dropbox and view any image in there. Folders and images are cached, so Piqup doesn't waste your network bandwidth unnecessarily. Up- and downloads continue in the background.
     - Create folders inside your Dropbox and delete any file or directory in there.
     - Upload images to any folder in your Dropbox. Images can be taken with the camera, chosen from the library or used from the clipboard. A shareable link will be copied to your clipboard after the upload is finished, so you can instantly share the uploaded image.
     - Apply a watermark to your images. The Settings area allows you to select different watermark positions and change the watermark's transparency.
     - Set your desired output format (JPEG or PNG). Additionally you can define the compression rate of JPEG images.
     - Share your images to social services like Facebook and Twitter or send them via E-Mail, SMS or AirDrop by using a generated link or the image itself, which makes sharing extremely easy.
-    - Recieve local notifications for background uploads.
+    - Receive local notifications for background uploads.
     - Remove your Dropbox account or link to a different one at any time.
     - Switch between a light (default) and a dark mode.</string>
 		<key>date</key>
@@ -130,12 +130,12 @@ With Piqup you can:
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>WWDC &apos;13 Scholarship</string>
+		<string>WWDC 2013 Scholarship</string>
 		<key>shortDescription</key>
 		<string>Apple chose me to attend 2013’s Worldwide Developers Conference in San Francisco on a Student Scholarship.</string>
 		<key>description</key>
-		<string>I had the great privilege to be among the 150 Student Scholarship recipients for Apple’s WWDC 13, hosted in San Francisco. This was a longtime dream come true and I had the chance to meet and talk to extremely talented, like-minded people from around the entire world.
-
+        <string>I had the great privilege to be among the 150 Student Scholarship recipients for Apple’s WWDC 2013, hosted in San Francisco. This was a longtime dream come true and I had the chance to meet and talk to extremely talented, like-minded people from around the entire world.
+            
 I also got the chance to pay Silicon Valley a visit. Together with some friends, I visited the campuses of many major tech companies in the Bay Area.</string>
 		<key>date</key>
 		<string>Jun 2013</string>
@@ -155,11 +155,11 @@ I also got the chance to pay Silicon Valley a visit. Together with some friends,
 		<key>title</key>
 		<string>Computer Science Student at TUM</string>
 		<key>shortDescription</key>
-		<string>TUM (Technische Universität München) is considerd one of the top technological universities in Europe.</string>
+		<string>TUM (Technische Universität München) is considered one of the top technological universities in Europe.</string>
 		<key>description</key>
-		<string>Especially in areas like Chemistry, Mechanical Engineering, and Computer Science, TUM is constantly ranked in the worldwide Top 30.
-        
-Just two weeks ago, I've started my sixth - and most likely last - semester as a Bachelor student. Right now, I am working on my Bachelor's thesis, which aims at simplifying prototyping and continous integration / delivery for iOS and OS X applications.</string>
+        <string>Especially in areas like Chemistry, Mechanical Engineering, and Computer Science, TUM is constantly ranked in the worldwide Top 30.
+            
+Just two weeks ago, I've started my sixth - and most likely last - semester as a Bachelor student. Right now, I am working on my Bachelor's thesis, which aims at simplifying prototyping and continuous integration / delivery for iOS and OS X applications.</string>
 		<key>date</key>
 		<string>Oct 2012</string>
 		<key>type</key>
@@ -220,9 +220,9 @@ Just two weeks ago, I've started my sixth - and most likely last - semester as a
 		<key>title</key>
 		<string>Stripe Capture the Flag</string>
 		<key>shortDescription</key>
-		<string>I was one out of 250 people, who successfully hacked themselves through Stripe's &quot;Capture the Flag&quot; contest.</string>
+		<string>I was one out of 250 people, who successfully hacked themselves through Stripe's "Capture the Flag" contest.</string>
 		<key>description</key>
-		<string>Stripe's CTF was a great chance to learn about common application vulnerabilities. Since application security is increasingly getting more attention, I was very interested in how to exploit and possibly prevent vulnerabilities of such kinds in my own code.
+        <string>Stripe's CTF was a great chance to learn about common application vulnerabilities. Since application security is increasingly getting more attention, I was very interested in how to exploit and possibly prevent vulnerabilities of such kinds in my own code.
             
 I also participated in 2012's Summer-CTF, which had a focus on web applications, and I managed to get to level 7/8.</string>
 		<key>date</key>
@@ -266,8 +266,8 @@ I also participated in 2012's Summer-CTF, which had a focus on web applications,
 		<key>shortDescription</key>
 		<string>After I fell in love with the iPhone the very moment I first saw it, getting into iOS and OS X development was a logical step for an emerging Computer Science student like me.</string>
 		<key>description</key>
-		<string>I got into iOS development the very day the iPhone SDK was announced. To get to know the tools and some of the classes and standard user interface elements provided by Apple, I created a little app called &quot;Easy Physics&quot;. This app featured a collection of different slideshows and videos about basic topics in physics. Easy Physics was also my very first app on the App Store and I made it available for free. A few weeks later, I launched Easy Physics Pro, which was an extension to Easy Physics. Besides the standard content, the Pro version also provided some more advanced topics.
-        
+        <string>I got into iOS development the very day the iPhone SDK was announced. To get to know the tools and some of the classes and standard user interface elements provided by Apple, I created a little app called "Easy Physics". This app featured a collection of different slideshows and videos about basic topics in physics. Easy Physics was also my very first app on the App Store and I made it available for free. A few weeks later, I launched Easy Physics Pro, which was an extension to Easy Physics. Besides the standard content, the Pro version also provided some more advanced topics.
+            
 Of course, I am continuously experimenting with the SDKs and unfortunately not all of my ideas and side projects made it into nice, polished App Store apps.</string>
 		<key>date</key>
 		<string>Mar 2008</string>
@@ -285,13 +285,15 @@ Of course, I am continuously experimenting with the SDKs and unfortunately not a
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>High School Student at TFO &quot;Max Valier&quot;</string>
+		<string>High School Student at TFO "Max Valier"</string>
 		<key>shortDescription</key>
-		<string>The TFO &quot;Max Valier&quot; is the most renowned high school focusing on technological subjects in my home province.</string>
+		<string>The TFO "Max Valier" is the most renowned high school focusing on technological subjects in my home province.</string>
 		<key>description</key>
-		<string>After my graduation from middle school, I had to decide which high school would be most appropriate to help me to accomplish my long term goals as a prospective computer scientist. That's why the TFO &quot;Max Valier&quot; in Bolzano - which is the most renowned high school focusing on technology in our province - was the way to go.
-        
-After two years of general studies, I focused on Information Technology in the next three years. Subjects like Informatics, Information Systems and Electronics greatly helped me in shaping my understanding of Computer Science and how it realates to other technical fields (namely Electronics and Mechanical Engineering). </string>
+        <string>The TFO "Max Valier" is the most renowned high school focusing on technological subjects in my home province.</string>
+        <key>description</key>
+        <string>After my graduation from middle school, I had to decide which high school would be most appropriate to help me accomplish my long term goals as a prospective computer scientist. That's why the TFO "Max Valier" in Bolzano - which is the most renowned high school focusing on technology in our province - was the way to go.
+            
+After two years of general studies, I focused on Information Technology in the next three years. Subjects like Informatics, Information Systems and Electronics greatly helped me in shaping my understanding of Computer Science and how it relates to other technical fields (namely Electronics and Mechanical Engineering).</string>
 		<key>date</key>
 		<string>Sep 2007</string>
 		<key>type</key>
@@ -312,9 +314,9 @@ After two years of general studies, I focused on Information Technology in the n
 		<key>shortDescription</key>
 		<string>I was born on December 12th 1993 in the beautiful region of South Tyrol, Italy.</string>
 		<key>description</key>
-		<string>Even though I'm an Italian citicen, I grew up as a German native speaker, because South Tyrol has once been part of Austria, but was a gift to Italy after World War I. Round about 70% of the population of South Tyrol speaks German as their first language, altough most of them use a quite aggressive dialect in their average day-to-day conversations.
+        <string>Even though I'm an Italian citizen, I grew up as a German native speaker, because South Tyrol has once been part of Austria, but was given to Italy after World War I. Approximately 70% of the population of South Tyrol speaks German as their first language, although most of them use a dialect in their average day-to-day conversations.
             
-Between 1999 and 2004, I attended elementary school in Soprabolzano. Then I went to the &quot;Franziskaner-Gymnasium&quot; (a private school in Bolzano) from 2004 to 2007. During these years, I discovered my interest in computers and programming and I immediately knew, that I wanted to study Computer Science, eventually.</string>
+Between 1999 and 2004, I attended elementary school in Soprabolzano. Then I went to the "Franziskaner-Gymnasium" (a private school in Bolzano) from 2004 to 2007. During these years, I discovered my interest in computers and programming and I immediately knew that I wanted to study Computer Science, eventually.</string>
 		<key>date</key>
 		<string>Dec 1993</string>
 		<key>type</key>
