@@ -177,9 +177,7 @@
 		AA867F2F1AE98C0A00A3948E /* Stephan Rabanser WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AA867F521AE98CE000A3948E /* TimelineInterfaceController.swift */,
-				AAA69DB71AEAECFB002B612A /* PersonalInterfaceController.swift */,
-				AA867F541AE98D2700A3948E /* DetailInterfaceController.swift */,
+				AABF1BF91AED56D3002EE57D /* Interface Controllers */,
 				AA867F391AE98C0A00A3948E /* Images.xcassets */,
 				AA867F301AE98C0A00A3948E /* Supporting Files */,
 			);
@@ -198,7 +196,7 @@
 		AA867F411AE98C0A00A3948E /* Stephan Rabanser WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
-				AA867F441AE98C0A00A3948E /* Interface.storyboard */,
+				AABF1BFA1AED5706002EE57D /* Interfaces */,
 				AA867F471AE98C0A00A3948E /* Images.xcassets */,
 				AA867F421AE98C0A00A3948E /* Supporting Files */,
 			);
@@ -246,6 +244,7 @@
 				AAA3F2051AEC241E00857EBE /* Activities */,
 				AAF2954F1AE1268B00D05A9E /* Extensions */,
 				AAE81E911AE44F8E0031AD4A /* External Helpers */,
+				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
 				AA9C082F1AE0EB5100617B43 /* Supporting Files */,
 			);
 			path = "Stephan Rabanser";
@@ -258,7 +257,6 @@
 				AA2866A71AEAF837001AB0A9 /* Me.plist */,
 				AA8626811AE0F78E004D995D /* Entries.plist */,
 				AA9C08301AE0EB5100617B43 /* Info.plist */,
-				AA9C08381AE0EB5100617B43 /* Images.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +275,24 @@
 				AAD411A71AEC06F000102C95 /* SafariActivity.swift */,
 			);
 			name = Activities;
+			sourceTree = "<group>";
+		};
+		AABF1BF91AED56D3002EE57D /* Interface Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AA867F521AE98CE000A3948E /* TimelineInterfaceController.swift */,
+				AAA69DB71AEAECFB002B612A /* PersonalInterfaceController.swift */,
+				AA867F541AE98D2700A3948E /* DetailInterfaceController.swift */,
+			);
+			name = "Interface Controllers";
+			sourceTree = "<group>";
+		};
+		AABF1BFA1AED5706002EE57D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				AA867F441AE98C0A00A3948E /* Interface.storyboard */,
+			);
+			name = Interfaces;
 			sourceTree = "<group>";
 		};
 		AAE81E911AE44F8E0031AD4A /* External Helpers */ = {

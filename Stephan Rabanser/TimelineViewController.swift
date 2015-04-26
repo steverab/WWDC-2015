@@ -147,6 +147,12 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
         var avatarTransform = CATransform3DIdentity
         var headerTransform = CATransform3DIdentity
         
+        if offset == 0 {
+            avatarView.userInteractionEnabled = true
+        } else {
+            avatarView.userInteractionEnabled = false
+        }
+        
         if offset < 0 {
             let headerScaleFactor:CGFloat = -(offset) / header.bounds.height
             let headerSizevariation = ((header.bounds.height * (1.0 + headerScaleFactor)) - header.bounds.height)/2.0
@@ -170,12 +176,6 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
             let avatarSizeVariation:CGFloat = ((avatarView.bounds.height * (1.0 + avatarScaleFactor)) - avatarView.bounds.height) / 2.0
             avatarTransform = CATransform3DTranslate(avatarTransform, 0, avatarSizeVariation, 0)
             avatarTransform = CATransform3DScale(avatarTransform, 1.0 - avatarScaleFactor, 1.0 - avatarScaleFactor, 0)
-            
-            if avatarScaleFactor == 0 {
-                avatarView.userInteractionEnabled = true
-            } else {
-                avatarView.userInteractionEnabled = false
-            }
             
             if offset <= offsetHeaderStop {
                 if avatarView.layer.zPosition < header.layer.zPosition{

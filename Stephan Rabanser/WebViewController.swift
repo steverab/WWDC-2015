@@ -26,6 +26,8 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = ""
 
         setupNavigationBar()
         setupWebView()
