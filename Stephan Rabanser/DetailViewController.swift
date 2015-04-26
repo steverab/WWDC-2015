@@ -69,7 +69,7 @@ class DetailViewController: UIViewController, SKStoreProductViewControllerDelega
             borderButton.labelColor = UIColor.colorForType(timelineEntry.type)
             borderButton.labelText = timelineEntry.buttonTitle
             borderButton.action = {[unowned self] in
-                if self.timelineEntry.title != "Piqup" {
+                if self.timelineEntry.title != "Piqup App" {
                     if let destinationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("navigationWebViewController") as? UINavigationController {
                         if let webViewController = destinationViewController.viewControllers.first as? WebViewController {
                             webViewController.url = self.timelineEntry.buttonURL
