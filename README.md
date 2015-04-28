@@ -8,6 +8,6 @@ See the app in action in this [video](https://dl.dropboxusercontent.com/u/146018
 
 ## Screenshots
 
-<img src="SR-1.PNG">
-<img src="SR-2.PNG">
-<img src="SR-W.PNG">
+![Screenshot 1](https://raw.githubusercontent.com/steverab/WWDC-2015/master/SR-1.png)
+![Screenshot 2](https://raw.githubusercontent.com/steverab/WWDC-2015/master/SR-2.png)
+![Screenshot Watch](https://raw.githubusercontent.com/steverab/WWDC-2015/master/SR-W.png)
